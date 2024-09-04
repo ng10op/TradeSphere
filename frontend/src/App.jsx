@@ -1,39 +1,25 @@
-// import React from "react";
-// import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-// import UserAuth from "./components/UserAuth";
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <div>
-//         <Link to="/auth">
-//           <button>Go to UserAuth</button>
-//         </Link>
-
-//         <Routes>
-//           <Route path="/auth" element={<UserAuth />} />
-//         </Routes>
-//       </div>
-//     </Router>
-//   );
-// };
-
-// export default App;
-
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navigation from "./components/NavBar";
-import UserAuth from "./components/UserAuth";
+import FullPage from "./components/LandingPage/FullPage";
+import UserAuth from "./components/Auth/UserAuth";
+import ScrollToTopButton from "./components/ScrollToTopButton";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const App = () => {
+  // const location = useLocation();
+  // const isHomePage = location.pathname === "/";
   return (
     <Router>
-      <div>
-        <Navigation />
-
+      <div className="content">
         <Routes>
+          <Route path="/" element={<FullPage />} />
           <Route path="/auth" element={<UserAuth />} />
         </Routes>
+        <ScrollToTopButton />
+        {/* {isHomePage && <ScrollToTopButton />} */}
       </div>
     </Router>
   );

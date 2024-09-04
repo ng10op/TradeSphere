@@ -1,0 +1,44 @@
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #1c64f2;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.ulItems {
+  margin-left: auto;
+  margin-top: 10px;
+  font-size: larger;
+}
+
+.fixed-nav-padding {
+  padding-bottom: 65px;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  box-shadow: 0 4px 2px -2px gray;
+}

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./UserAuth.css";
 
 const UserAuth = () => {
@@ -156,6 +158,14 @@ const UserAuth = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="text-center mt-4">
+          <Link
+            to="/"
+            className="inline-block px-6 py-3 text-lg font-semibold text-white rounded-full no-underline Button"
+          >
+            Back to Homepage
+          </Link>
         </div>
       </div>
     </>
