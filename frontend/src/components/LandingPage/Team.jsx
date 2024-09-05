@@ -2,22 +2,22 @@ import React from "react";
 
 const data = [
   {
-    img: "img/team/01.jpg",
+    img: "/Naman_pic.jpg",
     name: "Naman Gosain",
     job: "Director",
   },
   {
-    img: "img/team/02.jpg",
+    img: "/Naman_pic.jpg",
     name: "Naman Gosain",
     job: "Senior Designer",
   },
   {
-    img: "img/team/03.jpg",
+    img: "/Naman_pic.jpg",
     name: "Naman Gosain",
     job: "Research Analyst",
   },
   {
-    img: "img/team/04.jpg",
+    img: "/Naman_pic.jpg",
     name: "Naman Gosain",
     job: "Project Manager",
   },
@@ -41,11 +41,11 @@ const Team = () => {
         <div className="row">
           {data.map((d, i) => (
             <div key={`${d.name}-${i}`} className="col-md-3 col-sm-6 mb-8">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="bg-white rounded-lg shadow-md ">
                 <img
                   src={d.img}
                   alt={d.name}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-contain"
                 />
                 <div className="p-4 text-center">
                   <h4 className="text-xl font-semibold mb-2">{d.name}</h4>

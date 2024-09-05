@@ -44,7 +44,7 @@ const Navigation = () => {
           />
           <Link
             to="/"
-            className="text-2xl font-bold text-gray-800 uppercase no-underline"
+            className="text-4xl font-bold text-gray-800 uppercase no-underline"
           >
             TradeSphere
           </Link>
@@ -81,17 +81,6 @@ const Navigation = () => {
                 onClick={handleScroll}
               >
                 Services
-              </a>
-            </li>
-            <li>
-              <a
-                className={`nav-link ${
-                  activeSection === "portfolio" ? "active" : ""
-                }`}
-                href="#portfolio"
-                onClick={handleScroll}
-              >
-                Gallery
               </a>
             </li>
             <li>
