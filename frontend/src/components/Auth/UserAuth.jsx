@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./UserAuth.css";
 
 const UserAuth = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [isSignUp, setIsSignUp] = useState(false);
   const [emailL, setEmailL] = useState("");
   const [passwordL, setPasswordL] = useState("");
@@ -161,7 +165,7 @@ const UserAuth = () => {
         </div>
         <div className="text-center mt-4">
           <Link
-            to="/"
+            to="/dashboard"
             className="inline-block px-6 py-3 text-lg font-semibold text-white rounded-full no-underline Button"
           >
             Back to Homepage
