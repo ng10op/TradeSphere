@@ -41,7 +41,7 @@ const Team = () => {
         <div className="row">
           {data.map((d, i) => (
             <div key={`${d.name}-${i}`} className="col-md-3 col-sm-6 mb-8">
-              <div className="bg-white rounded-lg shadow-md ">
+              <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
                 <img
                   src={d.img}
                   alt={d.name}

@@ -46,7 +46,7 @@ const Testimonials = () => {
         <div className="row flex flex-wrap">
           {data.map((d, i) => (
             <div key={`${d.name}-${i}`} className="col-md-4 mb-8">
-              <div className="bg-white p-6 rounded-lg shadow-md flex items-center h-64">
+              <div className="bg-white p-6 rounded-lg shadow-md flex items-center h-64 hover:shadow-xl transition-shadow duration-200">
                 <div className="flex-shrink-0 mr-4">
                   <img
                     src={d.img}

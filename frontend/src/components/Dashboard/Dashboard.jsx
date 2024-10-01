@@ -15,7 +15,7 @@ function Dashboard() {
 
   useEffect(() => {
     // Fetch the CSV file and parse it using PapaParse
-    Papa.parse("/stockData.csv", {
+    Papa.parse("/stockDataET.csv", {
       download: true,
       header: true,
       complete: (result) => {
@@ -24,17 +24,6 @@ function Dashboard() {
     });
   }, []);
 
-  // Sample stock market data
-  //   const stockData = Array.from({ length: 10 }, () => ({
-  //     company: "Reliance Industries Ltd.",
-  //     ltp: "2,995.90",
-  //     returnPercentage: "+0.27",
-  //     marketCap: "20,27,032",
-  //     highLow: "3,217.60 / 2,220.30",
-  //     volume: "94,09,499",
-  //   }));
-
-  // Sample data for Most Bought stocks and Stocks in News
   const mostBoughtStocks = [
     {
       name: "Reliance Industries Ltd.",
@@ -72,7 +61,7 @@ function Dashboard() {
             {[
               {
                 title: "Total Stocks",
-                value: "350",
+                value: "360",
                 trend: "up",
                 diff: 5,
                 icon: "fa-chart-line",
@@ -104,7 +93,7 @@ function Dashboard() {
               },
             ].map((item, index) => (
               <div
-                className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
+                className="bg-white shadow-md rounded-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl transition-shadow duration-200"
                 key={index}
               >
                 <div className="flex justify-between items-center">
@@ -150,7 +139,7 @@ function Dashboard() {
           {/* Most Bought Stocks Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
             {/* Most Bought on TradeSphere Section */}
-            <div className="bg-white shadow-lg rounded-lg p-6">
+            <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow duration-200  ">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-bold">
                   Most Bought on TradeSphere
@@ -184,7 +173,7 @@ function Dashboard() {
             </div>
 
             {/* Stocks in News Section */}
-            <div className="bg-white shadow-lg rounded-lg p-6">
+            <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-bold">Stocks in News</h2>
                 <Link
@@ -219,7 +208,7 @@ function Dashboard() {
           <Charts />
 
           {/* Stock Market Data Table */}
-          <div className="bg-white shadow-lg rounded-lg p-6 mt-4">
+          <div className="bg-white shadow-md rounded-lg p-6 mt-4 hover:shadow-xl transition-shadow duration-200">
             <h2 className="text-2xl font-bold mb-6 text-gray-800">
               Stock Market Data
             </h2>
@@ -228,10 +217,9 @@ function Dashboard() {
                 <tr className="bg-gray-200 text-gray-700 text-sm ">
                   <th className="py-4 px-6 border">Company</th>
                   <th className="py-4 px-6 border">LTP (₹)</th>
-                  <th className="py-4 px-6 border">Change %</th>
-                  <th className="py-4 px-6 border">Volume</th>
+                  <th className="py-4 px-6 border">1D Return %</th>
                   <th className="py-4 px-6 border">Market Cap (Cr)</th>
-                  <th className="py-4 px-6 border">1M Returns</th>
+                  <th className="py-4 px-6 border">Volume</th>
                 </tr>
               </thead>
               <tbody>
@@ -240,37 +228,32 @@ function Dashboard() {
                     key={index}
                     className="hover:bg-gray-100 transition-colors"
                   >
-                    <td className="py-4 px-6 border">{data.Name || "N/A"}</td>
-                    <td className="py-4 px-6 border">{data.LTP || "N/A"}</td>
+                    <td className="py-4 px-6 border">
+                      {data.Company || "N/A"}
+                    </td>
+                    <td className="py-4 px-6 border">
+                      {data["LTP (₹)"] || "N/A"}
+                    </td>
                     <td
                       className={`py-4 px-6 border ${
-                        parseFloat(data["Change %"]) > 0
+                        parseFloat(data["1D Return %"]) > 0
                           ? "text-green-500"
                           : "text-red-500"
                       }`}
                     >
-                      {data["Change %"] || "N/A"}
+                      {data["1D Return %"] || "N/A"}
+                    </td>
+                    <td className="py-4 px-6 border">
+                      {data["Market Cap (Cr)"] || "N/A"}
                     </td>
                     <td className="py-4 px-6 border">{data.Volume || "N/A"}</td>
-                    <td className="py-4 px-6 border">
-                      {data["Market Cap (Cr.)"] || "N/A"}
-                    </td>
-                    <td
-                      className={`py-4 px-6 border ${
-                        parseFloat(data["1M Returns"]) > 0
-                          ? "text-green-500"
-                          : "text-red-500"
-                      }`}
-                    >
-                      {data["1M Returns"] || "N/A"}
-                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
 
             {/* View All Link */}
-            <div className="flex justify-end mt-4">
+            <div className="flex justify-end mt-4 mr-4">
               <Link
                 to="/stocks"
                 className="text-blue-500 hover:text-blue-700 font-semibold"

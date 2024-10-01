@@ -6,6 +6,15 @@ const ProfilePage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Calculate the last login date (1 day before the current date)
+  const lastLoginDate = new Date();
+  lastLoginDate.setDate(lastLoginDate.getDate() - 1); // Subtract 1 day
+  const formattedLastLogin = lastLoginDate.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <div className="flex">
       <Sidebar />
@@ -23,48 +32,49 @@ const ProfilePage = () => {
             </div>
 
             {/* Profile Summary */}
-            <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-black">
+            <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
+              <h3 className="text-3xl font-semibold text-black">
                 Profile Summary
               </h3>
               <div className="mt-4">
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-lg">
                   <strong>Name:</strong> John Doe
                 </p>
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-lg">
                   <strong>Email:</strong> johndoe@example.com
                 </p>
-                <p className="text-gray-700">
-                  <strong>Joined:</strong> January 15, 2023
+                <p className="text-gray-700 text-lg">
+                  <strong>Joined:</strong> January 15, 2021
                 </p>
               </div>
             </div>
 
             {/* User Activity */}
-            <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-black">
+            <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
+              <h3 className="text-3xl font-semibold text-black">
                 User Activity
               </h3>
               <ul className="mt-4">
-                <li className="text-gray-700">
-                  Traded: ADANIENT, INFY, KOTAKBANK
+                <li className="text-gray-700 text-lg">
+                  <strong>Traded:</strong> ADANIENT, INFY, KOTAKBANK
                 </li>
-                <li className="text-gray-700">
-                  Last login: September 28, 2024
+                <li className="text-gray-700 text-lg">
+                  <strong>Last login:</strong> {formattedLastLogin}{" "}
+                  {/* Display the last login date */}
                 </li>
-                <li className="text-gray-700">
-                  Invested in: 3 different sectors
+                <li className="text-gray-700 text-lg">
+                  <strong>Invested in:</strong> 3 different sectors
                 </li>
               </ul>
             </div>
 
             {/* Contact Support Section */}
-            <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-black">
+            <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
+              <h3 className="text-3xl font-semibold text-black">
                 Contact Support
               </h3>
               <form className="mt-4">
-                <div className="flex flex-col mb-4">
+                <div className="flex flex-col mb-4 text-lg">
                   <label className="mb-2 text-gray-700" htmlFor="message">
                     Message:
                   </label>

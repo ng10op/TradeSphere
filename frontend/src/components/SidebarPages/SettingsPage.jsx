@@ -48,7 +48,7 @@ const SettingsPage = () => {
             </div>
 
             {/* Update Password */}
-            <div className="mt-12 bg-white p-6 rounded-lg shadow-lg">
+            <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
               <h3 className="text-2xl font-semibold text-black">
                 Update Password
               </h3>
@@ -112,7 +112,7 @@ const SettingsPage = () => {
             </div>
 
             {/* Notification Settings */}
-            <div className="mt-12 bg-white p-6 rounded-lg shadow-lg">
+            <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
               <h3 className="text-2xl font-semibold text-black">
                 Notification Settings
               </h3>

@@ -45,11 +45,11 @@ const Support = () => {
               </p>
             </div>
 
-            <div className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16 shadow-sm">
+            <div className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
               {faqData.map((faq, index) => (
                 <div
                   key={index}
-                  className="transition-all duration-200 bg-white border border-gray-200 cursor-pointer hover:bg-gray-50"
+                  className="transition-all duration-200 bg-white border border-gray-200 cursor-pointer hover:bg-gray-50 shadow-md hover:shadow-xl transition-shadow duration-200"
                 >
                   <button
                     type="button"
@@ -86,7 +86,7 @@ const Support = () => {
             </div>
 
             {/* Contact Section */}
-            <div className="mt-12 text-center bg-gray-100 p-6 rounded-lg shadow">
+            <div className="mt-12 text-center bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
               <h3 className="text-3xl font-bold text-black mb-4">
                 Didn't find the answer you are looking for?
               </h3>
