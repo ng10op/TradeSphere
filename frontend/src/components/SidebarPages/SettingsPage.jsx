@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "../Sidebar"; // Adjust the path as necessary
-import Toggle from "./Toggle"; // Adjust the path as necessary
+import Toggle from "../Buttons/Toggle"; // Adjust the path as necessary
 
 const SettingsPage = () => {
   useEffect(() => {
