@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showContacts, setShowContacts] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // Retrieve user data from local storage
+    const userData = localStorage.getItem("user");
+    if (userData) {
+      setUser(JSON.parse(userData));
+    }
+  }, []);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -55,8 +64,8 @@ const Navbar = () => {
             {isOpen && (
               <div className="absolute right-0 w-48 mt-2 bg-white rounded-md shadow-lg z-20">
                 <div className="px-4 py-2 border-b">
-                  <p className="text-gray-800 font-semibold">John Doe</p>
-                  <p className="text-gray-600 text-sm">john.doe@example.com</p>
+                  <p className="text-gray-800 font-semibold">{user.name}</p>
+                  <p className="text-gray-600 text-sm">{user.email}</p>
                 </div>
                 <hr />
                 <div className="py-2">

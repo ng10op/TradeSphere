@@ -1,8 +1,8 @@
-import User from "../model/user.model.js";
-import bcryptjs from "bcryptjs";
-import generateTokenandSetCookie from "../utils/generateTokenandSetCookie.js";
+const User = require("../models/user.model");
+const bcrypt = require("bcryptjs");
+const generateTokenandSetCookie = require("../utils/generateTokenandSetCookie.js");
 
-export const signup = async (req, res) => {
+const signup = async (req, res) => {
   try {
     const { name, email, password } = req.body;
     if (!name || !email || !password) {
@@ -14,7 +14,7 @@ export const signup = async (req, res) => {
       return res.status(400).json({ error: "User already exists!" });
     }
 
-    const hashedPassword = await bcryptjs.hash(password, 10);
+    const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = new User({
       name,
       email,
@@ -22,8 +22,8 @@ export const signup = async (req, res) => {
     });
 
     if (newUser) {
-      generateTokenandSetCookie(newUser._id, res);
       await newUser.save();
+      generateTokenandSetCookie(newUser._id, res);
       const { password: pass, ...rest } = newUser._doc;
       return res.status(201).json({
         user: rest,
@@ -40,7 +40,7 @@ export const signup = async (req, res) => {
   }
 };
 
-export const login = async (req, res) => {
+const login = async (req, res) => {
   try {
     const { email, password } = req.body;
     if (!email || !password) {
@@ -52,7 +52,7 @@ export const login = async (req, res) => {
       return res.status(404).json({ error: "User not found, please Signup!" });
     }
 
-    const isMatch = await bcryptjs.compare(password, user.password);
+    const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res.status(401).json({ error: "Invalid password" });
     }
@@ -71,7 +71,7 @@ export const login = async (req, res) => {
   }
 };
 
-export const logout = async (req, res) => {
+const logout = async (req, res) => {
   try {
     res.cookie("jwt", "", { maxAge: 0 });
     return res.status(200).json({ message: "Logged out successfully!" });
@@ -80,3 +80,5 @@ export const logout = async (req, res) => {
     return res.status(500).json({ error: "Internal Server error" });
   }
 };
+
+module.exports = { signup, login, logout };

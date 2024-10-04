@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 import "./UserAuth.css";
 
 const UserAuth = () => {
+  const navigate = useNavigate(); // Hook for programmatic navigation
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -15,13 +16,6 @@ const UserAuth = () => {
   const [emailS, setEmailS] = useState("");
   const [passwordS, setPasswordS] = useState("");
   const [cnfmPasswordS, setCnfmPasswordS] = useState("");
-  let username;
-
-  //   const saveLocal = (email, role, name) => {
-  //     localStorage.setItem("user", JSON.stringify(email));
-  //     localStorage.setItem("role", JSON.stringify(role));
-  //     localStorage.setItem("name", JSON.stringify(name));
-  //   };
 
   const handleSignUpClick = () => {
     setIsSignUp(true);
@@ -31,49 +25,79 @@ const UserAuth = () => {
     setIsSignUp(false);
   };
 
-  //   const handleLogin = async (e) => {
-  //     e.preventDefault();
-  //     const response = await fetch("/auth/login", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify({ emailId: emailL, password: passwordL }),
-  //     });
-  //     const json = await response.json();
-  //     if (!response.ok) {
-  //       console.log(json.message);
-  //       alert("Invalid login credentials");
-  //       return;
-  //     }
-  //     username = json.user.userName;
-  //     const role = json.user.role;
-  //     console.log(json);
-  //     saveLocal(emailL, role, username);
-  //     if (response.ok) {
-  //       window.location.reload();
-  //     }
-  //   };
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
-  //   const handleSignUp = async (e) => {
-  //     e.preventDefault();
-  //     const response = await fetch("/auth/new", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify({
-  //         userName: name,
-  //         emailId: emailS,
-  //         password: passwordS,
-  //         role: role,
-  //       }),
-  //     });
-  //     const json = await response.json();
-  //     if (!response.ok) {
-  //       console.log(json.message);
-  //     }
-  //     saveLocal(emailS, role, name);
-  //     if (response.ok) {
-  //       window.location.reload();
-  //     }
-  //   };
+  const validatePassword = (password) => {
+    return password.length >= 6;
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    if (!validateEmail(emailL)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+    if (!validatePassword(passwordL)) {
+      alert("Password must be at least 6 characters long.");
+      return;
+    }
+
+    const response = await fetch("http://localhost:8000/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: emailL, password: passwordL }),
+    });
+    const json = await response.json();
+    if (!response.ok) {
+      console.log(json.message);
+      alert("Invalid login credentials");
+      return;
+    }
+    console.log(json.user);
+    localStorage.setItem("user", JSON.stringify(json.user));
+    navigate("/dashboard"); // Redirect on successful login
+  };
+
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    if (name.trim() === "") {
+      alert("Please enter your name.");
+      return;
+    }
+    if (!validateEmail(emailS)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+    if (!validatePassword(passwordS)) {
+      alert("Password must be at least 6 characters long.");
+      return;
+    }
+    if (passwordS !== cnfmPasswordS) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    const response = await fetch("http://localhost:8000/api/auth/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: name,
+        email: emailS,
+        password: passwordS,
+      }),
+    });
+    const json = await response.json();
+    if (!response.ok) {
+      console.log(json.message);
+      alert("Sign up failed.");
+      return;
+    }
+    console.log(json.user);
+    navigate("/dashboard"); // Redirect on successful sign-up
+  };
 
   return (
     <>
@@ -116,7 +140,9 @@ const UserAuth = () => {
                 type="password"
                 placeholder="Confirm Password"
               />
-              <button className="Button">Sign Up</button>
+              <button className="Button" onClick={handleSignUp}>
+                Sign Up
+              </button>
             </form>
           </div>
           <div className="form-container sign-in-container">
@@ -135,7 +161,9 @@ const UserAuth = () => {
                 type="password"
                 placeholder="Password"
               />
-              <button className="Button">Sign In</button>
+              <button className="Button" onClick={handleLogin}>
+                Sign In
+              </button>
             </form>
           </div>
           <div className="overlay-container">
@@ -165,7 +193,7 @@ const UserAuth = () => {
         </div>
         <div className="text-center mt-4">
           <Link
-            to="/dashboard"
+            to="/"
             className="inline-block px-6 py-3 text-lg font-semibold text-white rounded-full no-underline Button"
           >
             Back to Homepage
