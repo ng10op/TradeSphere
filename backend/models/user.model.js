@@ -15,7 +15,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    lastLogin: {
+    currLogin: {
+      type: Date,
+    },
+    prevLogin: {
       type: Date,
     },
   },

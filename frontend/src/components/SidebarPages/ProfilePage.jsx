@@ -1,19 +1,29 @@
 import React, { useEffect } from "react";
-import Sidebar from "../Sidebar"; // Adjust the path as necessary
+import Sidebar from "../Sidebar";
+import { useAuth } from "../Auth/AuthContext";
 
 const ProfilePage = () => {
+  const { user } = useAuth();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Calculate the last login date (1 day before the current date)
-  const lastLoginDate = new Date();
-  lastLoginDate.setDate(lastLoginDate.getDate() - 1); // Subtract 1 day
-  const formattedLastLogin = lastLoginDate.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  const formatDate = (isoDate) => {
+    const date = new Date(isoDate);
+    return date.toLocaleString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
+    });
+  };
+
+  const formattedCreatedAt = user?.createdAt ? formatDate(user.createdAt) : "";
+  const formattedLastLogin = user?.prevLogin ? formatDate(user.prevLogin) : "";
 
   return (
     <div className="flex">
@@ -21,7 +31,6 @@ const ProfilePage = () => {
       <main className="flex-1 p-6 ml-64">
         <section className="py-10 sm:py-16 lg:py-24">
           <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-            {/* Profile Header */}
             <div className="text-center">
               <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
                 User Profile
@@ -31,25 +40,23 @@ const ProfilePage = () => {
               </p>
             </div>
 
-            {/* Profile Summary */}
             <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
               <h3 className="text-3xl font-semibold text-black">
                 Profile Summary
               </h3>
               <div className="mt-4">
                 <p className="text-gray-700 text-lg">
-                  <strong>Name:</strong> John Doe
+                  <strong>Name:</strong> {user.name}
                 </p>
                 <p className="text-gray-700 text-lg">
-                  <strong>Email:</strong> johndoe@example.com
+                  <strong>Email:</strong> {user.email}
                 </p>
                 <p className="text-gray-700 text-lg">
-                  <strong>Joined:</strong> January 15, 2021
+                  <strong>Joined:</strong> {formattedCreatedAt}
                 </p>
               </div>
             </div>
 
-            {/* User Activity */}
             <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
               <h3 className="text-3xl font-semibold text-black">
                 User Activity
@@ -59,8 +66,7 @@ const ProfilePage = () => {
                   <strong>Traded:</strong> ADANIENT, INFY, KOTAKBANK
                 </li>
                 <li className="text-gray-700 text-lg">
-                  <strong>Last login:</strong> {formattedLastLogin}{" "}
-                  {/* Display the last login date */}
+                  <strong>Last login:</strong> {formattedLastLogin}
                 </li>
                 <li className="text-gray-700 text-lg">
                   <strong>Invested in:</strong> 3 different sectors
@@ -68,7 +74,6 @@ const ProfilePage = () => {
               </ul>
             </div>
 
-            {/* Contact Support Section */}
             <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
               <h3 className="text-3xl font-semibold text-black">
                 Contact Support

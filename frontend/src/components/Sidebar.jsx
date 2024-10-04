@@ -42,7 +42,6 @@ const Sidebar = () => {
       </div>
 
       <nav className="flex-1 flex flex-col px-3 mt-6 space-y-2">
-        {/* Existing Links */}
         <Link
           to="/dashboard"
           className={`flex items-center px-4 py-2.5 text-lg font-medium transition-all duration-200 ${
@@ -103,44 +102,41 @@ const Sidebar = () => {
           Settings
         </Link>
 
-        {/* News Dropdown */}
         <div className="relative">
           <button
             onClick={toggleDropdown}
             className="flex items-center justify-between w-full px-4 py-2 text-lg font-medium text-gray-900 hover:text-white hover:bg-indigo-600 rounded-lg focus:outline-none"
           >
             <span className="flex items-center">
-              <i className="fas fa-newspaper mr-4"></i>{" "}
-              {/* Font Awesome Icon for News */}
-              News
+              <i className="fas fa-newspaper mr-4"></i> News
             </span>
             <i className={`fas fa-chevron-${isOpen ? "up" : "down"}`}></i>
           </button>
           {isOpen && (
             <div className="absolute left-0 w-full mt-1 bg-white shadow-lg rounded-lg z-10">
               <Link
-                to="https://www.cnbc.com"
+                to="https://www.cnbctv18.com/"
                 target="_blank"
                 className="block px-4 py-2 text-gray-700 hover:bg-indigo-600 hover:text-white"
               >
                 Market News
               </Link>
               <Link
-                to="https://www.bloomberg.com"
+                to="https://economictimes.indiatimes.com/"
                 target="_blank"
                 className="block px-4 py-2 text-gray-700 hover:bg-indigo-600 hover:text-white"
               >
                 Economic News
               </Link>
               <Link
-                to="https://www.reuters.com"
+                to="https://www.moneycontrol.com/markets/global-indices/"
                 target="_blank"
                 className="block px-4 py-2 text-gray-700 hover:bg-indigo-600 hover:text-white"
               >
                 Global News
               </Link>
               <Link
-                to="https://www.finviz.com"
+                to="https://www.screener.in/"
                 target="_blank"
                 className="block px-4 py-2 text-gray-700 hover:bg-indigo-600 hover:text-white"
               >
@@ -151,7 +147,6 @@ const Sidebar = () => {
         </div>
       </nav>
 
-      {/* Logout Link at Bottom */}
       <div className="px-3 mt-auto mb-3">
         <Link
           to="/logout"

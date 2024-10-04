@@ -139,7 +139,7 @@ const Stocks = () => {
           <h1 className="text-2xl font-bold">All Stocks Listed on NSE & BSE</h1>
 
           {/* Search bar container */}
-          <div className="relative w-full max-w-[600px] mr-4">
+          <div className="relative w-full max-w-[600px]">
             <input
               type="search"
               placeholder="Search Stocks..."
@@ -150,6 +150,12 @@ const Stocks = () => {
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <i className="fas fa-search w-5 h-5 text-gray-400"></i>
             </div>
+          </div>
+
+          <div className="flex justify-center mr-8">
+            <button className="bg-[#4f46e5] text-white px-4 py-2 rounded-lg hover:bg-[#3730a3] transform hover:scale-105 transition duration-200">
+              Update Data
+            </button>
           </div>
         </div>
 

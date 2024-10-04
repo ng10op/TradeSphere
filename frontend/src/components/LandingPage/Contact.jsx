@@ -13,7 +13,7 @@ const data = {
   email: "tradeshpere@email.com",
   facebook: "/",
   twitter: "/",
-  github: "/",
+  github: "https://github.com/ng10op",
 };
 
 const Contact = () => {
@@ -29,26 +29,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, email, message);
-
-    // Uncomment and configure the following if using emailjs
-    /*
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        e.target,
-        "YOUR_PUBLIC_KEY"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          clearState();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    */
   };
 
   return (
@@ -175,7 +155,7 @@ const Contact = () => {
         <p className="text-gray-600 text-sm">
           &copy; 2024 TradeSphere. All rights reserved. Developed by{" "}
           <a
-            href="http://www.tradesphere.com"
+            href="https://github.com/ng10op/TradeSphere"
             className="text-blue-600 hover:underline"
             rel="nofollow"
           >

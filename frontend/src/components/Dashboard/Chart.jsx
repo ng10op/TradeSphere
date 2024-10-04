@@ -79,16 +79,12 @@ const Charts = () => {
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-center space-x-8 space-y-4 md:space-y-0">
-      {/* Bar Chart with Heading and Labels */}
       <div className="bg-white shadow-md rounded-lg p-6 mt-4 w-full md:w-1/2 h-96 hover:shadow-xl transition-shadow duration-200">
-        {/* Set height to h-96 for equal alignment */}
         <h2 className="text-2xl font-bold mb-4 text-gray-800">Indices</h2>
         <div className="flex flex-row h-full">
           <div className="w-3/4 h-full">
-            {/* Ensure chart fills the available height */}
             <Bar data={barData} options={barOptions} className="h-full" />
           </div>
-          {/* Bar chart labels with color */}
           <div className="flex flex-col justify-center pl-4">
             {labels.map((label, index) => (
               <div key={index} className="flex items-center mb-2">
@@ -105,9 +101,7 @@ const Charts = () => {
         </div>
       </div>
 
-      {/* Pie Chart with Heading and Labels */}
       <div className="bg-white shadow-md rounded-lg p-6 mt-4 w-full md:w-1/2 h-96 flex flex-row hover:shadow-xl transition-shadow duration-200">
-        {/* Set height to h-96 for equal alignment */}
         <div className="flex flex-col justify-center pr-4">
           <h2 className="text-2xl font-bold mb-4 text-gray-800">
             Sector Distribution
@@ -128,7 +122,6 @@ const Charts = () => {
           </ul>
         </div>
         <div className="w-3/4 h-full">
-          {/* Ensure chart fills the available height */}
           <Pie data={sectorData} options={sectorOptions} className="h-full" />
         </div>
       </div>

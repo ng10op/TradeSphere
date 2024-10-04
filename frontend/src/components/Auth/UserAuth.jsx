@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "./AuthContext";
 import "./UserAuth.css";
 
 const UserAuth = () => {
-  const navigate = useNavigate(); // Hook for programmatic navigation
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
+  const navigate = useNavigate();
+  const { signup, login } = useAuth();
   const [isSignUp, setIsSignUp] = useState(false);
   const [emailL, setEmailL] = useState("");
   const [passwordL, setPasswordL] = useState("");
@@ -16,6 +13,10 @@ const UserAuth = () => {
   const [emailS, setEmailS] = useState("");
   const [passwordS, setPasswordS] = useState("");
   const [cnfmPasswordS, setCnfmPasswordS] = useState("");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSignUpClick = () => {
     setIsSignUp(true);
@@ -45,20 +46,10 @@ const UserAuth = () => {
       return;
     }
 
-    const response = await fetch("http://localhost:8000/api/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: emailL, password: passwordL }),
-    });
-    const json = await response.json();
-    if (!response.ok) {
-      console.log(json.message);
-      alert("Invalid login credentials");
-      return;
+    const data = await login({ email: emailL, password: passwordL });
+    if (data) {
+      navigate("/dashboard");
     }
-    console.log(json.user);
-    localStorage.setItem("user", JSON.stringify(json.user));
-    navigate("/dashboard"); // Redirect on successful login
   };
 
   const handleSignUp = async (e) => {
@@ -80,23 +71,14 @@ const UserAuth = () => {
       return;
     }
 
-    const response = await fetch("http://localhost:8000/api/auth/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: name,
-        email: emailS,
-        password: passwordS,
-      }),
+    const data = await signup({
+      name: name,
+      email: emailS,
+      password: passwordS,
     });
-    const json = await response.json();
-    if (!response.ok) {
-      console.log(json.message);
-      alert("Sign up failed.");
-      return;
+    if (data) {
+      navigate("/dashboard");
     }
-    console.log(json.user);
-    navigate("/dashboard"); // Redirect on successful sign-up
   };
 
   return (
@@ -125,7 +107,6 @@ const UserAuth = () => {
                 onChange={(e) => setEmailS(e.target.value)}
                 className="Input"
                 type="email"
-                // id="email"
                 placeholder="Email"
               />
               <input
@@ -152,7 +133,6 @@ const UserAuth = () => {
                 onChange={(e) => setEmailL(e.target.value)}
                 className="Input"
                 type="email"
-                // id="email"
                 placeholder="Email"
               />
               <input

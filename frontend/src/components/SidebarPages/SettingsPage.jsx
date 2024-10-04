@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Sidebar from "../Sidebar"; // Adjust the path as necessary
-import Toggle from "../Buttons/Toggle"; // Adjust the path as necessary
+import Sidebar from "../Sidebar";
+import Toggle from "../Buttons/Toggle";
 
 const SettingsPage = () => {
   useEffect(() => {
@@ -28,7 +28,6 @@ const SettingsPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission logic here
   };
 
   return (
@@ -37,7 +36,6 @@ const SettingsPage = () => {
       <main className="flex-1 p-6 ml-64">
         <section className="py-10 sm:py-16 lg:py-24">
           <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-            {/* Settings Header */}
             <div className="text-center">
               <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
                 Settings
@@ -47,7 +45,6 @@ const SettingsPage = () => {
               </p>
             </div>
 
-            {/* Update Password */}
             <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
               <h3 className="text-2xl font-semibold text-black">
                 Update Password
@@ -111,7 +108,6 @@ const SettingsPage = () => {
               </form>
             </div>
 
-            {/* Notification Settings */}
             <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
               <h3 className="text-2xl font-semibold text-black">
                 Notification Settings

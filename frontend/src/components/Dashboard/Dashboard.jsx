@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./Navbar"; // Importing Navbar
-import Sidebar from "../Sidebar"; // Importing Sidebar
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+import Sidebar from "../Sidebar";
 import Charts from "./Chart";
 import Papa from "papaparse";
-
-import { Link } from "react-router-dom"; // Import Link for navigation
 
 function Dashboard() {
   const [stockData, setStockData] = useState([]);
@@ -14,7 +13,6 @@ function Dashboard() {
   }, []);
 
   useEffect(() => {
-    // Fetch the CSV file and parse it using PapaParse
     Papa.parse("/stockDataET.csv", {
       download: true,
       header: true,
@@ -27,12 +25,10 @@ function Dashboard() {
   const mostBoughtStocks = [
     {
       name: "Reliance Industries Ltd.",
-      ltp: "2,995.90",
       logo: "/images/Industries/Reliance_Industries_Logo.png",
     },
     {
       name: "Tata Consultancy Services",
-      ltp: "3,200.10",
       logo: "/images/Industries/TCS.png",
     },
   ];
@@ -57,7 +53,6 @@ function Dashboard() {
         <Navbar />
         <div className="container mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-4 mt-4">
-            {/* Sample data cards */}
             {[
               {
                 title: "Total Stocks",
@@ -136,9 +131,7 @@ function Dashboard() {
             ))}
           </div>
 
-          {/* Most Bought Stocks Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
-            {/* Most Bought on TradeSphere Section */}
             <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow duration-200  ">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-bold">
@@ -158,7 +151,7 @@ function Dashboard() {
                   className="flex items-center justify-between mb-2 p-4 border rounded-lg shadow-md"
                 >
                   <img
-                    src={stock.logo} // Assuming logo paths are provided in mostBoughtStocks array
+                    src={stock.logo}
                     alt={`${stock.name} Logo`}
                     className="w-16 h-12"
                   />
@@ -166,18 +159,16 @@ function Dashboard() {
                     <span className="text-gray-800 font-semibold">
                       {stock.name}
                     </span>
-                    <span className="text-gray-600">{stock.ltp}</span>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Stocks in News Section */}
             <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-bold">Stocks in News</h2>
                 <Link
-                  to="/stocks"
+                  to="https://economictimes.indiatimes.com/"
                   className="text-blue-500 hover:text-blue-700 font-semibold flex items-center"
                 >
                   <i className="fas fa-newspaper mr-2"></i>
@@ -190,7 +181,7 @@ function Dashboard() {
                   className="flex items-center justify-between mb-2 p-4 border rounded-lg shadow-md"
                 >
                   <img
-                    src={newsItem.logo} // Assuming logo paths are provided in stocksInNews array
+                    src={newsItem.logo}
                     alt={`${newsItem.name} Logo`}
                     className="w-8 h-8"
                   />
@@ -207,7 +198,6 @@ function Dashboard() {
 
           <Charts />
 
-          {/* Stock Market Data Table */}
           <div className="bg-white shadow-md rounded-lg p-6 mt-4 hover:shadow-xl transition-shadow duration-200">
             <h2 className="text-2xl font-bold mb-6 text-gray-800">
               Stock Market Data
@@ -252,7 +242,6 @@ function Dashboard() {
               </tbody>
             </table>
 
-            {/* View All Link */}
             <div className="flex justify-end mt-4 mr-4">
               <Link
                 to="/stocks"

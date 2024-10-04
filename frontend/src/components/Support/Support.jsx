@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Sidebar from "../Sidebar"; // Adjust the path as necessary
-import faqData from "./data.json"; // Adjust the path as necessary
+import Sidebar from "../Sidebar";
+import faqData from "./data.json";
 
 const Support = () => {
   useEffect(() => {
@@ -25,13 +25,12 @@ const Support = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log("Form submitted:", formData);
   };
 
   return (
     <div className="flex">
-      <Sidebar /> {/* Use your existing sidebar component */}
+      <Sidebar />
       <main className="flex-1 p-6 ml-64">
         <section className="py-10 sm:py-16 lg:py-24">
           <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -85,8 +84,7 @@ const Support = () => {
               ))}
             </div>
 
-            {/* Contact Section */}
-            <div className="mt-12 text-center bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
+            <div className="mt-12 text-center bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
               <h3 className="text-3xl font-bold text-black mb-4">
                 Didn't find the answer you are looking for?
               </h3>
@@ -127,7 +125,7 @@ const Support = () => {
                     placeholder="Your Message"
                     required
                     rows="4"
-                    style={{ resize: "none" }} // Prevent resizing
+                    style={{ resize: "none" }}
                     className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
                   />
                 </div>

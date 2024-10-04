@@ -57,7 +57,8 @@ const login = async (req, res) => {
       return res.status(401).json({ error: "Invalid password" });
     }
 
-    user.lastLogin = new Date();
+    user.prevLogin = user.currLogin || null;
+    user.currLogin = new Date();
     await user.save();
 
     generateTokenandSetCookie(user._id, res);

@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useAuth } from "../Auth/AuthContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showContacts, setShowContacts] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
-  const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    // Retrieve user data from local storage
-    const userData = localStorage.getItem("user");
-    if (userData) {
-      setUser(JSON.parse(userData));
-    }
-  }, []);
+  const { user } = useAuth();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -69,24 +64,24 @@ const Navbar = () => {
                 </div>
                 <hr />
                 <div className="py-2">
-                  <a
-                    href="/settings"
+                  <Link
+                    to="/settings"
                     className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
                   >
                     <i className="fas fa-cog mr-2"></i> Settings
-                  </a>
-                  <a
-                    href="/profile"
+                  </Link>
+                  <Link
+                    to="/profile"
                     className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
                   >
                     <i className="fas fa-user mr-2"></i> Profile
-                  </a>
-                  <a
-                    href="/logout"
+                  </Link>
+                  <Link
+                    to="/logout"
                     className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
                   >
                     <i className="fas fa-sign-out-alt mr-2"></i> Sign Out
-                  </a>
+                  </Link>
                 </div>
               </div>
             )}
