@@ -1,79 +1,95 @@
 import React, { useEffect } from "react";
-import { Link, useParams } from "react-router-dom"; // Import Link and useParams
+import { useParams, useLocation, useNavigate } from "react-router-dom"; // Import useLocation and useNavigate
 import anychart from "anychart";
 import "anychart/dist/css/anychart-ui.min.css"; // Import AnyChart CSS
+import Loader from "../Loader/Loader"; // Import your Loader component
 
 const IndividualStock = () => {
-  const { id } = useParams(); // Retrieve the 'name' parameter from the URL
+  const { id } = useParams(); // Retrieve the 'id' parameter from the URL
+  const name = id.replace(/-/g, " ");
+  const location = useLocation(); // Access location object
+  const { stockData } = location.state || {}; // Get stockData from state
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleNavigateToAnalysis = () => {
+    navigate(`/stock-analysis/${id}`, { state: { stockData } });
+  };
 
   useEffect(() => {
-    // Get the chart container element
     const container = document.getElementById("chartContainer");
 
-    if (container) {
+    if (container && stockData) {
       // Create chart instance
       const chart = anychart.stock();
       chart.container(container);
 
-      // Load and initialize chart data
-      anychart.data.loadCsvFile("/RELIANCE.csv", (data) => {
-        // Use dynamic stock name from URL
-        // Create data table on loaded data
-        const dataTable = anychart.data.table();
-        dataTable.addData(data);
+      // Create data table on loaded data
+      const dataTable = anychart.data.table("x");
 
-        // Map loaded data for the candlestick series
-        const mapping = dataTable.mapAs({
-          open: 1,
-          high: 2,
-          low: 3,
-          close: 4,
-        });
+      // Convert the data to the format expected by AnyChart
+      const formattedData = stockData.map((item) => ({
+        x: item.Date, // Use Date as the x value
+        open: item.Open,
+        high: item.High,
+        low: item.Low,
+        close: item.Close,
+      }));
 
-        // Create the first plot on the chart
-        const plot = chart.plot(0);
+      dataTable.addData(formattedData); // Add the formatted data
 
-        // Set grid settings
-        plot.yGrid(true).xGrid(true).yMinorGrid(true).xMinorGrid(true);
-
-        // Create candlestick series
-        const series = plot.candlestick(mapping).name(id.toUpperCase());
-        series.legendItem().iconType("rising-falling");
-
-        // Create scroller series with mapped data
-        chart.scroller().candlestick(mapping);
-
-        // Create and initialize range picker
-        const rangePicker = anychart.ui.rangePicker();
-        rangePicker.render(chart);
-
-        // Create and initialize range selector
-        const rangeSelector = anychart.ui.rangeSelector();
-        rangeSelector.render(chart);
-
-        // Set chart title
-        chart.title(`${id.toUpperCase()} Stock Chart`);
-
-        // Draw chart
-        chart.draw();
+      // Map loaded data for the candlestick series
+      const mapping = dataTable.mapAs({
+        open: "open",
+        high: "high",
+        low: "low",
+        close: "close",
       });
+
+      // Create the first plot on the chart
+      const plot = chart.plot(0);
+      plot.yGrid(true).xGrid(true).yMinorGrid(true).xMinorGrid(true);
+
+      // Create candlestick series
+      const series = plot.candlestick(mapping).name(name.toUpperCase());
+      series.legendItem().iconType("rising-falling");
+
+      // Create scroller series with mapped data
+      chart.scroller().candlestick(mapping);
+
+      // Create and initialize range picker
+      const rangePicker = anychart.ui.rangePicker();
+      rangePicker.render(chart);
+
+      // Create and initialize range selector
+      const rangeSelector = anychart.ui.rangeSelector();
+      rangeSelector.render(chart);
+
+      // Set chart title
+      chart.title(`${name.toUpperCase()} Stock Chart`);
+
+      // Draw chart
+      chart.draw();
 
       // Cleanup function
       return () => {
-        // Remove chart container's contents
         if (container) {
-          container.innerHTML = "";
+          container.innerHTML = ""; // Clear chart container on unmount
         }
       };
     }
-  }, [name]);
+  }, [id, stockData]); // Add stockData to dependencies
+
+  // Check if stockData is available, otherwise show loader
+  if (!stockData) {
+    return <Loader />; // Show the loader while fetching data
+  }
 
   return (
     <div style={{ padding: "20px" }}>
       <h1>Stock Analysis Dashboard</h1>
       <p>
         This dashboard displays stock charts for various companies. The chart
-        below shows data for {id.toUpperCase()}.
+        below shows data for {name.toUpperCase()}.
       </p>
       <div
         id="chartContainer"
@@ -88,12 +104,18 @@ const IndividualStock = () => {
       <footer style={{ marginTop: "20px", textAlign: "center" }}>
         <p>Additional content here, such as filters or other information.</p>
         {/* Link to dynamic stock analysis */}
-        <Link
-          to={`/stock-analysis/${id}`}
-          style={{ textDecoration: "none", color: "#007bff" }}
+        <button
+          onClick={handleNavigateToAnalysis}
+          style={{
+            textDecoration: "none",
+            color: "#007bff",
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+          }}
         >
-          Go to {id.toUpperCase()} Analysis
-        </Link>
+          Go to {name.toUpperCase()} Analysis
+        </button>
       </footer>
     </div>
   );

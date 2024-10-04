@@ -125,7 +125,7 @@ const UserAuth = () => {
                 onChange={(e) => setEmailS(e.target.value)}
                 className="Input"
                 type="email"
-                id="email"
+                // id="email"
                 placeholder="Email"
               />
               <input
@@ -152,7 +152,7 @@ const UserAuth = () => {
                 onChange={(e) => setEmailL(e.target.value)}
                 className="Input"
                 type="email"
-                id="email"
+                // id="email"
                 placeholder="Email"
               />
               <input

@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"; // Import Link and useParams
+import { useParams, useLocation } from "react-router-dom"; // Import Link and useParams
 import anychart from "anychart";
 import "anychart/dist/css/anychart-ui.min.css";
 import Toggle from "../Buttons/Toggle"; // Import the Toggle component
 
 const StockAnalysis = () => {
   const { id } = useParams();
+  const name = id.replace(/-/g, " ");
+  const location = useLocation(); // Access location object
+  const { stockData } = location.state || {}; // Get stockData from state
 
   const [chart, setChart] = useState(null);
   const [mapping, setMapping] = useState(null);
@@ -25,48 +28,58 @@ const StockAnalysis = () => {
   useEffect(() => {
     const chartContainer = document.getElementById("chartContainer");
 
-    if (chartContainer) {
+    if (chartContainer && stockData) {
       const stockChart = anychart.stock();
       stockChart.container(chartContainer);
       setChart(stockChart);
 
-      anychart.data.loadCsvFile("/RELIANCE.csv", (data) => {
-        const dataTable = anychart.data.table();
-        dataTable.addData(data);
-        const map = dataTable.mapAs({
-          open: 1,
-          high: 2,
-          low: 3,
-          close: 4,
-          volume: 5,
-        });
-        setMapping(map);
+      const dataTable = anychart.data.table("x");
+      // Prepare data for AnyChart from stockData
+      const formattedData = stockData.map((item) => ({
+        x: item.Date,
+        open: item.Open,
+        high: item.High,
+        low: item.Low,
+        close: item.Close,
+        volume: item.Volume,
+      }));
+      dataTable.addData(formattedData);
 
-        const mainPlot = stockChart.plot(0);
-        mainPlot.yGrid(true).xGrid(true).yMinorGrid(true).xMinorGrid(true);
-        const candlestickSeries = mainPlot
-          .candlestick(map)
-          .name(id.toUpperCase());
-        candlestickSeries.legendItem().iconType("rising-falling");
-
-        const indicatorPlot = stockChart.plot(1);
-        indicatorPlot.yGrid(true).xGrid(true).yMinorGrid(true).xMinorGrid(true);
-
-        anychart.ui.rangePicker().render(stockChart);
-        anychart.ui.rangeSelector().render(stockChart);
-
-        stockChart.title(`${id.toUpperCase()} Stock Chart`);
-
-        stockChart.draw();
-
-        updateIndicators(indicators);
+      const map = dataTable.mapAs({
+        open: "open",
+        high: "high",
+        low: "low",
+        close: "close",
+        volume: "volume",
       });
+      setMapping(map);
 
-      return () => {
-        chartContainer.innerHTML = "";
-      };
+      const mainPlot = stockChart.plot(0);
+      mainPlot.yGrid(true).xGrid(true).yMinorGrid(true).xMinorGrid(true);
+      const candlestickSeries = mainPlot
+        .candlestick(map)
+        .name(name.toUpperCase());
+      candlestickSeries.legendItem().iconType("rising-falling");
+
+      const indicatorPlot = stockChart.plot(1);
+      indicatorPlot.yGrid(true).xGrid(true).yMinorGrid(true).xMinorGrid(true);
+
+      anychart.ui.rangePicker().render(stockChart);
+      anychart.ui.rangeSelector().render(stockChart);
+
+      stockChart.title(`${name.toUpperCase()} Stock Chart`);
+
+      stockChart.draw();
+
+      updateIndicators(indicators);
     }
-  }, []);
+
+    return () => {
+      if (chartContainer) {
+        chartContainer.innerHTML = "";
+      }
+    };
+  }, [stockData]);
 
   const toggleIndicator = (indicator) => {
     setIndicators((prevIndicators) => {
@@ -88,7 +101,7 @@ const StockAnalysis = () => {
 
       const candlestickSeries = mainPlot
         .candlestick(mapping)
-        .name(id.toUpperCase());
+        .name(name.toUpperCase());
       candlestickSeries.legendItem().iconType("rising-falling");
 
       if (currentIndicators.ema) {
@@ -164,7 +177,7 @@ const StockAnalysis = () => {
       <h1 className="text-2xl font-bold mb-4">Stock Analysis Dashboard</h1>
       <p className="text-gray-600 mb-6">
         This dashboard displays stock charts for various companies. The chart
-        below shows data for {id}
+        below shows data for {name}
       </p>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
         <Toggle
