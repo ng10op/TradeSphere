@@ -4,6 +4,7 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [token, setToken] = useState(null);
 
   const signup = async (userData) => {
     try {
@@ -25,6 +26,7 @@ export const AuthProvider = ({ children }) => {
 
       const data = await response.json();
       setUser(data.user);
+      setToken(data.token);
       return data;
     } catch (error) {
       console.error("Error signing up:", error);
@@ -51,6 +53,7 @@ export const AuthProvider = ({ children }) => {
 
       const data = await response.json();
       setUser(data.user);
+      setToken(data.token);
       return data;
     } catch (error) {
       console.error("Error logging in:", error);
@@ -66,6 +69,7 @@ export const AuthProvider = ({ children }) => {
         },
       });
       setUser(null);
+      setToken(null);
       alert("Logged Out Successfully!");
     } catch (error) {
       console.error("Error logging out:", error);
@@ -101,7 +105,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ user, signup, login, logout, changePassword }}
+      value={{ user, token, signup, login, logout, changePassword }}
     >
       {children}
     </AuthContext.Provider>

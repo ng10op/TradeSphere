@@ -141,7 +141,7 @@ function Dashboard() {
                   to="/stocks"
                   className="text-blue-500 hover:text-blue-700 font-semibold flex items-center"
                 >
-                  <i class="fa-solid fa-arrow-trend-up mr-2"></i>
+                  <i className="fa-solid fa-arrow-trend-up mr-2"></i>
                   Top Stocks
                 </Link>
               </div>

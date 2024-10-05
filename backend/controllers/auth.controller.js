@@ -23,10 +23,11 @@ const signup = async (req, res) => {
 
     if (newUser) {
       await newUser.save();
-      generateTokenandSetCookie(newUser._id, res);
+      const token = generateTokenandSetCookie(newUser._id, res);
       const { password: pass, ...rest } = newUser._doc;
       return res.status(201).json({
         user: rest,
+        token: token,
       });
     } else {
       res.status(400).json({ error: "Invalid user data" });
@@ -61,10 +62,11 @@ const login = async (req, res) => {
     user.currLogin = new Date();
     await user.save();
 
-    generateTokenandSetCookie(user._id, res);
+    const token = generateTokenandSetCookie(user._id, res);
     const { password: pass, ...rest } = user._doc;
     return res.status(200).json({
       user: rest,
+      token: token,
     });
   } catch (error) {
     console.log("Error in signup controller", error.message);

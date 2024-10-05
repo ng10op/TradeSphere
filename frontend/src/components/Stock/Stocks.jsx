@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import Papa from "papaparse";
 import Sidebar from "../Sidebar"; // Assuming you have a Sidebar component
+import { useAuth } from "../Auth/AuthContext";
 
 const Stocks = () => {
+  const { token } = useAuth();
   const [stockData, setStockData] = useState([]);
   const [visibleRows, setVisibleRows] = useState(20); // Initially show 20 rows
   const [randomStocks, setRandomStocks] = useState([]);
@@ -59,6 +61,7 @@ const Stocks = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({ companyName }), // Send the company name in the request body
       });

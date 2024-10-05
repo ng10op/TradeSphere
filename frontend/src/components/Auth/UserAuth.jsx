@@ -48,7 +48,6 @@ const UserAuth = () => {
 
     const data = await login({ email: emailL, password: passwordL });
     if (data) {
-      console.log(data);
       navigate("/dashboard");
     }
   };
