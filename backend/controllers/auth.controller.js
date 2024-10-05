@@ -82,4 +82,34 @@ const logout = async (req, res) => {
   }
 };
 
-module.exports = { signup, login, logout };
+const changePassword = async (req, res) => {
+  try {
+    const { email, oldPassword, newPassword } = req.body;
+    if (!email || !oldPassword || !newPassword) {
+      return res.status(400).json({
+        error: "Email, Current Password, and New Password are required",
+      });
+    }
+
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ error: "User not found!" });
+    }
+
+    const isMatch = await bcrypt.compare(oldPassword, user.password);
+    if (!isMatch) {
+      return res.status(401).json({ error: "Incorrect Current Password!" });
+    }
+
+    const hashedNewPassword = await bcrypt.hash(newPassword, 10);
+    user.password = hashedNewPassword;
+    await user.save();
+
+    return res.status(200).json({ message: "Password updated successfully!" });
+  } catch (error) {
+    console.log("Error in changePassword controller", error.message);
+    return res.status(500).json({ error: "Internal Server error" });
+  }
+};
+
+module.exports = { signup, login, logout, changePassword };

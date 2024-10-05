@@ -72,8 +72,37 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const changePassword = async (userData) => {
+    try {
+      const response = await fetch(
+        "http://localhost:8000/api/auth/changePass",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userData),
+        }
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        alert(errorData.error || "Something went wrong with the server.");
+        throw new Error(
+          errorData.error || "Something went wrong with the server."
+        );
+      }
+
+      alert("Password changed successfully!");
+    } catch (error) {
+      console.error("Error changing password:", error);
+    }
+  };
+
   return (
-    <AuthContext.Provider value={{ user, signup, login, logout }}>
+    <AuthContext.Provider
+      value={{ user, signup, login, logout, changePassword }}
+    >
       {children}
     </AuthContext.Provider>
   );

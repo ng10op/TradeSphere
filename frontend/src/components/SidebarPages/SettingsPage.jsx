@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useAuth } from "../Auth/AuthContext";
 import Sidebar from "../Sidebar";
 import Toggle from "../Buttons/Toggle";
 
 const SettingsPage = () => {
+  const { user, changePassword } = useAuth();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -26,8 +29,34 @@ const SettingsPage = () => {
     setSmsNotifications(!smsNotifications);
   };
 
-  const handleSubmit = (event) => {
+  const validatePassword = (password) => {
+    return password.length >= 6;
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    if (!validatePassword(newPassword)) {
+      alert("Password must be at least 6 characters long.");
+      return;
+    }
+
+    if (newPassword !== confirmPassword) {
+      alert("New password and confirmation do not match");
+      return;
+    }
+
+    try {
+      await changePassword({
+        email: user.email,
+        oldPassword: currentPassword,
+        newPassword: newPassword,
+      });
+      setCurrentPassword("");
+      setNewPassword("");
+      setConfirmPassword("");
+    } catch (error) {
+      console.error("Failed to change password", error);
+    }
   };
 
   return (
