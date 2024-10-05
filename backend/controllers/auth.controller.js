@@ -22,6 +22,7 @@ const signup = async (req, res) => {
     });
 
     if (newUser) {
+      newUser.currLogin = new Date();
       await newUser.save();
       const token = generateTokenandSetCookie(newUser._id, res);
       const { password: pass, ...rest } = newUser._doc;

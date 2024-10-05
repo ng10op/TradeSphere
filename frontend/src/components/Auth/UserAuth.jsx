@@ -48,6 +48,7 @@ const UserAuth = () => {
 
     const data = await login({ email: emailL, password: passwordL });
     if (data) {
+      alert("Logged in Successfully");
       navigate("/dashboard");
     }
   };
@@ -77,6 +78,7 @@ const UserAuth = () => {
       password: passwordS,
     });
     if (data) {
+      alert("Signed in successfully");
       navigate("/dashboard");
     }
   };

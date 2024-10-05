@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useLocation } from "react-router-dom"; // Import Link and useParams
+import { useParams, useLocation } from "react-router-dom"; // Import useNavigate
 import anychart from "anychart";
 import "anychart/dist/css/anychart-ui.min.css";
 import Toggle from "../Buttons/Toggle"; // Import the Toggle component
@@ -24,6 +24,10 @@ const StockAnalysis = () => {
     obv: false,
     stochastic: false,
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const chartContainer = document.getElementById("chartContainer");
@@ -174,11 +178,24 @@ const StockAnalysis = () => {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1 className="text-2xl font-bold mb-4">Stock Analysis Dashboard</h1>
+      {/* Navigation Bar */}
+      <div className="flex items-center mb-4">
+        <button
+          className="flex items-center text-gray-600 hover:text-gray-800"
+          onClick={() => history.back()} // Navigate back to /stocks/id
+        >
+          <i className="fas fa-arrow-left mr-2"></i>{" "}
+          {/* Font Awesome back arrow */}
+          Back
+        </button>
+        <h1 className="text-2xl font-bold ml-4">Stock Analysis Dashboard</h1>
+      </div>
+
       <p className="text-gray-600 mb-6">
         This dashboard displays stock charts for various companies. The chart
         below shows data for {name}
       </p>
+
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
         <Toggle
           label="Add EMA"
@@ -231,6 +248,7 @@ const StockAnalysis = () => {
           onChange={() => toggleIndicator("stochastic")}
         />
       </div>
+
       <div
         id="chartContainer"
         className="w-full h-[1000px] my-8 bg-gray-100 border border-gray-300"

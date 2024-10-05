@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import Papa from "papaparse";
-import Sidebar from "../Sidebar"; // Assuming you have a Sidebar component
+import Sidebar from "../Sidebar";
 import { useAuth } from "../Auth/AuthContext";
+import Loader from "../Loader/Loader";
 
 const Stocks = () => {
   const { token } = useAuth();
   const [stockData, setStockData] = useState([]);
-  const [visibleRows, setVisibleRows] = useState(20); // Initially show 20 rows
+  const [visibleRows, setVisibleRows] = useState(20);
   const [randomStocks, setRandomStocks] = useState([]);
-  const [searchQuery, setSearchQuery] = useState(""); // State for the search query
-  const navigate = useNavigate(); // Initialize navigate
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
-    // Fetch the CSV file and parse it using PapaParse
     Papa.parse("/stockDataET.csv", {
       download: true,
       header: true,
@@ -44,18 +45,17 @@ const Stocks = () => {
   };
 
   const loadMoreRows = () => {
-    setVisibleRows((prev) => prev + 20); // Load 20 more rows
+    setVisibleRows((prev) => prev + 20);
   };
 
-  // Filtered stock data based on search query
   const filteredStockData = stockData.filter(
     (stock) =>
       stock.Company &&
       stock.Company.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Function to handle company name click
   const handleCompanyClick = async (companyName) => {
+    setIsLoading(true); // Set loading state to true
     try {
       const response = await fetch("http://localhost:8000/api/stock/history", {
         method: "POST",
@@ -63,35 +63,34 @@ const Stocks = () => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ companyName }), // Send the company name in the request body
+        body: JSON.stringify({ companyName }),
       });
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
 
-      const data = await response.json(); // Parse the JSON response
-      // console.log(data); // Log the returned data
+      const data = await response.json();
 
-      // Optionally, navigate to a new page with the company name
       const formattedCompanyName = companyName.replace(/\s+/g, "-");
-
       navigate(`/stock/${formattedCompanyName}`, {
         state: { stockData: data },
       });
     } catch (error) {
       console.error("Error fetching stock data:", error);
+    } finally {
+      setIsLoading(false); // Reset loading state
     }
   };
 
+  if (isLoading) {
+    return <Loader />; // Show loader if loading
+  }
+
   return (
     <div className="flex">
-      {/* Sidebar */}
       <Sidebar />
-
-      {/* Main content */}
       <div className="flex-1 p-6 ml-64">
-        {/* Marquee for random stocks */}
         <div className="overflow-hidden whitespace-nowrap border-b border-gray-300">
           <marquee
             className="py-2 text-lg"
@@ -99,7 +98,6 @@ const Stocks = () => {
             behavior="scroll"
             direction="left"
           >
-            {/* Duplicate the content for a seamless effect */}
             <span className="flex">
               {randomStocks.map((stock, index) => (
                 <span key={index} className="mx-4">
@@ -117,7 +115,6 @@ const Stocks = () => {
                   )
                 </span>
               ))}
-              {/* Duplicating the same content for seamless scrolling */}
               {randomStocks.map((stock, index) => (
                 <span key={`dup-${index}`} className="mx-4">
                   {stock.Name || "N/A"} {stock.LTP || "N/A"} (
@@ -140,8 +137,6 @@ const Stocks = () => {
 
         <div className="flex items-center justify-between mb-4 mt-4">
           <h1 className="text-2xl font-bold">All Stocks Listed on NSE & BSE</h1>
-
-          {/* Search bar container */}
           <div className="relative w-full max-w-[600px]">
             <input
               type="search"
@@ -154,7 +149,6 @@ const Stocks = () => {
               <i className="fas fa-search w-5 h-5 text-gray-400"></i>
             </div>
           </div>
-
           <div className="flex justify-center mr-8">
             <button className="bg-[#4f46e5] text-white px-4 py-2 rounded-lg hover:bg-[#3730a3] transform hover:scale-105 transition duration-200">
               Update Data
@@ -162,7 +156,6 @@ const Stocks = () => {
           </div>
         </div>
 
-        {/* Scrollable div for the table */}
         <div className="overflow-auto max-h-[720px] max-w-[1380px] border rounded-lg">
           <div className="min-w-full">
             <table className="min-w-full table-auto whitespace-nowrap">
@@ -185,7 +178,7 @@ const Stocks = () => {
                     >
                       <td
                         className="py-4 px-6 border cursor-pointer"
-                        onClick={() => handleCompanyClick(data.Company)} // Add click handler
+                        onClick={() => handleCompanyClick(data.Company)}
                       >
                         {data.Company || "N/A"}
                       </td>
@@ -223,8 +216,6 @@ const Stocks = () => {
             </table>
           </div>
         </div>
-
-        {/* Display total and visible stocks */}
         <div className="flex justify-between mt-4">
           <span className="text-lg ml-4 font-bold">
             Showing {Math.min(visibleRows, filteredStockData.length)} of{" "}

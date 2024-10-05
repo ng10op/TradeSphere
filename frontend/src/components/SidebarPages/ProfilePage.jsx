@@ -23,7 +23,9 @@ const ProfilePage = () => {
   };
 
   const formattedCreatedAt = user?.createdAt ? formatDate(user.createdAt) : "";
-  const formattedLastLogin = user?.prevLogin ? formatDate(user.prevLogin) : "";
+  const formattedLastLogin = user?.prevLogin
+    ? formatDate(user.prevLogin)
+    : formatDate(user.currLogin);
 
   return (
     <div className="flex">
