@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
-import Sidebar from "../Sidebar";
+import Navbar from "../NavBar/Navbar";
+import Sidebar from "../SideBar/Sidebar";
 import Charts from "./Chart";
 import Papa from "papaparse";
 
@@ -132,7 +132,7 @@ function Dashboard() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
-            <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow duration-200  ">
+            <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-bold">
                   Most Bought on TradeSphere

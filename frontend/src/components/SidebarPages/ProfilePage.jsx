@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import Sidebar from "../Sidebar";
-import { useAuth } from "../Auth/AuthContext";
+import Sidebar from "../SideBar/Sidebar";
+import { useAuth } from "../Context/AuthContext";
 
 const ProfilePage = () => {
   const { user } = useAuth();

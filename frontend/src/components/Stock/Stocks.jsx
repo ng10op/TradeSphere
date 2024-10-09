@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Papa from "papaparse";
-import Sidebar from "../Sidebar";
-import { useAuth } from "../Auth/AuthContext";
+import Sidebar from "../SideBar/Sidebar";
+import { useAuth } from "../Context/AuthContext";
 import Loader from "../Loader/Loader";
 
 const Stocks = () => {
@@ -54,7 +54,7 @@ const Stocks = () => {
       stock.Company.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const handleCompanyClick = async (companyName) => {
+  const handleCompanyClick = async (companyName, ltp, change) => {
     setIsLoading(true); // Set loading state to true
     try {
       const response = await fetch("http://localhost:8000/api/stock/history", {
@@ -74,7 +74,7 @@ const Stocks = () => {
 
       const formattedCompanyName = companyName.replace(/\s+/g, "-");
       navigate(`/stock/${formattedCompanyName}`, {
-        state: { stockData: data },
+        state: { stockData: data, companyName, ltp, change },
       });
     } catch (error) {
       console.error("Error fetching stock data:", error);
@@ -178,7 +178,13 @@ const Stocks = () => {
                     >
                       <td
                         className="py-4 px-6 border cursor-pointer"
-                        onClick={() => handleCompanyClick(data.Company)}
+                        onClick={() =>
+                          handleCompanyClick(
+                            data.Company,
+                            data["LTP (₹)"],
+                            data["1D Return %"]
+                          )
+                        }
                       >
                         {data.Company || "N/A"}
                       </td>

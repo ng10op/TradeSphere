@@ -13,7 +13,7 @@ const data = {
   email: "tradeshpere@email.com",
   facebook: "/",
   twitter: "/",
-  github: "https://github.com/ng10op",
+  github: "https://github.com/ng10op/TradeSphere",
 };
 
 const Contact = () => {
@@ -28,7 +28,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, message);
+    alert("Message sent successfully!");
+    clearState();
   };
 
   return (
@@ -60,6 +61,7 @@ const Contact = () => {
                       className="form-control p-3 border border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none"
                       placeholder="Name"
                       required
+                      value={name || ""}
                       onChange={handleChange}
                     />
                   </div>
@@ -71,6 +73,7 @@ const Contact = () => {
                       className="form-control p-3 border border-gray-300 rounded-lg focus:border-gray-600 focus:outline-none"
                       placeholder="Email"
                       required
+                      value={email || ""}
                       onChange={handleChange}
                     />
                   </div>
@@ -83,6 +86,7 @@ const Contact = () => {
                     rows="4"
                     placeholder="Message"
                     required
+                    value={message || ""}
                     onChange={handleChange}
                   ></textarea>
                 </div>
@@ -155,7 +159,7 @@ const Contact = () => {
         <p className="text-gray-600 text-sm">
           &copy; 2024 TradeSphere. All rights reserved. Developed by{" "}
           <a
-            href="https://github.com/ng10op/TradeSphere"
+            href="https://github.com/ng10op"
             className="text-blue-600 hover:underline"
             rel="nofollow"
           >

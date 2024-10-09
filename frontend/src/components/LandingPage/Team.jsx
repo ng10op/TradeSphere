@@ -9,7 +9,7 @@ const data = [
   {
     img: "/Naman_pic.jpg",
     name: "Naman Gosain",
-    job: "Senior Designer",
+    job: "Senior Developer",
   },
   {
     img: "/Naman_pic.jpg",

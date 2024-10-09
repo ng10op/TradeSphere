@@ -11,9 +11,9 @@ import LogoutPage from "./components/SidebarPages/LogoutPage";
 import IndividualStock from "./components/Stock/IndividualStock";
 import StockAnalysis from "./components/Stock/StockAnalysis";
 import Loader from "./components/Loader/Loader";
-import ScrollToTopButton from "./components/ScrollToTopButton";
+import ScrollToTopButton from "./components/Buttons/ScrollToTopButton";
 import PrivateRoute from "./components/Auth/PrivateRoute";
-import { AuthProvider } from "./components/Auth/AuthContext";
+import { AuthProvider } from "./components/Context/AuthContext";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  zoom: 0.9;
+}
+
 /* For WebKit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   width: 8px;

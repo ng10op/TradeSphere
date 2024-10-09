@@ -34,7 +34,7 @@ const Navigation = () => {
 
   return (
     <div className="fixed-nav-padding">
-      <nav className="fixed-nav py-3">
+      <nav className="fixed-nav py-4">
         <div className="container mx-auto flex justify-between items-center">
           <img
             src="/icon.ico"

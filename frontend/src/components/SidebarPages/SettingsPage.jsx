@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useAuth } from "../Auth/AuthContext";
-import Sidebar from "../Sidebar";
+import { useAuth } from "../Context/AuthContext";
+import Sidebar from "../SideBar/Sidebar";
 import Toggle from "../Buttons/Toggle";
 
 const SettingsPage = () => {

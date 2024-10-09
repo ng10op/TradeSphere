@@ -3,13 +3,16 @@ import { useParams, useLocation } from "react-router-dom"; // Import useNavigate
 import anychart from "anychart";
 import "anychart/dist/css/anychart-ui.min.css";
 import Toggle from "../Buttons/Toggle"; // Import the Toggle component
+import Navbar from "../NavBar/Navbar";
+import indicatorData from "./data.json";
 
 const StockAnalysis = () => {
   const { id } = useParams();
   const name = id.replace(/-/g, " ");
   const location = useLocation(); // Access location object
-  const { stockData } = location.state || {}; // Get stockData from state
+  const { stockData } = location.state || {};
 
+  const [activeIndex, setActiveIndex] = useState(null);
   const [chart, setChart] = useState(null);
   const [mapping, setMapping] = useState(null);
   const [indicators, setIndicators] = useState({
@@ -24,6 +27,10 @@ const StockAnalysis = () => {
     obv: false,
     stochastic: false,
   });
+
+  const toggleIndicators = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -60,9 +67,7 @@ const StockAnalysis = () => {
 
       const mainPlot = stockChart.plot(0);
       mainPlot.yGrid(true).xGrid(true).yMinorGrid(true).xMinorGrid(true);
-      const candlestickSeries = mainPlot
-        .candlestick(map)
-        .name(name.toUpperCase());
+      const candlestickSeries = mainPlot.candlestick(map).name("DATA");
       candlestickSeries.legendItem().iconType("rising-falling");
 
       const indicatorPlot = stockChart.plot(1);
@@ -71,7 +76,7 @@ const StockAnalysis = () => {
       anychart.ui.rangePicker().render(stockChart);
       anychart.ui.rangeSelector().render(stockChart);
 
-      stockChart.title(`${name.toUpperCase()} Stock Chart`);
+      stockChart.title(`${name.toUpperCase()} Candlestick Chart`);
 
       stockChart.draw();
 
@@ -177,82 +182,128 @@ const StockAnalysis = () => {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      {/* Navigation Bar */}
-      <div className="flex items-center mb-4">
-        <button
-          className="flex items-center text-gray-600 hover:text-gray-800"
-          onClick={() => history.back()} // Navigate back to /stocks/id
-        >
-          <i className="fas fa-arrow-left mr-2"></i>{" "}
-          {/* Font Awesome back arrow */}
-          Back
-        </button>
-        <h1 className="text-2xl font-bold ml-4">Stock Analysis Dashboard</h1>
+    <div className="bg-gray-100">
+      <Navbar />
+      <div className="flex p-6 mx-4 my-3 shadow-xl bg-white rounded-lg">
+        {/* Toggle Buttons Div */}
+        <div className="w-[15%] p-4">
+          <div className="grid grid-cols-1 gap-4">
+            <Toggle
+              label="EMA"
+              checked={indicators.ema}
+              onChange={() => toggleIndicator("ema")}
+            />
+            <Toggle
+              label="SMA"
+              checked={indicators.sma}
+              onChange={() => toggleIndicator("sma")}
+            />
+            <Toggle
+              label="PSAR"
+              checked={indicators.psar}
+              onChange={() => toggleIndicator("psar")}
+            />
+            <Toggle
+              label="Price Channels"
+              checked={indicators.priceChannels}
+              onChange={() => toggleIndicator("priceChannels")}
+            />
+            <Toggle
+              label="Bollinger Bands"
+              checked={indicators.bbands}
+              onChange={() => toggleIndicator("bbands")}
+            />
+            <Toggle
+              label="MACD"
+              checked={indicators.macd}
+              onChange={() => toggleIndicator("macd")}
+            />
+            <Toggle
+              label="ATR"
+              checked={indicators.atr}
+              onChange={() => toggleIndicator("atr")}
+            />
+            <Toggle
+              label="RSI"
+              checked={indicators.rsi}
+              onChange={() => toggleIndicator("rsi")}
+            />
+            <Toggle
+              label="OBV"
+              checked={indicators.obv}
+              onChange={() => toggleIndicator("obv")}
+            />
+            <Toggle
+              label="Stochastic Oscillator"
+              checked={indicators.stochastic}
+              onChange={() => toggleIndicator("stochastic")}
+            />
+          </div>
+        </div>
+
+        {/* Chart Div */}
+        <div
+          id="chartContainer"
+          className="w-[90%] shadow-md rounded-lg bg-white mb-4 p-4"
+          style={{
+            height: "850px",
+            border: "1px solid #ddd",
+          }}
+        />
       </div>
 
-      <p className="text-gray-600 mb-6">
-        This dashboard displays stock charts for various companies. The chart
-        below shows data for {name}
-      </p>
+      {/* Indicator Description Section */}
+      <div className="w-[95%] mx-auto shadow-lg rounded-lg bg-white mb-4 mt-8 p-6 space-y-6">
+        {/* Heading */}
+        <h2 className="text-4xl font-bold text-black mb-8 text-center">
+          About Indicators
+        </h2>
 
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
-        <Toggle
-          label="Add EMA"
-          checked={indicators.ema}
-          onChange={() => toggleIndicator("ema")}
-        />
-        <Toggle
-          label="Add SMA"
-          checked={indicators.sma}
-          onChange={() => toggleIndicator("sma")}
-        />
-        <Toggle
-          label="Add PSAR"
-          checked={indicators.psar}
-          onChange={() => toggleIndicator("psar")}
-        />
-        <Toggle
-          label="Add Price Channels"
-          checked={indicators.priceChannels}
-          onChange={() => toggleIndicator("priceChannels")}
-        />
-        <Toggle
-          label="Add Bollinger Bands"
-          checked={indicators.bbands}
-          onChange={() => toggleIndicator("bbands")}
-        />
-        <Toggle
-          label="Add MACD"
-          checked={indicators.macd}
-          onChange={() => toggleIndicator("macd")}
-        />
-        <Toggle
-          label="Add Average True Range"
-          checked={indicators.atr}
-          onChange={() => toggleIndicator("atr")}
-        />
-        <Toggle
-          label="Add Relative Strength Index"
-          checked={indicators.rsi}
-          onChange={() => toggleIndicator("rsi")}
-        />
-        <Toggle
-          label="Add On-Balance Volume"
-          checked={indicators.obv}
-          onChange={() => toggleIndicator("obv")}
-        />
-        <Toggle
-          label="Add Stochastic Oscillator"
-          checked={indicators.stochastic}
-          onChange={() => toggleIndicator("stochastic")}
-        />
+        {indicatorData.map((indicator, index) => (
+          <div
+            key={index}
+            className="w-[90%] mx-auto transition-all duration-200 bg-white border border-gray-200 cursor-pointer hover:bg-gray-50 shadow-md hover:shadow-xl transition-shadow duration-200 rounded-lg"
+          >
+            <button
+              type="button"
+              onClick={() => toggleIndicators(index)}
+              className="flex items-center justify-between w-full px-4 py-5 sm:p-6"
+            >
+              <span className="flex text-lg font-semibold text-black text-xl">
+                {indicator.indicator}
+              </span>
+              <svg
+                className={`w-6 h-6 text-gray-400 transition-transform duration-200 ${
+                  activeIndex === index ? "rotate-180" : ""
+                }`}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            {activeIndex === index && (
+              <div className="px-6 pb-6 bg-gray-50 rounded-lg text-lg mx-auto space-y-4">
+                <p className="mb-2 text-gray-700 leading-relaxed">
+                  <strong className="text-gray-900">Description: </strong>
+                  {indicator.description}
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  <strong className="text-gray-900">Use: </strong>
+                  {indicator.use}
+                </p>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
-
-      <div
-        id="chartContainer"
-        className="w-full h-[1000px] my-8 bg-gray-100 border border-gray-300"
-      />
     </div>
   );
 };
