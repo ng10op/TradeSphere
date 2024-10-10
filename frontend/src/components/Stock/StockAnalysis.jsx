@@ -182,7 +182,7 @@ const StockAnalysis = () => {
   };
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-200">
       <Navbar />
       <div className="flex p-6 mx-4 my-3 shadow-xl bg-white rounded-lg">
         {/* Toggle Buttons Div */}
@@ -253,7 +253,7 @@ const StockAnalysis = () => {
       </div>
 
       {/* Indicator Description Section */}
-      <div className="w-[95%] mx-auto shadow-lg rounded-lg bg-white mb-4 mt-8 p-6 space-y-6">
+      <div className="w-[95%] mx-4 shadow-md rounded-lg bg-white mb-4 mt-8 p-6 space-y-6">
         {/* Heading */}
         <h2 className="text-4xl font-bold text-black mb-8 text-center">
           About Indicators

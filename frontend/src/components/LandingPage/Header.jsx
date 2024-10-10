@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header id="header" className="relative overflow-hidden bg-gray-200 mt-3">
+    <header id="header" className="relative overflow-hidden bg-gray-200 mt-4">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('../images/hero_img.jpg')" }}

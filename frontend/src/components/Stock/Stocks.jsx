@@ -54,10 +54,59 @@ const Stocks = () => {
       stock.Company.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  // const handleCompanyClick = async (companyName, ltp, change) => {
+  //   setIsLoading(true); // Set loading state to true
+  //   try {
+  //     const response = await fetch("http://localhost:8000/api/stock/history", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         Authorization: `Bearer ${token}`,
+  //       },
+  //       body: JSON.stringify({ companyName }),
+  //     });
+
+  //     if (!response.ok) {
+  //       throw new Error("Network response was not ok");
+  //     }
+
+  //     const data = await response.json();
+
+  //     const formattedCompanyName = companyName.replace(/\s+/g, "-");
+  //     navigate(`/stock/${formattedCompanyName}`, {
+  //       state: { stockData: data, companyName, ltp, change },
+  //     });
+  //   } catch (error) {
+  //     console.error("Error fetching stock data:", error);
+  //   } finally {
+  //     setIsLoading(false); // Reset loading state
+  //   }
+  // };
+
   const handleCompanyClick = async (companyName, ltp, change) => {
     setIsLoading(true); // Set loading state to true
     try {
-      const response = await fetch("http://localhost:8000/api/stock/history", {
+      // Fetch stock history data
+      const stockHistoryResponse = await fetch(
+        "http://localhost:8000/api/stock/history",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ companyName }),
+        }
+      );
+
+      if (!stockHistoryResponse.ok) {
+        throw new Error("Error fetching stock history");
+      }
+
+      const stockHistoryData = await stockHistoryResponse.json();
+
+      // Fetch page data
+      const pageResponse = await fetch("http://localhost:8000/api/stock/page", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -66,18 +115,27 @@ const Stocks = () => {
         body: JSON.stringify({ companyName }),
       });
 
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
+      if (!pageResponse.ok) {
+        throw new Error("Error fetching page data");
       }
 
-      const data = await response.json();
+      const pageData = await pageResponse.json();
 
+      // Navigate to stock page with both data sets
       const formattedCompanyName = companyName.replace(/\s+/g, "-");
+      console.log(stockData);
+      console.log(pageData);
       navigate(`/stock/${formattedCompanyName}`, {
-        state: { stockData: data, companyName, ltp, change },
+        state: {
+          stockData: stockHistoryData,
+          pageData,
+          companyName,
+          ltp,
+          change,
+        },
       });
     } catch (error) {
-      console.error("Error fetching stock data:", error);
+      console.error("Error fetching stock data or page data:", error);
     } finally {
       setIsLoading(false); // Reset loading state
     }

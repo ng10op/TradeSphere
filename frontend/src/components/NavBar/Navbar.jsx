@@ -14,7 +14,8 @@ const Navbar = () => {
   const { user } = useAuth();
   const { id } = useParams();
   const location = useLocation();
-  const { stockData, companyName, ltp, change } = location.state || {};
+  const { stockData, pageData, companyName, ltp, change } =
+    location.state || {};
   const navigate = useNavigate();
 
   const toggleDropdown = () => {
@@ -29,7 +30,7 @@ const Navbar = () => {
     // Use a variable to hold the stock ID if necessary
     if (isAnalysisPage) {
       navigate(`/stock/${id}`, {
-        state: { stockData, companyName, ltp, change },
+        state: { stockData, pageData, companyName, ltp, change },
       });
     } else {
       navigate("/stocks"); // Go back to the previous page

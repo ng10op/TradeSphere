@@ -4,7 +4,7 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const connectToMongoDB = require("./db/connectToMongoDB");
 const authRoutes = require("./routes/auth.routes");
-const historyRoute = require("./routes/stockHistory.routes");
+const historyRoute = require("./routes/stock.routes");
 
 require("dotenv").config();
 const PORT = process.env.PORT || 5000;

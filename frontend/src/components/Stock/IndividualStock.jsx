@@ -10,12 +10,13 @@ const IndividualStock = () => {
   const { id } = useParams();
   const name = id.replace(/-/g, " ");
   const location = useLocation();
-  const { stockData, companyName, ltp, change } = location.state || {};
+  const { stockData, pageData, companyName, ltp, change } =
+    location.state || {};
   const navigate = useNavigate();
 
   const handleNavigateToAnalysis = () => {
     navigate(`/stock-analysis/${id}`, {
-      state: { stockData, companyName, ltp, change },
+      state: { stockData, pageData, companyName, ltp, change },
     });
   };
 
@@ -90,7 +91,7 @@ const IndividualStock = () => {
   }
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-200">
       <Navbar />
       <StockNavbar companyName={companyName} ltp={ltp} change={change} />
       <div className="p-6 mx-4 my-3 shadow-2xl bg-white rounded-lg">
@@ -121,63 +122,41 @@ const IndividualStock = () => {
       {/* Section 1: Key Indicators */}
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
         <h3 className="text-2xl font-bold mb-2">Key Indicators</h3>
-        <p>Today's low/high: ₹2,763.55 / ₹2,834.70</p>
-        <p>52-week low/high: ₹2,220.30 / ₹3,217.60</p>
-        <p>Circuit range: ₹2,495.74 / ₹3,050.36</p>
-        <p>Market cap: ₹18,76,251 Cr</p>
-        <p>PE ratio (TTM): 26.95</p>
-        <p>Sector PE: 19.94</p>
-        <p>ROE: 10.42%</p>
-        <p>ROCE: 11.87%</p>
-        <p>Basic EPS (TTM): ₹102.90</p>
-        <p>Debt to equity: 0.41</p>
-        <p>Dividend Yield: 0.36%</p>
-      </div>
-
-      {/* Section 2: Returns Calculator */}
-      <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
-        <h3 className="text-2xl font-bold mb-2">Returns Calculator</h3>
-        <p>Investment period: 5 Oct 2023 - 5 Oct 2024</p>
-        <p>Total investment: ₹10,000</p>
-        <p>Profit: + ₹1,983</p>
-        <p>Dividends: + ₹50</p>
-        <p>Total corpus: ₹12,033</p>
-        <p>Absolute returns: 20.33%</p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: pageData.data.section_1.replace(/\n/g, "<br />"),
+          }}
+        />{" "}
       </div>
 
       {/* Section 3: Financials */}
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
         <h3 className="text-2xl font-bold mb-2">Financials</h3>
-        <p>Operating Revenue: ₹9,01,064 Cr (YoY +2.65%)</p>
-        <p>EBITDA: ₹1,78,290 Cr (YoY +15.85%)</p>
-        <p>Profit Before Tax: ₹1,04,340 Cr (YoY +10.97%)</p>
-        <p>Profit After Tax: ₹78,633 Cr (YoY +6.17%)</p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: pageData.data.section_3.replace(/\n/g, "<br />"),
+          }}
+        />{" "}
       </div>
 
       {/* Section 4: Shareholding */}
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
         <h3 className="text-2xl font-bold mb-2">Shareholding</h3>
-        <p>Promoters: 50.33%</p>
-        <p>FII: 21.75%</p>
-        <p>DII: 17.42%</p>
-        <p>Retail & others: 10.5%</p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: pageData.data.section_4.replace(/\n/g, "<br />"),
+          }}
+        />{" "}
       </div>
 
       {/* Section 5: Peer Comparison */}
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
         <h3 className="text-2xl font-bold mb-2">Peer Comparison</h3>
-        <p>
-          Reliance Industries Ltd.: Market cap ₹18,76,217 Cr | PE 26.95 | ROE
-          10.42%
-        </p>
-        <p>
-          Indian Oil Corporation Ltd.: Market cap ₹2,38,649 Cr | PE 5.71 | ROE
-          25.76%
-        </p>
-        <p>
-          Bharat Petroleum Corporation Ltd.: Market cap ₹1,47,509 Cr | PE 5.50 |
-          ROE 39.94%
-        </p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: pageData.data.section_5.replace(/\n/g, "<br />"),
+          }}
+        />{" "}
       </div>
 
       {/* Section 6: About Company */}
@@ -185,23 +164,21 @@ const IndividualStock = () => {
         <h3 className="text-2xl font-bold mb-2">
           About Reliance Industries Ltd.
         </h3>
-        <p>
-          Reliance Industries Ltd. is a private sector enterprise in India and
-          operates in the Refineries sector...
-        </p>
-        <p>
-          The company was established in 1973 with a market cap of ₹18,76,251.3
-          Cr as of 06 Oct 2024.
-        </p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: pageData.data.section_6.replace(/\n/g, "<br />"),
+          }}
+        />{" "}
       </div>
 
       {/* Section 7: News */}
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
         <h3 className="text-2xl font-bold mb-2">News</h3>
-        <p>
-          04 Oct 2024: Share market update: Most active stocks of the day in
-          terms of traded value.
-        </p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: pageData.data.section_7.replace(/\n/g, "<br />"),
+          }}
+        />
       </div>
     </div>
   );
