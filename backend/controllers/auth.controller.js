@@ -1,6 +1,7 @@
 const User = require("../models/user.model");
 const bcrypt = require("bcryptjs");
 const generateTokenandSetCookie = require("../utils/generateTokenandSetCookie.js");
+const defaultStockTableData = require("../data/defaultStockTableData.json");
 
 const signup = async (req, res) => {
   try {
@@ -15,10 +16,19 @@ const signup = async (req, res) => {
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
+    const stocks = defaultStockTableData.map((stock) => ({
+      companyName: stock.Company,
+      ltp: stock["LTP (₹)"],
+      oneDReturn: stock["1D Return %"],
+      marketCap: stock["Market Cap (Cr)"],
+      highLow52W: stock["52W High / Low (₹)"],
+      volume: stock.Volume,
+    }));
     const newUser = new User({
       name,
       email,
       password: hashedPassword,
+      stocks: stocks,
     });
 
     if (newUser) {

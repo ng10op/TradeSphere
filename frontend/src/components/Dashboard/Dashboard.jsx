@@ -1,25 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../NavBar/Navbar";
 import Sidebar from "../SideBar/Sidebar";
 import Charts from "./Chart";
-import Papa from "papaparse";
+import { useAuth } from "../Context/AuthContext";
 
 function Dashboard() {
-  const [stockData, setStockData] = useState([]);
+  const { user } = useAuth();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    Papa.parse("/stockDataET.csv", {
-      download: true,
-      header: true,
-      complete: (result) => {
-        setStockData(result.data);
-      },
-    });
   }, []);
 
   const mostBoughtStocks = [
@@ -213,30 +203,28 @@ function Dashboard() {
                 </tr>
               </thead>
               <tbody>
-                {stockData.slice(0, 10).map((data, index) => (
+                {user.stocks.slice(0, 10).map((data, index) => (
                   <tr
                     key={index}
                     className="hover:bg-gray-100 transition-colors"
                   >
                     <td className="py-4 px-6 border">
-                      {data.Company || "N/A"}
+                      {data.companyName || "N/A"}
                     </td>
-                    <td className="py-4 px-6 border">
-                      {data["LTP (₹)"] || "N/A"}
-                    </td>
+                    <td className="py-4 px-6 border">{data.ltp || "N/A"}</td>
                     <td
                       className={`py-4 px-6 border ${
-                        parseFloat(data["1D Return %"]) > 0
+                        parseFloat(data.oneDReturn) > 0
                           ? "text-green-500"
                           : "text-red-500"
                       }`}
                     >
-                      {data["1D Return %"] || "N/A"}
+                      {data.oneDReturn || "N/A"}
                     </td>
                     <td className="py-4 px-6 border">
-                      {data["Market Cap (Cr)"] || "N/A"}
+                      {data.marketCap || "N/A"}
                     </td>
-                    <td className="py-4 px-6 border">{data.Volume || "N/A"}</td>
+                    <td className="py-4 px-6 border">{data.volume || "N/A"}</td>
                   </tr>
                 ))}
               </tbody>

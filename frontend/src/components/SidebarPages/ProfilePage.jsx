@@ -78,27 +78,42 @@ const ProfilePage = () => {
 
             <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
               <h3 className="text-3xl font-semibold text-black">
-                Contact Support
+                Investment Summary
               </h3>
-              <form className="mt-4">
-                <div className="flex flex-col mb-4 text-lg">
-                  <label className="mb-2 text-gray-700" htmlFor="message">
-                    Message:
-                  </label>
-                  <textarea
-                    id="message"
-                    rows="4"
-                    className="resize-none p-2 border border-gray-300 rounded-lg"
-                    placeholder="Write your message here..."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center w-full px-4 py-2 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition duration-200"
-                >
-                  Send Message
-                </button>
-              </form>
+              <ul className="mt-4">
+                <li className="text-gray-700 text-lg">
+                  <strong>Total Stocks Owned:</strong> 15
+                </li>
+                <li className="text-gray-700 text-lg">
+                  <strong>Portfolio Value:</strong> ₹2,50,000
+                </li>
+                <li className="text-gray-700 text-lg">
+                  <strong>Profit/Loss:</strong> +₹30,000 (12%)
+                </li>
+              </ul>
+            </div>
+
+            <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
+              <h3 className="text-3xl font-semibold text-black">Watchlist</h3>
+              <ul className="mt-4">
+                <li className="text-gray-700 text-lg">TCS</li>
+                <li className="text-gray-700 text-lg">RELIANCE</li>
+                <li className="text-gray-700 text-lg">ITC</li>
+              </ul>
+            </div>
+
+            <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
+              <h3 className="text-3xl font-semibold text-black">
+                Recent Transactions
+              </h3>
+              <ul className="mt-4">
+                <li className="text-gray-700 text-lg">
+                  <strong>Buy:</strong> INFY - 20 shares at ₹1,800
+                </li>
+                <li className="text-gray-700 text-lg">
+                  <strong>Sell:</strong> ADANIENT - 10 shares at ₹2,300
+                </li>
+              </ul>
             </div>
           </div>
         </section>

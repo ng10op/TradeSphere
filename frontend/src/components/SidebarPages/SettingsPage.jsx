@@ -13,6 +13,10 @@ const SettingsPage = () => {
   const [notifications, setNotifications] = useState(true);
   const [emailNotifications, setEmailNotifications] = useState(true);
   const [smsNotifications, setSmsNotifications] = useState(false);
+  const [nse, setNse] = useState(true);
+  const [bse, setBse] = useState(true);
+  const [mf, setMf] = useState(false);
+  const [fno, setFno] = useState(false);
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -27,6 +31,22 @@ const SettingsPage = () => {
 
   const handleSmsNotificationsChange = () => {
     setSmsNotifications(!smsNotifications);
+  };
+
+  const handleNSE = () => {
+    setNse(!nse);
+  };
+
+  const handleBSE = () => {
+    setBse(!bse);
+  };
+
+  const handleMF = () => {
+    setMf(!mf);
+  };
+
+  const handleFNO = () => {
+    setFno(!fno);
   };
 
   const validatePassword = (password) => {
@@ -80,9 +100,9 @@ const SettingsPage = () => {
               </h3>
               <hr className="my-6 border-gray-700" />
               <form className="mt-4" onSubmit={handleSubmit}>
-                <div className="mb-4">
+                <div className="mb-6">
                   <label
-                    className="block mb-2 text-gray-700"
+                    className="block mb-2 text-gray-800 font-medium"
                     htmlFor="current-password"
                   >
                     Current Password
@@ -90,15 +110,15 @@ const SettingsPage = () => {
                   <input
                     id="current-password"
                     type="password"
-                    className="w-full p-2 border border-gray-300 rounded-lg"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Enter your current password"
                     value={currentPassword}
                     onChange={(e) => setCurrentPassword(e.target.value)}
                   />
                 </div>
-                <div className="mb-4">
+                <div className="mb-6">
                   <label
-                    className="block mb-2 text-gray-700"
+                    className="block mb-2 text-gray-800 font-medium"
                     htmlFor="new-password"
                   >
                     New Password
@@ -106,15 +126,15 @@ const SettingsPage = () => {
                   <input
                     id="new-password"
                     type="password"
-                    className="w-full p-2 border border-gray-300 rounded-lg"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Enter your new password"
                     value={newPassword}
                     onChange={(e) => setNewPassword(e.target.value)}
                   />
                 </div>
-                <div className="mb-4">
+                <div className="mb-6">
                   <label
-                    className="block mb-2 text-gray-700"
+                    className="block mb-2 text-gray-800 font-medium"
                     htmlFor="confirm-password"
                   >
                     Confirm New Password
@@ -122,7 +142,7 @@ const SettingsPage = () => {
                   <input
                     id="confirm-password"
                     type="password"
-                    className="w-full p-2 border border-gray-300 rounded-lg"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Confirm your new password"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
@@ -130,9 +150,9 @@ const SettingsPage = () => {
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center w-full px-4 py-2 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition duration-200"
+                  className="w-40 px-4 py-2 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition duration-200"
                 >
-                  Update Password
+                  Update
                 </button>
               </form>
             </div>
@@ -157,6 +177,46 @@ const SettingsPage = () => {
                 checked={smsNotifications}
                 onChange={handleSmsNotificationsChange}
               />
+            </div>
+            <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
+              <h3 className="text-2xl font-semibold text-black">
+                Trading Prefernce
+              </h3>
+              <hr className="my-6 border-gray-700" />
+              <Toggle label="NSE" checked={nse} onChange={handleNSE} />
+              <Toggle label="BSE" checked={bse} onChange={handleBSE} />
+              <Toggle label="Mutual Funds" checked={mf} onChange={handleMF} />
+              <Toggle
+                label="Future and Options"
+                checked={fno}
+                onChange={handleFNO}
+              />
+            </div>
+            <div className="mt-12 bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
+              <h3 className="text-2xl font-semibold text-black">
+                Active Devices
+              </h3>
+              <hr className="my-6 border-gray-700" />
+              <ul className="space-y-4">
+                <li className="flex items-center">
+                  <div className="rounded-full bg-gray-200 p-3 mr-3">
+                    <i className="fas fa-laptop text-xl text-blue-500"></i>
+                  </div>
+                  <span className="text-lg font-medium">Chrome on Windows</span>
+                  <span className="ml-auto text-sm text-green-500">
+                    Active now
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <div className="rounded-full bg-gray-200 p-3 mr-3">
+                    <i className="fas fa-mobile-alt text-xl text-blue-500"></i>
+                  </div>
+                  <span className="text-lg font-medium">iPhone</span>
+                  <span className="ml-auto text-sm text-gray-500">
+                    Last active 2 hours ago
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </section>

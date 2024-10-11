@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Papa from "papaparse";
 import Sidebar from "../SideBar/Sidebar";
 import { useAuth } from "../Context/AuthContext";
 import Loader from "../Loader/Loader";
 
 const Stocks = () => {
-  const { token } = useAuth();
-  const [stockData, setStockData] = useState([]);
+  const { user, token } = useAuth();
   const [visibleRows, setVisibleRows] = useState(20);
-  const [randomStocks, setRandomStocks] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -18,71 +15,20 @@ const Stocks = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  useEffect(() => {
-    Papa.parse("/stockDataET.csv", {
-      download: true,
-      header: true,
-      complete: (result) => {
-        setStockData(result.data);
-        selectRandomStocks(result.data);
-      },
+  const formatDate = (isoDate) => {
+    const date = new Date(isoDate);
+    return date.toLocaleString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
     });
-  }, []);
-
-  const selectRandomStocks = (data) => {
-    const numberOfStocksToSelect = 20;
-    const selectedIndices = new Set();
-
-    while (selectedIndices.size < numberOfStocksToSelect) {
-      const randomIndex = Math.floor(Math.random() * data.length);
-      selectedIndices.add(randomIndex);
-    }
-
-    const selectedStocks = Array.from(selectedIndices).map(
-      (index) => data[index]
-    );
-    setRandomStocks(selectedStocks);
   };
 
-  const loadMoreRows = () => {
-    setVisibleRows((prev) => prev + 20);
-  };
-
-  const filteredStockData = stockData.filter(
-    (stock) =>
-      stock.Company &&
-      stock.Company.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  // const handleCompanyClick = async (companyName, ltp, change) => {
-  //   setIsLoading(true); // Set loading state to true
-  //   try {
-  //     const response = await fetch("http://localhost:8000/api/stock/history", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //       body: JSON.stringify({ companyName }),
-  //     });
-
-  //     if (!response.ok) {
-  //       throw new Error("Network response was not ok");
-  //     }
-
-  //     const data = await response.json();
-
-  //     const formattedCompanyName = companyName.replace(/\s+/g, "-");
-  //     navigate(`/stock/${formattedCompanyName}`, {
-  //       state: { stockData: data, companyName, ltp, change },
-  //     });
-  //   } catch (error) {
-  //     console.error("Error fetching stock data:", error);
-  //   } finally {
-  //     setIsLoading(false); // Reset loading state
-  //   }
-  // };
-
+  // Function to handle company click and navigation
   const handleCompanyClick = async (companyName, ltp, change) => {
     setIsLoading(true); // Set loading state to true
     try {
@@ -123,7 +69,6 @@ const Stocks = () => {
 
       // Navigate to stock page with both data sets
       const formattedCompanyName = companyName.replace(/\s+/g, "-");
-      console.log(stockData);
       console.log(pageData);
       navigate(`/stock/${formattedCompanyName}`, {
         state: {
@@ -145,6 +90,13 @@ const Stocks = () => {
     return <Loader />; // Show loader if loading
   }
 
+  // Filter stock data based on search query
+  const filteredStockData = user.stocks.filter(
+    (stock) =>
+      stock.companyName &&
+      stock.companyName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="flex">
       <Sidebar />
@@ -157,34 +109,18 @@ const Stocks = () => {
             direction="left"
           >
             <span className="flex">
-              {randomStocks.map((stock, index) => (
+              {user.stocks.slice(0, 100).map((stock, index) => (
                 <span key={index} className="mx-4">
-                  {stock.Company || "N/A"} {stock["LTP (₹)"] || "N/A"} (
+                  {stock.companyName || "N/A"} ₹{stock.ltp || "N/A"} (
                   <span
                     className={`${
-                      parseFloat(stock["1D Return %"]) > 0
+                      parseFloat(stock.oneDReturn) > 0
                         ? "text-green-500"
                         : "text-red-500"
                     }`}
                   >
-                    {stock["1D Return %"] || "N/A"}{" "}
-                    {parseFloat(stock["1D Return %"]) > 0 ? "↑" : "↓"}
-                  </span>
-                  )
-                </span>
-              ))}
-              {randomStocks.map((stock, index) => (
-                <span key={`dup-${index}`} className="mx-4">
-                  {stock.Name || "N/A"} {stock.LTP || "N/A"} (
-                  <span
-                    className={`${
-                      parseFloat(stock["Change %"]) > 0
-                        ? "text-green-500"
-                        : "text-red-500"
-                    }`}
-                  >
-                    {stock["Change %"] || "N/A"}{" "}
-                    {parseFloat(stock["Change %"]) > 0 ? "↑" : "↓"}
+                    {stock.oneDReturn || "N/A"}%{" "}
+                    {parseFloat(stock.oneDReturn) > 0 ? "↑" : "↓"}
                   </span>
                   )
                 </span>
@@ -238,34 +174,32 @@ const Stocks = () => {
                         className="py-4 px-6 border cursor-pointer"
                         onClick={() =>
                           handleCompanyClick(
-                            data.Company,
-                            data["LTP (₹)"],
-                            data["1D Return %"]
+                            data.companyName,
+                            data.ltp,
+                            data.oneDReturn
                           )
                         }
                       >
-                        {data.Company || "N/A"}
+                        {data.companyName || "N/A"}
                       </td>
-                      <td className="py-4 px-6 border">
-                        {data["LTP (₹)"] || "N/A"}
-                      </td>
+                      <td className="py-4 px-6 border">{data.ltp || "N/A"}</td>
                       <td
                         className={`py-4 px-6 border ${
-                          parseFloat(data["1D Return %"]) > 0
+                          parseFloat(data.oneDReturn) > 0
                             ? "text-green-500"
                             : "text-red-500"
                         }`}
                       >
-                        {data["1D Return %"] || "N/A"}
+                        {data.oneDReturn || "N/A"}
                       </td>
                       <td className="py-4 px-6 border">
-                        {data["Market Cap (Cr)"] || "N/A"}
+                        {data.marketCap || "N/A"}
                       </td>
                       <td className="py-4 px-6 border">
-                        {data["52W High / Low (₹)"] || "N/A"}
+                        {data.highLow52W || "N/A"}
                       </td>
                       <td className="py-4 px-6 border">
-                        {data.Volume || "N/A"}
+                        {data.volume || "N/A"}
                       </td>
                     </tr>
                   ))
@@ -281,15 +215,20 @@ const Stocks = () => {
           </div>
         </div>
         <div className="flex justify-between mt-4">
-          <span className="text-lg ml-4 font-bold">
-            Showing {Math.min(visibleRows, filteredStockData.length)} of{" "}
-            {filteredStockData.length} stocks
-          </span>
+          <div>
+            <span className="text-lg ml-4 font-bold">
+              Showing {Math.min(visibleRows, filteredStockData.length)} of{" "}
+              {filteredStockData.length} stocks
+            </span>
+            <span className="text-sm ml-4">
+              Last Updated: {formatDate(user.stocks[0].updatedAt) || "N/A"}
+            </span>
+          </div>
           <div className="flex justify-end mr-8">
             {/* Load more button */}
             {visibleRows < filteredStockData.length && (
               <button
-                onClick={loadMoreRows}
+                onClick={() => setVisibleRows((prev) => prev + 20)}
                 className="text-blue-500 hover:text-blue-700 font-semibold"
               >
                 View More →

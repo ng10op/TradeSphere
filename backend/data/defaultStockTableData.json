@@ -1,0 +1,2882 @@
+[
+  {
+    "Company": "Reliance Industries Ltd.",
+    "LTP (₹)": "2,742.10",
+    "1D Return %": "-0.26",
+    "Market Cap (Cr)": "18,55,310",
+    "52W High / Low (₹)": "3,217.60/2,220.30",
+    "Volume": "1,11,79,323"
+  },
+  {
+    "Company": "Tata Consultancy Services Ltd.",
+    "LTP (₹)": "4,227.40",
+    "1D Return %": "-0.60",
+    "Market Cap (Cr)": "15,29,510",
+    "52W High / Low (₹)": "4,592.25/3,311.00",
+    "Volume": "23,78,875"
+  },
+  {
+    "Company": "HDFC Bank Ltd.",
+    "LTP (₹)": "1,662.40",
+    "1D Return %": "+1.79",
+    "Market Cap (Cr)": "12,68,541",
+    "52W High / Low (₹)": "1,794.00/1,363.55",
+    "Volume": "1,08,77,383"
+  },
+  {
+    "Company": "Bharti Airtel Ltd.",
+    "LTP (₹)": "1,678.10",
+    "1D Return %": "0.00",
+    "Market Cap (Cr)": "9,71,856",
+    "52W High / Low (₹)": "1,779.00/895.45",
+    "Volume": "50,47,657"
+  },
+  {
+    "Company": "ICICI Bank Ltd.",
+    "LTP (₹)": "1,243.50",
+    "1D Return %": "-0.05",
+    "Market Cap (Cr)": "8,76,248",
+    "52W High / Low (₹)": "1,362.35/899.00",
+    "Volume": "91,18,195"
+  },
+  {
+    "Company": "Infosys Ltd.",
+    "LTP (₹)": "1,919.00",
+    "1D Return %": "-1.73",
+    "Market Cap (Cr)": "7,96,797",
+    "52W High / Low (₹)": "1,977.00/1,351.65",
+    "Volume": "47,82,119"
+  },
+  {
+    "Company": "State Bank Of India",
+    "LTP (₹)": "797.10",
+    "1D Return %": "-0.04",
+    "Market Cap (Cr)": "7,11,381",
+    "52W High / Low (₹)": "912.00/543.20",
+    "Volume": "1,02,41,015"
+  },
+  {
+    "Company": "Hindustan Unilever Ltd.",
+    "LTP (₹)": "2,754.70",
+    "1D Return %": "-0.51",
+    "Market Cap (Cr)": "6,47,242",
+    "52W High / Low (₹)": "3,035.00/2,172.05",
+    "Volume": "20,65,078"
+  },
+  {
+    "Company": "ITC Ltd.",
+    "LTP (₹)": "492.05",
+    "1D Return %": "+0.07",
+    "Market Cap (Cr)": "6,15,436",
+    "52W High / Low (₹)": "528.50/399.35",
+    "Volume": "1,27,99,333"
+  },
+  {
+    "Company": "Life Insurance Corporation Of India",
+    "LTP (₹)": "965.15",
+    "1D Return %": "-0.60",
+    "Market Cap (Cr)": "6,10,457",
+    "52W High / Low (₹)": "1,222.00/597.35",
+    "Volume": "6,00,669"
+  },
+  {
+    "Company": "HCL Technologies Ltd.",
+    "LTP (₹)": "1,808.65",
+    "1D Return %": "-0.06",
+    "Market Cap (Cr)": "4,90,807",
+    "52W High / Low (₹)": "1,839.95/1,208.55",
+    "Volume": "37,53,869"
+  },
+  {
+    "Company": "Larsen & Toubro Ltd.",
+    "LTP (₹)": "3,460.35",
+    "1D Return %": "-0.77",
+    "Market Cap (Cr)": "4,86,570",
+    "52W High / Low (₹)": "3,919.90/2,856.15",
+    "Volume": "26,86,116"
+  },
+  {
+    "Company": "Bajaj Finance Ltd.",
+    "LTP (₹)": "7,319.70",
+    "1D Return %": "+0.26",
+    "Market Cap (Cr)": "4,53,087",
+    "52W High / Low (₹)": "8,173.00/6,187.80",
+    "Volume": "5,59,427"
+  },
+  {
+    "Company": "Sun Pharmaceutical Industries Ltd.",
+    "LTP (₹)": "1,887.75",
+    "1D Return %": "-2.23",
+    "Market Cap (Cr)": "4,52,934",
+    "52W High / Low (₹)": "1,960.35/1,068.35",
+    "Volume": "23,83,012"
+  },
+  {
+    "Company": "NTPC Ltd.",
+    "LTP (₹)": "422.70",
+    "1D Return %": "+1.02",
+    "Market Cap (Cr)": "4,09,878",
+    "52W High / Low (₹)": "448.45/227.75",
+    "Volume": "1,58,66,037"
+  },
+  {
+    "Company": "Maruti Suzuki India Ltd.",
+    "LTP (₹)": "12,944.10",
+    "1D Return %": "+1.44",
+    "Market Cap (Cr)": "4,06,966",
+    "52W High / Low (₹)": "13,680.00/9,737.65",
+    "Volume": "4,92,698"
+  },
+  {
+    "Company": "Mahindra & Mahindra Ltd.",
+    "LTP (₹)": "3,194.30",
+    "1D Return %": "+1.31",
+    "Market Cap (Cr)": "3,97,220",
+    "52W High / Low (₹)": "3,222.10/1,450.00",
+    "Volume": "25,07,231"
+  },
+  {
+    "Company": "Kotak Mahindra Bank Ltd.",
+    "LTP (₹)": "1,876.10",
+    "1D Return %": "+4.18",
+    "Market Cap (Cr)": "3,72,999",
+    "52W High / Low (₹)": "1,942.00/1,543.85",
+    "Volume": "59,05,798"
+  },
+  {
+    "Company": "Oil And Natural Gas Corporation Ltd.",
+    "LTP (₹)": "288.75",
+    "1D Return %": "+0.09",
+    "Market Cap (Cr)": "3,70,560",
+    "52W High / Low (₹)": "345.00/179.90",
+    "Volume": "72,37,212"
+  },
+  {
+    "Company": "Axis Bank Ltd.",
+    "LTP (₹)": "1,184.25",
+    "1D Return %": "+1.20",
+    "Market Cap (Cr)": "3,66,330",
+    "52W High / Low (₹)": "1,339.65/951.40",
+    "Volume": "68,06,243"
+  },
+  {
+    "Company": "Adani Enterprises Ltd.",
+    "LTP (₹)": "3,174.20",
+    "1D Return %": "+0.65",
+    "Market Cap (Cr)": "3,61,859",
+    "52W High / Low (₹)": "3,743.90/2,142.00",
+    "Volume": "29,05,725"
+  },
+  {
+    "Company": "Tata Motors Ltd.",
+    "LTP (₹)": "928.50",
+    "1D Return %": "-1.13",
+    "Market Cap (Cr)": "3,41,770",
+    "52W High / Low (₹)": "1,179.00/617.60",
+    "Volume": "1,32,49,851"
+  },
+  {
+    "Company": "Bajaj Auto Ltd.",
+    "LTP (₹)": "11,832.00",
+    "1D Return %": "+0.12",
+    "Market Cap (Cr)": "3,30,418",
+    "52W High / Low (₹)": "12,774.00/5,002.20",
+    "Volume": "2,51,378"
+  },
+  {
+    "Company": "UltraTech Cement Ltd.",
+    "LTP (₹)": "11,430.05",
+    "1D Return %": "+0.70",
+    "Market Cap (Cr)": "3,29,983",
+    "52W High / Low (₹)": "12,138.00/8,155.55",
+    "Volume": "1,80,542"
+  },
+  {
+    "Company": "Power Grid Corporation Of India Ltd.",
+    "LTP (₹)": "334.35",
+    "1D Return %": "+1.39",
+    "Market Cap (Cr)": "3,10,966",
+    "52W High / Low (₹)": "366.25/195.70",
+    "Volume": "2,07,73,976"
+  },
+  {
+    "Company": "Adani Ports & Special Economic Zone Ltd.",
+    "LTP (₹)": "1,417.20",
+    "1D Return %": "+0.64",
+    "Market Cap (Cr)": "3,06,135",
+    "52W High / Low (₹)": "1,621.40/754.50",
+    "Volume": "16,28,495"
+  },
+  {
+    "Company": "Titan Company Ltd.",
+    "LTP (₹)": "3,447.25",
+    "1D Return %": "-1.32",
+    "Market Cap (Cr)": "3,06,042",
+    "52W High / Low (₹)": "3,886.95/3,055.65",
+    "Volume": "14,88,328"
+  },
+  {
+    "Company": "Coal India Ltd.",
+    "LTP (₹)": "488.10",
+    "1D Return %": "+0.24",
+    "Market Cap (Cr)": "3,00,803",
+    "52W High / Low (₹)": "543.55/287.80",
+    "Volume": "47,00,891"
+  },
+  {
+    "Company": "Avenue Supermarts Ltd.",
+    "LTP (₹)": "4,607.50",
+    "1D Return %": "-0.82",
+    "Market Cap (Cr)": "2,99,825",
+    "52W High / Low (₹)": "5,484.85/3,620.00",
+    "Volume": "3,16,729"
+  },
+  {
+    "Company": "Hindustan Aeronautics Ltd.",
+    "LTP (₹)": "4,482.25",
+    "1D Return %": "+2.18",
+    "Market Cap (Cr)": "2,99,762",
+    "52W High / Low (₹)": "5,674.75/1,767.80",
+    "Volume": "22,94,983"
+  },
+  {
+    "Company": "Bajaj Finserv Ltd.",
+    "LTP (₹)": "1,875.70",
+    "1D Return %": "+0.47",
+    "Market Cap (Cr)": "2,99,486",
+    "52W High / Low (₹)": "2,029.90/1,419.05",
+    "Volume": "12,09,065"
+  },
+  {
+    "Company": "Asian Paints Ltd.",
+    "LTP (₹)": "3,059.10",
+    "1D Return %": "-0.64",
+    "Market Cap (Cr)": "2,93,428",
+    "52W High / Low (₹)": "3,422.95/2,670.10",
+    "Volume": "11,61,933"
+  },
+  {
+    "Company": "Trent Ltd.",
+    "LTP (₹)": "8,028.85",
+    "1D Return %": "-2.34",
+    "Market Cap (Cr)": "2,85,416",
+    "52W High / Low (₹)": "8,322.20/1,945.00",
+    "Volume": "6,06,292"
+  },
+  {
+    "Company": "Adani Green Energy Ltd.",
+    "LTP (₹)": "1,780.50",
+    "1D Return %": "-0.22",
+    "Market Cap (Cr)": "2,82,037",
+    "52W High / Low (₹)": "2,174.10/815.55",
+    "Volume": "5,95,689"
+  },
+  {
+    "Company": "Wipro Ltd.",
+    "LTP (₹)": "525.00",
+    "1D Return %": "-1.16",
+    "Market Cap (Cr)": "2,74,646",
+    "52W High / Low (₹)": "579.90/375.05",
+    "Volume": "63,10,122"
+  },
+  {
+    "Company": "Siemens Ltd.",
+    "LTP (₹)": "7,686.75",
+    "1D Return %": "+0.12",
+    "Market Cap (Cr)": "2,73,741",
+    "52W High / Low (₹)": "7,968.70/3,246.00",
+    "Volume": "2,18,831"
+  },
+  {
+    "Company": "Adani Power Ltd.",
+    "LTP (₹)": "645.40",
+    "1D Return %": "+1.75",
+    "Market Cap (Cr)": "2,48,927",
+    "52W High / Low (₹)": "895.85/289.35",
+    "Volume": "16,49,770"
+  },
+  {
+    "Company": "JSW Steel Ltd.",
+    "LTP (₹)": "1,007.40",
+    "1D Return %": "+1.30",
+    "Market Cap (Cr)": "2,46,355",
+    "52W High / Low (₹)": "1,063.00/723.00",
+    "Volume": "13,68,830"
+  },
+  {
+    "Company": "Zomato Ltd.",
+    "LTP (₹)": "275.35",
+    "1D Return %": "-1.64",
+    "Market Cap (Cr)": "2,43,255",
+    "52W High / Low (₹)": "298.25/101.25",
+    "Volume": "3,89,04,819"
+  },
+  {
+    "Company": "Nestle India Ltd.",
+    "LTP (₹)": "2,512.45",
+    "1D Return %": "-0.14",
+    "Market Cap (Cr)": "2,42,240",
+    "52W High / Low (₹)": "2,778.00/2,293.00",
+    "Volume": "10,30,002"
+  },
+  {
+    "Company": "Indian Oil Corporation Ltd.",
+    "LTP (₹)": "164.39",
+    "1D Return %": "-0.21",
+    "Market Cap (Cr)": "2,32,139",
+    "52W High / Low (₹)": "196.80/85.50",
+    "Volume": "1,01,45,184"
+  },
+  {
+    "Company": "Jio Financial Services Ltd.",
+    "LTP (₹)": "343.80",
+    "1D Return %": "+0.23",
+    "Market Cap (Cr)": "2,18,426",
+    "52W High / Low (₹)": "394.70/204.25",
+    "Volume": "89,14,571"
+  },
+  {
+    "Company": "Hindustan Zinc Ltd.",
+    "LTP (₹)": "508.80",
+    "1D Return %": "+0.66",
+    "Market Cap (Cr)": "2,14,984",
+    "52W High / Low (₹)": "807.70/284.60",
+    "Volume": "6,77,683"
+  },
+  {
+    "Company": "DLF Ltd.",
+    "LTP (₹)": "860.80",
+    "1D Return %": "+1.04",
+    "Market Cap (Cr)": "2,13,075",
+    "52W High / Low (₹)": "967.60/513.50",
+    "Volume": "44,43,507"
+  },
+  {
+    "Company": "Bharat Electronics Ltd.",
+    "LTP (₹)": "286.90",
+    "1D Return %": "+1.59",
+    "Market Cap (Cr)": "2,09,718",
+    "52W High / Low (₹)": "340.50/127.00",
+    "Volume": "1,91,55,691"
+  },
+  {
+    "Company": "Tata Steel Ltd.",
+    "LTP (₹)": "159.72",
+    "1D Return %": "+0.41",
+    "Market Cap (Cr)": "1,99,387",
+    "52W High / Low (₹)": "184.60/114.60",
+    "Volume": "4,65,07,936"
+  },
+  {
+    "Company": "Indian Railway Finance Corporation Ltd.",
+    "LTP (₹)": "151.43",
+    "1D Return %": "-1.34",
+    "Market Cap (Cr)": "1,97,896",
+    "52W High / Low (₹)": "229.00/65.75",
+    "Volume": "1,07,97,567"
+  },
+  {
+    "Company": "Vedanta Ltd.",
+    "LTP (₹)": "492.50",
+    "1D Return %": "-0.76",
+    "Market Cap (Cr)": "1,92,601",
+    "52W High / Low (₹)": "523.65/211.20",
+    "Volume": "96,13,583"
+  },
+  {
+    "Company": "Varun Beverages Ltd.",
+    "LTP (₹)": "588.65",
+    "1D Return %": "-0.63",
+    "Market Cap (Cr)": "1,91,233",
+    "52W High / Low (₹)": "681.12/331.26",
+    "Volume": "51,67,165"
+  },
+  {
+    "Company": "LTIMindtree Ltd.",
+    "LTP (₹)": "6,346.05",
+    "1D Return %": "-1.47",
+    "Market Cap (Cr)": "1,87,960",
+    "52W High / Low (₹)": "6,574.95/4,513.55",
+    "Volume": "2,00,473"
+  },
+  {
+    "Company": "Grasim Industries Ltd.",
+    "LTP (₹)": "2,722.45",
+    "1D Return %": "+0.25",
+    "Market Cap (Cr)": "1,82,250",
+    "52W High / Low (₹)": "2,877.75/1,820.73",
+    "Volume": "3,87,246"
+  },
+  {
+    "Company": "ABB India Ltd.",
+    "LTP (₹)": "8,510.30",
+    "1D Return %": "+0.62",
+    "Market Cap (Cr)": "1,80,340",
+    "52W High / Low (₹)": "9,149.95/3,850.00",
+    "Volume": "3,21,074"
+  },
+  {
+    "Company": "InterGlobe Aviation Ltd.",
+    "LTP (₹)": "4,665.15",
+    "1D Return %": "-0.92",
+    "Market Cap (Cr)": "1,80,202",
+    "52W High / Low (₹)": "5,035.00/2,388.85",
+    "Volume": "5,19,523"
+  },
+  {
+    "Company": "SBI Life Insurance Company Ltd.",
+    "LTP (₹)": "1,734.50",
+    "1D Return %": "-0.17",
+    "Market Cap (Cr)": "1,73,784",
+    "52W High / Low (₹)": "1,936.00/1,279.80",
+    "Volume": "7,84,503"
+  },
+  {
+    "Company": "Hindalco Industries Ltd.",
+    "LTP (₹)": "730.15",
+    "1D Return %": "+0.36",
+    "Market Cap (Cr)": "1,64,081",
+    "52W High / Low (₹)": "772.65/448.75",
+    "Volume": "38,90,250"
+  },
+  {
+    "Company": "Pidilite Industries Ltd.",
+    "LTP (₹)": "3,137.70",
+    "1D Return %": "-1.15",
+    "Market Cap (Cr)": "1,59,588",
+    "52W High / Low (₹)": "3,415.00/2,292.55",
+    "Volume": "1,30,144"
+  },
+  {
+    "Company": "Tech Mahindra Ltd.",
+    "LTP (₹)": "1,619.70",
+    "1D Return %": "-2.36",
+    "Market Cap (Cr)": "1,58,463",
+    "52W High / Low (₹)": "1,675.95/1,098.15",
+    "Volume": "15,18,162"
+  },
+  {
+    "Company": "Divi'S Laboratories Ltd.",
+    "LTP (₹)": "5,942.15",
+    "1D Return %": "-0.79",
+    "Market Cap (Cr)": "1,57,745",
+    "52W High / Low (₹)": "6,029.95/3,295.30",
+    "Volume": "6,40,572"
+  },
+  {
+    "Company": "Power Finance Corporation Ltd.",
+    "LTP (₹)": "471.95",
+    "1D Return %": "+0.24",
+    "Market Cap (Cr)": "1,55,748",
+    "52W High / Low (₹)": "580.00/225.50",
+    "Volume": "72,09,670"
+  },
+  {
+    "Company": "HDFC Life Insurance Company Ltd.",
+    "LTP (₹)": "723.65",
+    "1D Return %": "+0.89",
+    "Market Cap (Cr)": "1,55,745",
+    "52W High / Low (₹)": "761.20/511.40",
+    "Volume": "22,49,443"
+  },
+  {
+    "Company": "Tata Power Company Ltd.",
+    "LTP (₹)": "465.65",
+    "1D Return %": "+1.04",
+    "Market Cap (Cr)": "1,48,791",
+    "52W High / Low (₹)": "494.85/230.80",
+    "Volume": "2,06,26,505"
+  },
+  {
+    "Company": "GAIL (India) Ltd.",
+    "LTP (₹)": "225.62",
+    "1D Return %": "+1.37",
+    "Market Cap (Cr)": "1,48,347",
+    "52W High / Low (₹)": "246.30/116.15",
+    "Volume": "1,01,08,642"
+  },
+  {
+    "Company": "Samvardhana Motherson International Ltd.",
+    "LTP (₹)": "210.02",
+    "1D Return %": "+1.93",
+    "Market Cap (Cr)": "1,47,776",
+    "52W High / Low (₹)": "216.99/86.80",
+    "Volume": "2,49,58,982"
+  },
+  {
+    "Company": "Bharat Petroleum Corporation Ltd.",
+    "LTP (₹)": "335.45",
+    "1D Return %": "-1.00",
+    "Market Cap (Cr)": "1,45,535",
+    "52W High / Low (₹)": "376.00/165.72",
+    "Volume": "57,06,365"
+  },
+  {
+    "Company": "Britannia Industries Ltd.",
+    "LTP (₹)": "6,002.15",
+    "1D Return %": "-1.56",
+    "Market Cap (Cr)": "1,44,573",
+    "52W High / Low (₹)": "6,469.90/4,347.70",
+    "Volume": "2,87,475"
+  },
+  {
+    "Company": "Ambuja Cements Ltd.",
+    "LTP (₹)": "585.25",
+    "1D Return %": "-3.73",
+    "Market Cap (Cr)": "1,44,154",
+    "52W High / Low (₹)": "706.95/404.05",
+    "Volume": "64,17,410"
+  },
+  {
+    "Company": "REC Ltd.",
+    "LTP (₹)": "544.25",
+    "1D Return %": "+2.23",
+    "Market Cap (Cr)": "1,43,313",
+    "52W High / Low (₹)": "654.00/259.45",
+    "Volume": "1,01,61,095"
+  },
+  {
+    "Company": "Godrej Consumer Products Ltd.",
+    "LTP (₹)": "1,316.75",
+    "1D Return %": "-1.25",
+    "Market Cap (Cr)": "1,34,694",
+    "52W High / Low (₹)": "1,541.85/959.80",
+    "Volume": "9,58,975"
+  },
+  {
+    "Company": "TVS Motor Company Ltd.",
+    "LTP (₹)": "2,793.50",
+    "1D Return %": "+0.39",
+    "Market Cap (Cr)": "1,32,716",
+    "52W High / Low (₹)": "2,958.00/1,522.50",
+    "Volume": "4,98,243"
+  },
+  {
+    "Company": "Cipla Ltd.",
+    "LTP (₹)": "1,618.90",
+    "1D Return %": "-3.67",
+    "Market Cap (Cr)": "1,30,742",
+    "52W High / Low (₹)": "1,702.05/1,132.00",
+    "Volume": "22,88,313"
+  },
+  {
+    "Company": "Eicher Motors Ltd.",
+    "LTP (₹)": "4,697.90",
+    "1D Return %": "-0.23",
+    "Market Cap (Cr)": "1,28,749",
+    "52W High / Low (₹)": "5,105.00/3,275.00",
+    "Volume": "3,05,739"
+  },
+  {
+    "Company": "CG Power And Industrial Solutions Ltd.",
+    "LTP (₹)": "841.75",
+    "1D Return %": "+4.76",
+    "Market Cap (Cr)": "1,28,660",
+    "52W High / Low (₹)": "844.95/359.20",
+    "Volume": "66,50,932"
+  },
+  {
+    "Company": "Cholamandalam Investment & Finance Company Ltd.",
+    "LTP (₹)": "1,517.10",
+    "1D Return %": "-2.85",
+    "Market Cap (Cr)": "1,27,504",
+    "52W High / Low (₹)": "1,652.00/1,011.20",
+    "Volume": "10,81,043"
+  },
+  {
+    "Company": "JSW Energy Ltd.",
+    "LTP (₹)": "728.85",
+    "1D Return %": "-0.17",
+    "Market Cap (Cr)": "1,27,386",
+    "52W High / Low (₹)": "804.90/347.50",
+    "Volume": "11,71,351"
+  },
+  {
+    "Company": "Bank Of Baroda",
+    "LTP (₹)": "246.05",
+    "1D Return %": "-0.11",
+    "Market Cap (Cr)": "1,27,241",
+    "52W High / Low (₹)": "299.70/187.85",
+    "Volume": "1,73,74,776"
+  },
+  {
+    "Company": "Bajaj Housing Finance Ltd.",
+    "LTP (₹)": "150.84",
+    "1D Return %": "-2.85",
+    "Market Cap (Cr)": "1,25,622",
+    "52W High / Low (₹)": "188.50/70.00",
+    "Volume": "2,22,36,338"
+  },
+  {
+    "Company": "Shriram Finance Ltd.",
+    "LTP (₹)": "3,337.65",
+    "1D Return %": "-1.48",
+    "Market Cap (Cr)": "1,25,492",
+    "52W High / Low (₹)": "3,652.25/1,760.85",
+    "Volume": "7,48,077"
+  },
+  {
+    "Company": "Havells India Ltd.",
+    "LTP (₹)": "1,938.30",
+    "1D Return %": "+0.50",
+    "Market Cap (Cr)": "1,21,520",
+    "52W High / Low (₹)": "2,106.00/1,232.85",
+    "Volume": "5,17,804"
+  },
+  {
+    "Company": "Bajaj Holdings & Investment Ltd.",
+    "LTP (₹)": "10,747.05",
+    "1D Return %": "+2.61",
+    "Market Cap (Cr)": "1,19,608",
+    "52W High / Low (₹)": "11,350.00/6,627.90",
+    "Volume": "29,630"
+  },
+  {
+    "Company": "Punjab National Bank",
+    "LTP (₹)": "103.69",
+    "1D Return %": "-0.39",
+    "Market Cap (Cr)": "1,19,170",
+    "52W High / Low (₹)": "142.90/67.35",
+    "Volume": "1,85,21,599"
+  },
+  {
+    "Company": "Adani Energy Solutions Ltd.",
+    "LTP (₹)": "989.85",
+    "1D Return %": "+0.67",
+    "Market Cap (Cr)": "1,18,909",
+    "52W High / Low (₹)": "1,348.00/686.00",
+    "Volume": "19,81,159"
+  },
+  {
+    "Company": "Macrotech Developers Ltd.",
+    "LTP (₹)": "1,183.80",
+    "1D Return %": "-2.08",
+    "Market Cap (Cr)": "1,17,817",
+    "52W High / Low (₹)": "1,649.95/701.70",
+    "Volume": "6,48,210"
+  },
+  {
+    "Company": "Torrent Pharmaceuticals Ltd.",
+    "LTP (₹)": "3,443.25",
+    "1D Return %": "-3.20",
+    "Market Cap (Cr)": "1,16,535",
+    "52W High / Low (₹)": "3,590.70/1,822.55",
+    "Volume": "2,94,303"
+  },
+  {
+    "Company": "Bosch Ltd.",
+    "LTP (₹)": "38,222.25",
+    "1D Return %": "-0.99",
+    "Market Cap (Cr)": "1,12,731",
+    "52W High / Low (₹)": "39,088.80/19,300.00",
+    "Volume": "26,527"
+  },
+  {
+    "Company": "Polycab India Ltd.",
+    "LTP (₹)": "7,452.85",
+    "1D Return %": "+0.76",
+    "Market Cap (Cr)": "1,12,069",
+    "52W High / Low (₹)": "7,585.50/3,801.00",
+    "Volume": "4,70,788"
+  },
+  {
+    "Company": "Tata Consumer Products Ltd.",
+    "LTP (₹)": "1,114.15",
+    "1D Return %": "-0.33",
+    "Market Cap (Cr)": "1,10,243",
+    "52W High / Low (₹)": "1,253.39/861.27",
+    "Volume": "11,76,370"
+  },
+  {
+    "Company": "Dr. Reddy'S Laboratories Ltd.",
+    "LTP (₹)": "6,583.10",
+    "1D Return %": "-1.23",
+    "Market Cap (Cr)": "1,09,857",
+    "52W High / Low (₹)": "7,107.45/5,205.55",
+    "Volume": "3,16,547"
+  },
+  {
+    "Company": "United Spirits Ltd.",
+    "LTP (₹)": "1,507.80",
+    "1D Return %": "-1.03",
+    "Market Cap (Cr)": "1,09,670",
+    "52W High / Low (₹)": "1,647.50/993.85",
+    "Volume": "3,69,677"
+  },
+  {
+    "Company": "Hero MotoCorp Ltd.",
+    "LTP (₹)": "5,456.10",
+    "1D Return %": "-1.77",
+    "Market Cap (Cr)": "1,09,111",
+    "52W High / Low (₹)": "6,246.25/2,966.00",
+    "Volume": "5,79,335"
+  },
+  {
+    "Company": "ICICI Prudential Life Insurance Company Ltd.",
+    "LTP (₹)": "745.60",
+    "1D Return %": "-1.33",
+    "Market Cap (Cr)": "1,07,693",
+    "52W High / Low (₹)": "796.80/463.45",
+    "Volume": "3,75,514"
+  },
+  {
+    "Company": "Mankind Pharma Ltd.",
+    "LTP (₹)": "2,684.00",
+    "1D Return %": "-0.10",
+    "Market Cap (Cr)": "1,07,533",
+    "52W High / Low (₹)": "2,780.00/1,683.05",
+    "Volume": "2,14,011"
+  },
+  {
+    "Company": "Info Edge (India) Ltd.",
+    "LTP (₹)": "8,295.20",
+    "1D Return %": "-1.16",
+    "Market Cap (Cr)": "1,07,493",
+    "52W High / Low (₹)": "8,472.00/3,972.05",
+    "Volume": "95,579"
+  },
+  {
+    "Company": "Zydus Lifesciences Ltd.",
+    "LTP (₹)": "1,057.00",
+    "1D Return %": "-0.78",
+    "Market Cap (Cr)": "1,06,359",
+    "52W High / Low (₹)": "1,324.30/567.75",
+    "Volume": "9,68,218"
+  },
+  {
+    "Company": "IndusInd Bank Ltd.",
+    "LTP (₹)": "1,356.40",
+    "1D Return %": "+1.11",
+    "Market Cap (Cr)": "1,05,663",
+    "52W High / Low (₹)": "1,694.50/1,329.20",
+    "Volume": "16,73,393"
+  },
+  {
+    "Company": "Cummins India Ltd.",
+    "LTP (₹)": "3,782.65",
+    "1D Return %": "+0.55",
+    "Market Cap (Cr)": "1,04,855",
+    "52W High / Low (₹)": "4,171.90/1,659.05",
+    "Volume": "1,86,298"
+  },
+  {
+    "Company": "Indian Overseas Bank",
+    "LTP (₹)": "54.46",
+    "1D Return %": "-0.80",
+    "Market Cap (Cr)": "1,02,943",
+    "52W High / Low (₹)": "83.75/36.65",
+    "Volume": "34,09,843"
+  },
+  {
+    "Company": "Suzlon Energy Ltd.",
+    "LTP (₹)": "75.44",
+    "1D Return %": "-1.63",
+    "Market Cap (Cr)": "1,02,940",
+    "52W High / Low (₹)": "86.04/26.45",
+    "Volume": "7,10,16,473"
+  },
+  {
+    "Company": "ICICI Lombard General Insurance Company Ltd.",
+    "LTP (₹)": "2,080.00",
+    "1D Return %": "-0.18",
+    "Market Cap (Cr)": "1,02,902",
+    "52W High / Low (₹)": "2,301.90/1,292.15",
+    "Volume": "2,36,249"
+  },
+  {
+    "Company": "Solar Industries India Ltd.",
+    "LTP (₹)": "11,297.25",
+    "1D Return %": "+0.53",
+    "Market Cap (Cr)": "1,02,229",
+    "52W High / Low (₹)": "13,298.00/4,995.85",
+    "Volume": "37,444"
+  },
+  {
+    "Company": "Indus Towers Ltd.",
+    "LTP (₹)": "378.90",
+    "1D Return %": "+1.45",
+    "Market Cap (Cr)": "1,02,111",
+    "52W High / Low (₹)": "460.35/166.70",
+    "Volume": "61,50,764"
+  },
+  {
+    "Company": "Dabur India Ltd.",
+    "LTP (₹)": "571.70",
+    "1D Return %": "+1.18",
+    "Market Cap (Cr)": "1,01,323",
+    "52W High / Low (₹)": "672.00/489.20",
+    "Volume": "23,79,978"
+  },
+  {
+    "Company": "Jindal Steel & Power Ltd.",
+    "LTP (₹)": "990.75",
+    "1D Return %": "-0.88",
+    "Market Cap (Cr)": "1,01,065",
+    "52W High / Low (₹)": "1,097.00/581.60",
+    "Volume": "14,15,371"
+  },
+  {
+    "Company": "Indian Hotels Company Ltd.",
+    "LTP (₹)": "706.25",
+    "1D Return %": "+1.82",
+    "Market Cap (Cr)": "1,00,530",
+    "52W High / Low (₹)": "720.45/371.60",
+    "Volume": "31,12,837"
+  },
+  {
+    "Company": "Rail Vikas Nigam Ltd.",
+    "LTP (₹)": "480.55",
+    "1D Return %": "-0.06",
+    "Market Cap (Cr)": "1,00,196",
+    "52W High / Low (₹)": "647.00/142.15",
+    "Volume": "33,84,210"
+  },
+  {
+    "Company": "Apollo Hospitals Enterprise Ltd.",
+    "LTP (₹)": "6,955.05",
+    "1D Return %": "-0.77",
+    "Market Cap (Cr)": "1,00,003",
+    "52W High / Low (₹)": "7,316.95/4,726.00",
+    "Volume": "2,37,853"
+  },
+  {
+    "Company": "Oracle Financial Services Software Ltd.",
+    "LTP (₹)": "11,466.65",
+    "1D Return %": "-1.60",
+    "Market Cap (Cr)": "99,467",
+    "52W High / Low (₹)": "12,619.00/3,868.80",
+    "Volume": "1,88,860"
+  },
+  {
+    "Company": "Colgate-Palmolive (India) Ltd.",
+    "LTP (₹)": "3,641.40",
+    "1D Return %": "-1.92",
+    "Market Cap (Cr)": "99,041",
+    "52W High / Low (₹)": "3,890.00/2,002.05",
+    "Volume": "1,84,794"
+  },
+  {
+    "Company": "Lupin Ltd.",
+    "LTP (₹)": "2,154.65",
+    "1D Return %": "-5.75",
+    "Market Cap (Cr)": "98,283",
+    "52W High / Low (₹)": "2,312.00/1,123.00",
+    "Volume": "22,27,752"
+  },
+  {
+    "Company": "Bharat Heavy Electricals Ltd.",
+    "LTP (₹)": "271.35",
+    "1D Return %": "+2.67",
+    "Market Cap (Cr)": "94,486",
+    "52W High / Low (₹)": "335.35/113.50",
+    "Volume": "1,28,25,979"
+  },
+  {
+    "Company": "Canara Bank",
+    "LTP (₹)": "104.13",
+    "1D Return %": "-0.26",
+    "Market Cap (Cr)": "94,453",
+    "52W High / Low (₹)": "128.90/68.42",
+    "Volume": "1,24,28,432"
+  },
+  {
+    "Company": "HDFC Asset Management Company Ltd.",
+    "LTP (₹)": "4,410.45",
+    "1D Return %": "+0.93",
+    "Market Cap (Cr)": "94,214",
+    "52W High / Low (₹)": "4,546.20/2,690.60",
+    "Volume": "3,85,531"
+  },
+  {
+    "Company": "GMR Airports Infrastructure Ltd.",
+    "LTP (₹)": "88.85",
+    "1D Return %": "+1.32",
+    "Market Cap (Cr)": "93,817",
+    "52W High / Low (₹)": "103.75/52.00",
+    "Volume": "1,60,67,072"
+  },
+  {
+    "Company": "Oil India Ltd.",
+    "LTP (₹)": "572.50",
+    "1D Return %": "-0.32",
+    "Market Cap (Cr)": "93,123",
+    "52W High / Low (₹)": "767.90/195.47",
+    "Volume": "32,60,024"
+  },
+  {
+    "Company": "Max Healthcare Institute Ltd.",
+    "LTP (₹)": "952.35",
+    "1D Return %": "-1.03",
+    "Market Cap (Cr)": "92,581",
+    "52W High / Low (₹)": "1,118.00/538.65",
+    "Volume": "8,61,912"
+  },
+  {
+    "Company": "NHPC Ltd.",
+    "LTP (₹)": "90.81",
+    "1D Return %": "-1.44",
+    "Market Cap (Cr)": "91,219",
+    "52W High / Low (₹)": "118.40/48.40",
+    "Volume": "1,53,75,544"
+  },
+  {
+    "Company": "Torrent Power Ltd.",
+    "LTP (₹)": "1,884.20",
+    "1D Return %": "-2.63",
+    "Market Cap (Cr)": "90,558",
+    "52W High / Low (₹)": "1,984.70/691.95",
+    "Volume": "5,69,426"
+  },
+  {
+    "Company": "IDBI Bank Ltd.",
+    "LTP (₹)": "83.87",
+    "1D Return %": "+0.76",
+    "Market Cap (Cr)": "90,180",
+    "52W High / Low (₹)": "107.90/59.50",
+    "Volume": "45,80,267"
+  },
+  {
+    "Company": "Dixon Technologies (India) Ltd.",
+    "LTP (₹)": "14,933.55",
+    "1D Return %": "+0.87",
+    "Market Cap (Cr)": "89,357",
+    "52W High / Low (₹)": "15,100.00/5,076.00",
+    "Volume": "4,72,580"
+  },
+  {
+    "Company": "Mazagon Dock Shipbuilders Ltd.",
+    "LTP (₹)": "4,428.35",
+    "1D Return %": "+8.35",
+    "Market Cap (Cr)": "89,315",
+    "52W High / Low (₹)": "5,860.00/1,742.00",
+    "Volume": "74,63,838"
+  },
+  {
+    "Company": "Shree Cements Ltd.",
+    "LTP (₹)": "24,641.80",
+    "1D Return %": "-1.33",
+    "Market Cap (Cr)": "88,909",
+    "52W High / Low (₹)": "30,737.75/23,700.00",
+    "Volume": "34,741"
+  },
+  {
+    "Company": "Marico Ltd.",
+    "LTP (₹)": "685.10",
+    "1D Return %": "-1.88",
+    "Market Cap (Cr)": "88,703",
+    "52W High / Low (₹)": "719.85/486.30",
+    "Volume": "5,00,562"
+  },
+  {
+    "Company": "Union Bank Of India",
+    "LTP (₹)": "114.01",
+    "1D Return %": "-0.69",
+    "Market Cap (Cr)": "87,031",
+    "52W High / Low (₹)": "172.50/91.25",
+    "Volume": "47,73,755"
+  },
+  {
+    "Company": "Aurobindo Pharma Ltd.",
+    "LTP (₹)": "1,465.95",
+    "1D Return %": "-2.87",
+    "Market Cap (Cr)": "85,896",
+    "52W High / Low (₹)": "1,592.00/834.65",
+    "Volume": "11,45,802"
+  },
+  {
+    "Company": "Godrej Properties Ltd.",
+    "LTP (₹)": "3,014.40",
+    "1D Return %": "+1.01",
+    "Market Cap (Cr)": "83,819",
+    "52W High / Low (₹)": "3,402.70/1,548.80",
+    "Volume": "3,42,884"
+  },
+  {
+    "Company": "Hindustan Petroleum Corporation Ltd.",
+    "LTP (₹)": "392.50",
+    "1D Return %": "-0.60",
+    "Market Cap (Cr)": "83,517",
+    "52W High / Low (₹)": "457.15/159.47",
+    "Volume": "33,63,159"
+  },
+  {
+    "Company": "Adani Total Gas Ltd.",
+    "LTP (₹)": "757.60",
+    "1D Return %": "+0.06",
+    "Market Cap (Cr)": "83,322",
+    "52W High / Low (₹)": "1,259.40/522.00",
+    "Volume": "3,17,482"
+  },
+  {
+    "Company": "Persistent Systems Ltd.",
+    "LTP (₹)": "5,241.10",
+    "1D Return %": "-1.74",
+    "Market Cap (Cr)": "80,949",
+    "52W High / Low (₹)": "5,585.95/2,800.00",
+    "Volume": "2,42,697"
+  },
+  {
+    "Company": "Prestige Estates Projects Ltd.",
+    "LTP (₹)": "1,862.05",
+    "1D Return %": "+0.21",
+    "Market Cap (Cr)": "80,204",
+    "52W High / Low (₹)": "2,074.80/666.95",
+    "Volume": "4,95,113"
+  },
+  {
+    "Company": "Tube Investments Of India Ltd.",
+    "LTP (₹)": "4,126.25",
+    "1D Return %": "-1.38",
+    "Market Cap (Cr)": "79,810",
+    "52W High / Low (₹)": "4,681.70/2,879.25",
+    "Volume": "1,26,312"
+  },
+  {
+    "Company": "Muthoot Finance Ltd.",
+    "LTP (₹)": "1,943.40",
+    "1D Return %": "+0.50",
+    "Market Cap (Cr)": "78,020",
+    "52W High / Low (₹)": "2,078.75/1,216.00",
+    "Volume": "2,65,399"
+  },
+  {
+    "Company": "PB Fintech Ltd.",
+    "LTP (₹)": "1,631.90",
+    "1D Return %": "-1.41",
+    "Market Cap (Cr)": "74,433",
+    "52W High / Low (₹)": "1,966.50/661.30",
+    "Volume": "17,09,381"
+  },
+  {
+    "Company": "Kalyan Jewellers India Ltd.",
+    "LTP (₹)": "718.80",
+    "1D Return %": "-0.38",
+    "Market Cap (Cr)": "74,125",
+    "52W High / Low (₹)": "786.25/265.65",
+    "Volume": "41,58,843"
+  },
+  {
+    "Company": "Alkem Laboratories Ltd.",
+    "LTP (₹)": "6,137.10",
+    "1D Return %": "-2.49",
+    "Market Cap (Cr)": "73,378",
+    "52W High / Low (₹)": "6,439.90/3,509.95",
+    "Volume": "1,33,293"
+  },
+  {
+    "Company": "Bharti Hexacom Ltd.",
+    "LTP (₹)": "1,439.75",
+    "1D Return %": "+0.54",
+    "Market Cap (Cr)": "71,988",
+    "52W High / Low (₹)": "1,568.00/570.00",
+    "Volume": "1,86,057"
+  },
+  {
+    "Company": "Linde India Ltd.",
+    "LTP (₹)": "8,323.75",
+    "1D Return %": "+1.30",
+    "Market Cap (Cr)": "70,988",
+    "52W High / Low (₹)": "9,935.05/5,325.00",
+    "Volume": "52,761"
+  },
+  {
+    "Company": "Indian Railway Catering & Tourism Corporation Ltd.",
+    "LTP (₹)": "882.65",
+    "1D Return %": "+0.35",
+    "Market Cap (Cr)": "70,612",
+    "52W High / Low (₹)": "1,138.90/635.55",
+    "Volume": "9,14,176"
+  },
+  {
+    "Company": "Indian Bank",
+    "LTP (₹)": "523.95",
+    "1D Return %": "-0.75",
+    "Market Cap (Cr)": "70,574",
+    "52W High / Low (₹)": "632.70/390.90",
+    "Volume": "3,71,064"
+  },
+  {
+    "Company": "SBI Cards And Payment Services Ltd.",
+    "LTP (₹)": "737.30",
+    "1D Return %": "-0.26",
+    "Market Cap (Cr)": "70,137",
+    "52W High / Low (₹)": "817.40/647.95",
+    "Volume": "14,29,333"
+  },
+  {
+    "Company": "Bharat Forge Ltd.",
+    "LTP (₹)": "1,501.05",
+    "1D Return %": "-0.61",
+    "Market Cap (Cr)": "69,887",
+    "52W High / Low (₹)": "1,804.50/1,002.30",
+    "Volume": "9,78,224"
+  },
+  {
+    "Company": "SRF Ltd.",
+    "LTP (₹)": "2,342.30",
+    "1D Return %": "+0.33",
+    "Market Cap (Cr)": "69,432",
+    "52W High / Low (₹)": "2,693.95/2,082.25",
+    "Volume": "3,03,852"
+  },
+  {
+    "Company": "PI Industries Ltd.",
+    "LTP (₹)": "4,561.85",
+    "1D Return %": "-0.94",
+    "Market Cap (Cr)": "69,212",
+    "52W High / Low (₹)": "4,804.05/3,220.00",
+    "Volume": "61,746"
+  },
+  {
+    "Company": "Oberoi Realty Ltd.",
+    "LTP (₹)": "1,879.25",
+    "1D Return %": "+2.43",
+    "Market Cap (Cr)": "68,330",
+    "52W High / Low (₹)": "1,970.00/1,051.10",
+    "Volume": "11,83,118"
+  },
+  {
+    "Company": "General Insurance Corporation Of India",
+    "LTP (₹)": "389.35",
+    "1D Return %": "-0.05",
+    "Market Cap (Cr)": "68,308",
+    "52W High / Low (₹)": "467.80/212.50",
+    "Volume": "5,14,706"
+  },
+  {
+    "Company": "Hitachi Energy India Ltd.",
+    "LTP (₹)": "15,960.15",
+    "1D Return %": "+10.22",
+    "Market Cap (Cr)": "67,642",
+    "52W High / Low (₹)": "16,380.00/3,930.00",
+    "Volume": "2,69,291"
+  },
+  {
+    "Company": "Supreme Industries Ltd.",
+    "LTP (₹)": "5,311.25",
+    "1D Return %": "-2.52",
+    "Market Cap (Cr)": "67,467",
+    "52W High / Low (₹)": "6,460.00/3,601.00",
+    "Volume": "63,017"
+  },
+  {
+    "Company": "YES Bank Ltd.",
+    "LTP (₹)": "21.42",
+    "1D Return %": "-0.60",
+    "Market Cap (Cr)": "67,145",
+    "52W High / Low (₹)": "32.85/15.70",
+    "Volume": "5,47,70,158"
+  },
+  {
+    "Company": "Berger Paints (India) Ltd.",
+    "LTP (₹)": "573.30",
+    "1D Return %": "-0.43",
+    "Market Cap (Cr)": "66,830",
+    "52W High / Low (₹)": "629.50/439.00",
+    "Volume": "6,99,203"
+  },
+  {
+    "Company": "JSW Infrastructure Ltd.",
+    "LTP (₹)": "316.15",
+    "1D Return %": "-1.30",
+    "Market Cap (Cr)": "66,392",
+    "52W High / Low (₹)": "360.95/162.05",
+    "Volume": "19,83,331"
+  },
+  {
+    "Company": "NMDC Ltd.",
+    "LTP (₹)": "226.36",
+    "1D Return %": "+0.97",
+    "Market Cap (Cr)": "66,337",
+    "52W High / Low (₹)": "286.35/143.25",
+    "Volume": "93,23,940"
+  },
+  {
+    "Company": "Ashok Leyland Ltd.",
+    "LTP (₹)": "225.70",
+    "1D Return %": "+1.75",
+    "Market Cap (Cr)": "66,275",
+    "52W High / Low (₹)": "264.65/157.55",
+    "Volume": "1,67,92,149"
+  },
+  {
+    "Company": "Vodafone Idea Ltd.",
+    "LTP (₹)": "9.31",
+    "1D Return %": "+1.31",
+    "Market Cap (Cr)": "64,891",
+    "52W High / Low (₹)": "19.18/8.90",
+    "Volume": "27,44,31,844"
+  },
+  {
+    "Company": "Patanjali Foods Ltd.",
+    "LTP (₹)": "1,740.30",
+    "1D Return %": "+2.00",
+    "Market Cap (Cr)": "62,998",
+    "52W High / Low (₹)": "1,992.20/1,169.95",
+    "Volume": "5,78,954"
+  },
+  {
+    "Company": "Indian Renewable Energy Development Agency Ltd.",
+    "LTP (₹)": "233.69",
+    "1D Return %": "+1.11",
+    "Market Cap (Cr)": "62,810",
+    "52W High / Low (₹)": "310.00/32.00",
+    "Volume": "1,08,34,531"
+  },
+  {
+    "Company": "Jindal Stainless Ltd.",
+    "LTP (₹)": "756.05",
+    "1D Return %": "+1.68",
+    "Market Cap (Cr)": "62,256",
+    "52W High / Low (₹)": "848.00/427.15",
+    "Volume": "5,22,093"
+  },
+  {
+    "Company": "Schaeffler India Ltd.",
+    "LTP (₹)": "3,862.35",
+    "1D Return %": "+0.10",
+    "Market Cap (Cr)": "60,370",
+    "52W High / Low (₹)": "4,951.00/2,612.20",
+    "Volume": "59,673"
+  },
+  {
+    "Company": "Abbott India Ltd.",
+    "LTP (₹)": "28,392.40",
+    "1D Return %": "-0.87",
+    "Market Cap (Cr)": "60,332",
+    "52W High / Low (₹)": "30,521.00/22,000.00",
+    "Volume": "6,927"
+  },
+  {
+    "Company": "The Fertilisers And Chemicals Travancore Ltd.",
+    "LTP (₹)": "932.35",
+    "1D Return %": "+5.33",
+    "Market Cap (Cr)": "60,330",
+    "52W High / Low (₹)": "1,187.00/515.00",
+    "Volume": "20,32,206"
+  },
+  {
+    "Company": "Thermax Ltd.",
+    "LTP (₹)": "5,057.90",
+    "1D Return %": "-2.18",
+    "Market Cap (Cr)": "60,268",
+    "52W High / Low (₹)": "5,839.95/2,500.25",
+    "Volume": "42,532"
+  },
+  {
+    "Company": "Phoenix Mills Ltd.",
+    "LTP (₹)": "1,668.00",
+    "1D Return %": "-3.51",
+    "Market Cap (Cr)": "59,629",
+    "52W High / Low (₹)": "2,068.50/864.02",
+    "Volume": "4,93,406"
+  },
+  {
+    "Company": "Balkrishna Industries Ltd.",
+    "LTP (₹)": "3,059.85",
+    "1D Return %": "+0.70",
+    "Market Cap (Cr)": "59,152",
+    "52W High / Low (₹)": "3,375.00/2,193.80",
+    "Volume": "2,37,013"
+  },
+  {
+    "Company": "Voltas Ltd.",
+    "LTP (₹)": "1,776.70",
+    "1D Return %": "-0.55",
+    "Market Cap (Cr)": "58,788",
+    "52W High / Low (₹)": "1,944.90/806.70",
+    "Volume": "8,15,772"
+  },
+  {
+    "Company": "Aditya Birla Capital Ltd.",
+    "LTP (₹)": "224.39",
+    "1D Return %": "-0.54",
+    "Market Cap (Cr)": "58,457",
+    "52W High / Low (₹)": "246.90/155.00",
+    "Volume": "33,47,579"
+  },
+  {
+    "Company": "UNO Minda Ltd.",
+    "LTP (₹)": "1,002.85",
+    "1D Return %": "-1.01",
+    "Market Cap (Cr)": "57,580",
+    "52W High / Low (₹)": "1,255.00/548.60",
+    "Volume": "7,51,012"
+  },
+  {
+    "Company": "Sundaram Finance Ltd.",
+    "LTP (₹)": "5,173.45",
+    "1D Return %": "-2.34",
+    "Market Cap (Cr)": "57,479",
+    "52W High / Low (₹)": "5,535.85/2,942.70",
+    "Volume": "36,822"
+  },
+  {
+    "Company": "BSE Ltd.",
+    "LTP (₹)": "4,216.15",
+    "1D Return %": "+0.84",
+    "Market Cap (Cr)": "57,077",
+    "52W High / Low (₹)": "4,395.00/1,405.00",
+    "Volume": "34,78,960"
+  },
+  {
+    "Company": "MRF Ltd.",
+    "LTP (₹)": "1,32,214.45",
+    "1D Return %": "-0.28",
+    "Market Cap (Cr)": "56,074",
+    "52W High / Low (₹)": "1,51,445.00/1,07,001.00",
+    "Volume": "3,208"
+  },
+  {
+    "Company": "Tata Communications Ltd.",
+    "LTP (₹)": "1,951.80",
+    "1D Return %": "+0.13",
+    "Market Cap (Cr)": "55,626",
+    "52W High / Low (₹)": "2,175.00/1,543.40",
+    "Volume": "4,17,120"
+  },
+  {
+    "Company": "FSN E-Commerce Ventures Ltd.",
+    "LTP (₹)": "192.93",
+    "1D Return %": "-2.81",
+    "Market Cap (Cr)": "55,138",
+    "52W High / Low (₹)": "229.80/136.50",
+    "Volume": "97,64,467"
+  },
+  {
+    "Company": "United Breweries Ltd.",
+    "LTP (₹)": "2,084.85",
+    "1D Return %": "-0.69",
+    "Market Cap (Cr)": "55,125",
+    "52W High / Low (₹)": "2,204.90/1,541.00",
+    "Volume": "1,47,981"
+  },
+  {
+    "Company": "L&T Technology Services Ltd.",
+    "LTP (₹)": "5,196.50",
+    "1D Return %": "-0.42",
+    "Market Cap (Cr)": "54,998",
+    "52W High / Low (₹)": "6,000.00/4,111.00",
+    "Volume": "1,57,161"
+  },
+  {
+    "Company": "IDFC First Bank Ltd.",
+    "LTP (₹)": "73.14",
+    "1D Return %": "+1.04",
+    "Market Cap (Cr)": "54,729",
+    "52W High / Low (₹)": "93.35/70.41",
+    "Volume": "2,58,85,296"
+  },
+  {
+    "Company": "UCO Bank",
+    "LTP (₹)": "45.50",
+    "1D Return %": "-0.61",
+    "Market Cap (Cr)": "54,400",
+    "52W High / Low (₹)": "70.65/34.75",
+    "Volume": "27,17,372"
+  },
+  {
+    "Company": "Procter & Gamble Hygiene & Healthcare Ltd.",
+    "LTP (₹)": "16,752.70",
+    "1D Return %": "-0.78",
+    "Market Cap (Cr)": "54,380",
+    "52W High / Low (₹)": "19,250.00/15,345.40",
+    "Volume": "17,226"
+  },
+  {
+    "Company": "Container Corporation Of India Ltd.",
+    "LTP (₹)": "888.10",
+    "1D Return %": "-0.92",
+    "Market Cap (Cr)": "54,111",
+    "52W High / Low (₹)": "1,180.00/672.20",
+    "Volume": "11,31,722"
+  },
+  {
+    "Company": "MphasiS Ltd.",
+    "LTP (₹)": "2,854.05",
+    "1D Return %": "-1.56",
+    "Market Cap (Cr)": "53,892",
+    "52W High / Low (₹)": "3,187.80/2,069.10",
+    "Volume": "3,11,244"
+  },
+  {
+    "Company": "Steel Authority Of India (SAIL) Ltd.",
+    "LTP (₹)": "129.97",
+    "1D Return %": "-0.28",
+    "Market Cap (Cr)": "53,684",
+    "52W High / Low (₹)": "175.35/81.80",
+    "Volume": "1,29,20,873"
+  },
+  {
+    "Company": "Petronet LNG Ltd.",
+    "LTP (₹)": "351.95",
+    "1D Return %": "-0.01",
+    "Market Cap (Cr)": "52,793",
+    "52W High / Low (₹)": "384.20/191.70",
+    "Volume": "19,30,268"
+  },
+  {
+    "Company": "Au Small Finance Bank Ltd.",
+    "LTP (₹)": "699.95",
+    "1D Return %": "-0.76",
+    "Market Cap (Cr)": "52,044",
+    "52W High / Low (₹)": "813.40/553.70",
+    "Volume": "10,55,278"
+  },
+  {
+    "Company": "Lloyds Metals & Energy Ltd.",
+    "LTP (₹)": "994.20",
+    "1D Return %": "+1.11",
+    "Market Cap (Cr)": "51,972",
+    "52W High / Low (₹)": "1,005.60/492.00",
+    "Volume": "4,76,519"
+  },
+  {
+    "Company": "Gujarat Fluorochemicals Ltd.",
+    "LTP (₹)": "4,659.75",
+    "1D Return %": "+6.76",
+    "Market Cap (Cr)": "51,187",
+    "52W High / Low (₹)": "4,695.00/2,476.00",
+    "Volume": "9,50,286"
+  },
+  {
+    "Company": "Astral Ltd.",
+    "LTP (₹)": "1,899.45",
+    "1D Return %": "-0.12",
+    "Market Cap (Cr)": "51,024",
+    "52W High / Low (₹)": "2,454.00/1,740.00",
+    "Volume": "2,69,728"
+  },
+  {
+    "Company": "Premier Energies Ltd.",
+    "LTP (₹)": "1,105.70",
+    "1D Return %": "+2.47",
+    "Market Cap (Cr)": "49,842",
+    "52W High / Low (₹)": "1,267.95/450.00",
+    "Volume": "24,42,587"
+  },
+  {
+    "Company": "Glenmark Pharmaceuticals Ltd.",
+    "LTP (₹)": "1,760.95",
+    "1D Return %": "-1.41",
+    "Market Cap (Cr)": "49,692",
+    "52W High / Low (₹)": "1,803.00/722.10",
+    "Volume": "10,05,393"
+  },
+  {
+    "Company": "Central Bank Of India",
+    "LTP (₹)": "57.05",
+    "1D Return %": "-1.23",
+    "Market Cap (Cr)": "49,525",
+    "52W High / Low (₹)": "76.90/40.85",
+    "Volume": "21,14,794"
+  },
+  {
+    "Company": "Page Industries Ltd.",
+    "LTP (₹)": "44,165.05",
+    "1D Return %": "+0.52",
+    "Market Cap (Cr)": "49,261",
+    "52W High / Low (₹)": "44,249.90/33,070.05",
+    "Volume": "20,708"
+  },
+  {
+    "Company": "Coforge Ltd.",
+    "LTP (₹)": "7,281.50",
+    "1D Return %": "-1.30",
+    "Market Cap (Cr)": "48,563",
+    "52W High / Low (₹)": "7,429.00/4,287.25",
+    "Volume": "1,92,600"
+  },
+  {
+    "Company": "Tata Elxsi Ltd.",
+    "LTP (₹)": "7,759.30",
+    "1D Return %": "+1.90",
+    "Market Cap (Cr)": "48,325",
+    "52W High / Low (₹)": "9,200.00/6,411.20",
+    "Volume": "6,79,383"
+  },
+  {
+    "Company": "Bank Of India",
+    "LTP (₹)": "105.47",
+    "1D Return %": "+0.09",
+    "Market Cap (Cr)": "48,017",
+    "52W High / Low (₹)": "157.95/86.40",
+    "Volume": "28,88,761"
+  },
+  {
+    "Company": "Coromandel International Ltd.",
+    "LTP (₹)": "1,628.05",
+    "1D Return %": "+1.09",
+    "Market Cap (Cr)": "47,951",
+    "52W High / Low (₹)": "1,789.00/1,019.05",
+    "Volume": "1,42,809"
+  },
+  {
+    "Company": "KPIT Technologies Ltd.",
+    "LTP (₹)": "1,731.75",
+    "1D Return %": "-0.56",
+    "Market Cap (Cr)": "47,475",
+    "52W High / Low (₹)": "1,928.70/1,091.20",
+    "Volume": "5,00,994"
+  },
+  {
+    "Company": "SJVN Ltd.",
+    "LTP (₹)": "119.06",
+    "1D Return %": "-1.61",
+    "Market Cap (Cr)": "46,788",
+    "52W High / Low (₹)": "170.50/63.40",
+    "Volume": "61,02,757"
+  },
+  {
+    "Company": "GlaxoSmithKline Pharmaceuticals Ltd.",
+    "LTP (₹)": "2,761.15",
+    "1D Return %": "-1.87",
+    "Market Cap (Cr)": "46,776",
+    "52W High / Low (₹)": "3,088.00/1,385.05",
+    "Volume": "60,793"
+  },
+  {
+    "Company": "One97 Communications Ltd.",
+    "LTP (₹)": "732.00",
+    "1D Return %": "-1.25",
+    "Market Cap (Cr)": "46,609",
+    "52W High / Low (₹)": "998.30/310.00",
+    "Volume": "1,20,19,164"
+  },
+  {
+    "Company": "Fortis Healthcare Ltd.",
+    "LTP (₹)": "614.40",
+    "1D Return %": "+1.14",
+    "Market Cap (Cr)": "46,385",
+    "52W High / Low (₹)": "628.50/313.80",
+    "Volume": "16,17,252"
+  },
+  {
+    "Company": "Motilal Oswal Financial Services Ltd.",
+    "LTP (₹)": "772.80",
+    "1D Return %": "-1.64",
+    "Market Cap (Cr)": "46,258",
+    "52W High / Low (₹)": "828.85/225.51",
+    "Volume": "8,45,782"
+  },
+  {
+    "Company": "Federal Bank Ltd.",
+    "LTP (₹)": "185.68",
+    "1D Return %": "-0.09",
+    "Market Cap (Cr)": "45,536",
+    "52W High / Low (₹)": "206.59/137.25",
+    "Volume": "37,98,189"
+  },
+  {
+    "Company": "GE T&D India Ltd.",
+    "LTP (₹)": "1,770.05",
+    "1D Return %": "+1.22",
+    "Market Cap (Cr)": "45,322",
+    "52W High / Low (₹)": "1,889.90/349.00",
+    "Volume": "6,74,086"
+  },
+  {
+    "Company": "Housing And Urban Development Corporation Ltd.",
+    "LTP (₹)": "225.19",
+    "1D Return %": "-0.56",
+    "Market Cap (Cr)": "45,081",
+    "52W High / Low (₹)": "353.70/70.50",
+    "Volume": "29,33,364"
+  },
+  {
+    "Company": "Bharat Dynamics Ltd.",
+    "LTP (₹)": "1,217.70",
+    "1D Return %": "+4.69",
+    "Market Cap (Cr)": "44,636",
+    "52W High / Low (₹)": "1,794.70/450.00",
+    "Volume": "14,53,370"
+  },
+  {
+    "Company": "Cochin Shipyard Ltd.",
+    "LTP (₹)": "1,694.55",
+    "1D Return %": "+2.40",
+    "Market Cap (Cr)": "44,580",
+    "52W High / Low (₹)": "2,979.45/435.60",
+    "Volume": "7,43,389"
+  },
+  {
+    "Company": "Honeywell Automation India Ltd.",
+    "LTP (₹)": "50,120.75",
+    "1D Return %": "+1.42",
+    "Market Cap (Cr)": "44,314",
+    "52W High / Low (₹)": "59,994.00/34,977.70",
+    "Volume": "6,179"
+  },
+  {
+    "Company": "Escorts Kubota Ltd.",
+    "LTP (₹)": "3,973.80",
+    "1D Return %": "-1.76",
+    "Market Cap (Cr)": "43,910",
+    "52W High / Low (₹)": "4,420.00/2,648.40",
+    "Volume": "1,80,370"
+  },
+  {
+    "Company": "UPL Ltd.",
+    "LTP (₹)": "584.40",
+    "1D Return %": "+1.18",
+    "Market Cap (Cr)": "43,866",
+    "52W High / Low (₹)": "634.90/447.80",
+    "Volume": "13,78,203"
+  },
+  {
+    "Company": "Adani Wilmar Ltd.",
+    "LTP (₹)": "336.65",
+    "1D Return %": "+0.07",
+    "Market Cap (Cr)": "43,754",
+    "52W High / Low (₹)": "410.50/285.80",
+    "Volume": "7,48,054"
+  },
+  {
+    "Company": "APL Apollo Tubes Ltd.",
+    "LTP (₹)": "1,573.75",
+    "1D Return %": "+2.46",
+    "Market Cap (Cr)": "43,675",
+    "52W High / Low (₹)": "1,788.35/1,305.00",
+    "Volume": "2,93,849"
+  },
+  {
+    "Company": "Exide Industries Ltd.",
+    "LTP (₹)": "512.15",
+    "1D Return %": "-1.39",
+    "Market Cap (Cr)": "43,533",
+    "52W High / Low (₹)": "620.35/241.70",
+    "Volume": "85,50,164"
+  },
+  {
+    "Company": "ACC Ltd.",
+    "LTP (₹)": "2,313.00",
+    "1D Return %": "-1.15",
+    "Market Cap (Cr)": "43,435",
+    "52W High / Low (₹)": "2,844.00/1,803.00",
+    "Volume": "3,40,234"
+  },
+  {
+    "Company": "Tata Technologies Ltd.",
+    "LTP (₹)": "1,064.70",
+    "1D Return %": "+1.53",
+    "Market Cap (Cr)": "43,192",
+    "52W High / Low (₹)": "1,400.00/500.00",
+    "Volume": "29,86,720"
+  },
+  {
+    "Company": "Apar Industries Ltd.",
+    "LTP (₹)": "10,649.70",
+    "1D Return %": "+6.17",
+    "Market Cap (Cr)": "42,778",
+    "52W High / Low (₹)": "10,720.00/4,545.65",
+    "Volume": "2,44,750"
+  },
+  {
+    "Company": "Ajanta Pharma Ltd.",
+    "LTP (₹)": "3,344.95",
+    "1D Return %": "-0.88",
+    "Market Cap (Cr)": "41,782",
+    "52W High / Low (₹)": "3,485.00/1,650.05",
+    "Volume": "1,45,658"
+  },
+  {
+    "Company": "L&T Finance Ltd.",
+    "LTP (₹)": "167.48",
+    "1D Return %": "-1.15",
+    "Market Cap (Cr)": "41,748",
+    "52W High / Low (₹)": "194.25/126.60",
+    "Volume": "42,74,505"
+  },
+  {
+    "Company": "Sona BLW Precision Forgings Ltd.",
+    "LTP (₹)": "670.80",
+    "1D Return %": "-0.34",
+    "Market Cap (Cr)": "41,674",
+    "52W High / Low (₹)": "768.65/488.10",
+    "Volume": "25,71,951"
+  },
+  {
+    "Company": "Bank Of Maharashtra",
+    "LTP (₹)": "54.16",
+    "1D Return %": "-0.91",
+    "Market Cap (Cr)": "41,657",
+    "52W High / Low (₹)": "73.50/38.65",
+    "Volume": "1,35,69,778"
+  },
+  {
+    "Company": "Biocon Ltd.",
+    "LTP (₹)": "345.80",
+    "1D Return %": "-0.36",
+    "Market Cap (Cr)": "41,517",
+    "52W High / Low (₹)": "395.80/217.50",
+    "Volume": "14,69,718"
+  },
+  {
+    "Company": "Gujarat Gas Ltd.",
+    "LTP (₹)": "602.90",
+    "1D Return %": "+0.90",
+    "Market Cap (Cr)": "41,503",
+    "52W High / Low (₹)": "689.95/397.05",
+    "Volume": "4,01,916"
+  },
+  {
+    "Company": "Jubilant Foodworks Ltd.",
+    "LTP (₹)": "623.80",
+    "1D Return %": "-0.86",
+    "Market Cap (Cr)": "41,161",
+    "52W High / Low (₹)": "715.45/421.05",
+    "Volume": "10,63,332"
+  },
+  {
+    "Company": "KEI Industries Ltd.",
+    "LTP (₹)": "4,528.80",
+    "1D Return %": "+3.05",
+    "Market Cap (Cr)": "40,890",
+    "52W High / Low (₹)": "5,039.70/2,321.10",
+    "Volume": "3,12,943"
+  },
+  {
+    "Company": "Max Financial Services Ltd.",
+    "LTP (₹)": "1,183.75",
+    "1D Return %": "-0.50",
+    "Market Cap (Cr)": "40,853",
+    "52W High / Low (₹)": "1,212.85/854.25",
+    "Volume": "5,52,401"
+  },
+  {
+    "Company": "Nippon Life India Asset Management Ltd.",
+    "LTP (₹)": "641.30",
+    "1D Return %": "-0.59",
+    "Market Cap (Cr)": "40,609",
+    "52W High / Low (₹)": "739.45/343.00",
+    "Volume": "7,99,783"
+  },
+  {
+    "Company": "Ipca Laboratories Ltd.",
+    "LTP (₹)": "1,590.05",
+    "1D Return %": "-1.37",
+    "Market Cap (Cr)": "40,340",
+    "52W High / Low (₹)": "1,625.95/932.10",
+    "Volume": "7,20,245"
+  },
+  {
+    "Company": "Ola Electric Mobility Ltd.",
+    "LTP (₹)": "90.79",
+    "1D Return %": "-5.21",
+    "Market Cap (Cr)": "40,046",
+    "52W High / Low (₹)": "157.40/76.00",
+    "Volume": "4,92,23,674"
+  },
+  {
+    "Company": "National Aluminium Company Ltd.",
+    "LTP (₹)": "212.72",
+    "1D Return %": "-0.73",
+    "Market Cap (Cr)": "39,069",
+    "52W High / Low (₹)": "227.39/88.60",
+    "Volume": "1,15,83,219"
+  },
+  {
+    "Company": "Blue Star Ltd.",
+    "LTP (₹)": "2,017.65",
+    "1D Return %": "+0.43",
+    "Market Cap (Cr)": "38,866",
+    "52W High / Low (₹)": "2,199.55/814.00",
+    "Volume": "3,54,407"
+  },
+  {
+    "Company": "3M India Ltd.",
+    "LTP (₹)": "34,428.30",
+    "1D Return %": "-1.43",
+    "Market Cap (Cr)": "38,784",
+    "52W High / Low (₹)": "40,856.50/28,498.95",
+    "Volume": "4,619"
+  },
+  {
+    "Company": "AIA Engineering Ltd.",
+    "LTP (₹)": "4,093.30",
+    "1D Return %": "-0.43",
+    "Market Cap (Cr)": "38,608",
+    "52W High / Low (₹)": "4,949.95/3,340.05",
+    "Volume": "12,081"
+  },
+  {
+    "Company": "Indraprastha Gas Ltd.",
+    "LTP (₹)": "540.90",
+    "1D Return %": "+1.58",
+    "Market Cap (Cr)": "37,863",
+    "52W High / Low (₹)": "570.35/375.70",
+    "Volume": "20,34,738"
+  },
+  {
+    "Company": "Deepak Nitrite Ltd.",
+    "LTP (₹)": "2,770.55",
+    "1D Return %": "-0.42",
+    "Market Cap (Cr)": "37,788",
+    "52W High / Low (₹)": "3,169.00/1,921.85",
+    "Volume": "2,03,271"
+  },
+  {
+    "Company": "NLC India Ltd.",
+    "LTP (₹)": "269.80",
+    "1D Return %": "-1.17",
+    "Market Cap (Cr)": "37,411",
+    "52W High / Low (₹)": "311.80/116.80",
+    "Volume": "8,84,461"
+  },
+  {
+    "Company": "360 One Wam Ltd.",
+    "LTP (₹)": "1,022.85",
+    "1D Return %": "+1.27",
+    "Market Cap (Cr)": "37,304",
+    "52W High / Low (₹)": "1,215.00/501.95",
+    "Volume": "16,53,897"
+  },
+  {
+    "Company": "Godrej Industries Ltd.",
+    "LTP (₹)": "1,099.55",
+    "1D Return %": "-2.19",
+    "Market Cap (Cr)": "37,028",
+    "52W High / Low (₹)": "1,314.00/602.40",
+    "Volume": "73,199"
+  },
+  {
+    "Company": "Aditya Birla Fashion And Retail Ltd.",
+    "LTP (₹)": "337.40",
+    "1D Return %": "-1.11",
+    "Market Cap (Cr)": "36,141",
+    "52W High / Low (₹)": "364.40/198.75",
+    "Volume": "14,62,013"
+  },
+  {
+    "Company": "Godfrey Phillips India Ltd.",
+    "LTP (₹)": "6,893.80",
+    "1D Return %": "-2.73",
+    "Market Cap (Cr)": "35,844",
+    "52W High / Low (₹)": "8,480.00/1,992.10",
+    "Volume": "61,564"
+  },
+  {
+    "Company": "Cholamandalam Financial Holdings Ltd.",
+    "LTP (₹)": "1,889.80",
+    "1D Return %": "-3.05",
+    "Market Cap (Cr)": "35,486",
+    "52W High / Low (₹)": "2,154.95/961.10",
+    "Volume": "1,62,958"
+  },
+  {
+    "Company": "Syngene International Ltd.",
+    "LTP (₹)": "880.90",
+    "1D Return %": "-0.62",
+    "Market Cap (Cr)": "35,459",
+    "52W High / Low (₹)": "945.25/607.65",
+    "Volume": "5,93,827"
+  },
+  {
+    "Company": "Kaynes Technology India Ltd.",
+    "LTP (₹)": "5,538.20",
+    "1D Return %": "+2.72",
+    "Market Cap (Cr)": "35,450",
+    "52W High / Low (₹)": "5,810.00/2,158.00",
+    "Volume": "7,66,364"
+  },
+  {
+    "Company": "IRB Infrastructure Developers Ltd.",
+    "LTP (₹)": "58.65",
+    "1D Return %": "-2.38",
+    "Market Cap (Cr)": "35,419",
+    "52W High / Low (₹)": "78.15/31.05",
+    "Volume": "1,23,40,963"
+  },
+  {
+    "Company": "Punjab & Sind Bank",
+    "LTP (₹)": "52.24",
+    "1D Return %": "-0.13",
+    "Market Cap (Cr)": "35,407",
+    "52W High / Low (₹)": "77.50/36.55",
+    "Volume": "4,80,543"
+  },
+  {
+    "Company": "Mahindra & Mahindra Financial Services Ltd.",
+    "LTP (₹)": "284.45",
+    "1D Return %": "-0.45",
+    "Market Cap (Cr)": "35,145",
+    "52W High / Low (₹)": "343.00/237.35",
+    "Volume": "32,15,003"
+  },
+  {
+    "Company": "BASF India Ltd.",
+    "LTP (₹)": "8,112.85",
+    "1D Return %": "-2.81",
+    "Market Cap (Cr)": "35,117",
+    "52W High / Low (₹)": "8,750.00/2,430.00",
+    "Volume": "28,063"
+  },
+  {
+    "Company": "Tata Investment Corporation Ltd.",
+    "LTP (₹)": "6,923.25",
+    "1D Return %": "+5.72",
+    "Market Cap (Cr)": "35,028",
+    "52W High / Low (₹)": "9,756.85/2,885.00",
+    "Volume": "12,03,564"
+  },
+  {
+    "Company": "Brainbees Solutions Ltd.",
+    "LTP (₹)": "672.25",
+    "1D Return %": "+4.82",
+    "Market Cap (Cr)": "34,902",
+    "52W High / Low (₹)": "707.70/465.00",
+    "Volume": "10,72,093"
+  },
+  {
+    "Company": "The New India Assurance Company Ltd.",
+    "LTP (₹)": "210.87",
+    "1D Return %": "-1.59",
+    "Market Cap (Cr)": "34,751",
+    "52W High / Low (₹)": "324.70/130.10",
+    "Volume": "8,42,918"
+  },
+  {
+    "Company": "Dalmia Bharat Ltd.",
+    "LTP (₹)": "1,848.35",
+    "1D Return %": "+0.41",
+    "Market Cap (Cr)": "34,665",
+    "52W High / Low (₹)": "2,430.70/1,651.40",
+    "Volume": "1,45,167"
+  },
+  {
+    "Company": "Go Digit General Insurance Ltd.",
+    "LTP (₹)": "374.90",
+    "1D Return %": "-2.09",
+    "Market Cap (Cr)": "34,386",
+    "52W High / Low (₹)": "407.40/278.55",
+    "Volume": "1,73,156"
+  },
+  {
+    "Company": "LIC Housing Finance Ltd.",
+    "LTP (₹)": "616.10",
+    "1D Return %": "-0.18",
+    "Market Cap (Cr)": "33,889",
+    "52W High / Low (₹)": "826.75/432.00",
+    "Volume": "8,26,195"
+  },
+  {
+    "Company": "Star Health And Allied Insurance Company Ltd.",
+    "LTP (₹)": "566.25",
+    "1D Return %": "-1.98",
+    "Market Cap (Cr)": "33,153",
+    "52W High / Low (₹)": "647.00/454.80",
+    "Volume": "12,99,947"
+  },
+  {
+    "Company": "Metro Brands Ltd.",
+    "LTP (₹)": "1,210.05",
+    "1D Return %": "-1.63",
+    "Market Cap (Cr)": "32,907",
+    "52W High / Low (₹)": "1,441.20/990.05",
+    "Volume": "54,525"
+  },
+  {
+    "Company": "Crisil Ltd.",
+    "LTP (₹)": "4,498.55",
+    "1D Return %": "-0.39",
+    "Market Cap (Cr)": "32,898",
+    "52W High / Low (₹)": "5,268.50/3,660.70",
+    "Volume": "9,937"
+  },
+  {
+    "Company": "JK Cement Ltd.",
+    "LTP (₹)": "4,256.60",
+    "1D Return %": "-1.70",
+    "Market Cap (Cr)": "32,890",
+    "52W High / Low (₹)": "4,895.50/3,052.65",
+    "Volume": "80,253"
+  },
+  {
+    "Company": "Endurance Technologies Ltd.",
+    "LTP (₹)": "2,330.45",
+    "1D Return %": "+0.45",
+    "Market Cap (Cr)": "32,781",
+    "52W High / Low (₹)": "3,061.30/1,548.15",
+    "Volume": "2,25,317"
+  },
+  {
+    "Company": "Emami Ltd.",
+    "LTP (₹)": "742.95",
+    "1D Return %": "-1.44",
+    "Market Cap (Cr)": "32,430",
+    "52W High / Low (₹)": "860.00/417.10",
+    "Volume": "2,47,457"
+  },
+  {
+    "Company": "Apollo Tyres Ltd.",
+    "LTP (₹)": "506.30",
+    "1D Return %": "-0.17",
+    "Market Cap (Cr)": "32,155",
+    "52W High / Low (₹)": "584.90/368.10",
+    "Volume": "9,71,249"
+  },
+  {
+    "Company": "KPR Mill Ltd.",
+    "LTP (₹)": "938.30",
+    "1D Return %": "-0.64",
+    "Market Cap (Cr)": "32,072",
+    "52W High / Low (₹)": "1,053.00/710.00",
+    "Volume": "97,552"
+  },
+  {
+    "Company": "Brigade Enterprises Ltd.",
+    "LTP (₹)": "1,303.55",
+    "1D Return %": "-3.16",
+    "Market Cap (Cr)": "31,836",
+    "52W High / Low (₹)": "1,453.10/581.15",
+    "Volume": "4,72,122"
+  },
+  {
+    "Company": "NBCC (India) Ltd.",
+    "LTP (₹)": "116.98",
+    "1D Return %": "+0.71",
+    "Market Cap (Cr)": "31,585",
+    "52W High / Low (₹)": "139.84/38.73",
+    "Volume": "93,36,602"
+  },
+  {
+    "Company": "Multi Commodity Exchange Of India Ltd.",
+    "LTP (₹)": "6,193.15",
+    "1D Return %": "+1.50",
+    "Market Cap (Cr)": "31,584",
+    "52W High / Low (₹)": "6,219.00/2,080.85",
+    "Volume": "3,87,207"
+  },
+  {
+    "Company": "Vedant Fashions Ltd.",
+    "LTP (₹)": "1,296.00",
+    "1D Return %": "-2.59",
+    "Market Cap (Cr)": "31,481",
+    "52W High / Low (₹)": "1,487.90/886.05",
+    "Volume": "11,21,190"
+  },
+  {
+    "Company": "Sun TV Network Ltd.",
+    "LTP (₹)": "790.65",
+    "1D Return %": "-2.32",
+    "Market Cap (Cr)": "31,158",
+    "52W High / Low (₹)": "921.00/567.60",
+    "Volume": "2,93,021"
+  },
+  {
+    "Company": "Himadri Speciality Chemical Ltd.",
+    "LTP (₹)": "629.65",
+    "1D Return %": "+0.10",
+    "Market Cap (Cr)": "31,083",
+    "52W High / Low (₹)": "688.70/224.00",
+    "Volume": "9,91,961"
+  },
+  {
+    "Company": "Authum Investment & Infrastructure Ltd.",
+    "LTP (₹)": "1,828.90",
+    "1D Return %": "+0.02",
+    "Market Cap (Cr)": "31,063",
+    "52W High / Low (₹)": "1,830.00/732.20",
+    "Volume": "84,908"
+  },
+  {
+    "Company": "Central Depository Services (India) Ltd.",
+    "LTP (₹)": "1,483.65",
+    "1D Return %": "+0.80",
+    "Market Cap (Cr)": "31,008",
+    "52W High / Low (₹)": "1,664.40/631.00",
+    "Volume": "43,89,364"
+  },
+  {
+    "Company": "Mangalore Refinery And Petrochemicals Ltd.",
+    "LTP (₹)": "175.70",
+    "1D Return %": "-0.84",
+    "Market Cap (Cr)": "30,793",
+    "52W High / Low (₹)": "289.25/92.50",
+    "Volume": "5,81,679"
+  },
+  {
+    "Company": "Delhivery Ltd.",
+    "LTP (₹)": "411.40",
+    "1D Return %": "-0.81",
+    "Market Cap (Cr)": "30,445",
+    "52W High / Low (₹)": "488.00/354.20",
+    "Volume": "4,96,556"
+  },
+  {
+    "Company": "Sundram Fasteners Ltd.",
+    "LTP (₹)": "1,448.10",
+    "1D Return %": "+0.55",
+    "Market Cap (Cr)": "30,429",
+    "52W High / Low (₹)": "1,505.95/1,003.05",
+    "Volume": "61,272"
+  },
+  {
+    "Company": "Aditya Birla Real Estate Ltd.",
+    "LTP (₹)": "2,714.05",
+    "1D Return %": "+1.05",
+    "Market Cap (Cr)": "30,315",
+    "52W High / Low (₹)": "2,936.45/1,046.45",
+    "Volume": "1,15,737"
+  },
+  {
+    "Company": "Suven Pharmaceuticals Ltd.",
+    "LTP (₹)": "1,190.40",
+    "1D Return %": "-1.20",
+    "Market Cap (Cr)": "30,303",
+    "52W High / Low (₹)": "1,287.90/541.00",
+    "Volume": "1,98,604"
+  },
+  {
+    "Company": "Bayer Cropscience Ltd.",
+    "LTP (₹)": "6,732.25",
+    "1D Return %": "-0.08",
+    "Market Cap (Cr)": "30,256",
+    "52W High / Low (₹)": "7,196.85/4,812.90",
+    "Volume": "15,226"
+  },
+  {
+    "Company": "Bandhan Bank Ltd.",
+    "LTP (₹)": "187.70",
+    "1D Return %": "-0.61",
+    "Market Cap (Cr)": "30,238",
+    "52W High / Low (₹)": "263.10/169.15",
+    "Volume": "53,77,952"
+  },
+  {
+    "Company": "Hindustan Copper Ltd.",
+    "LTP (₹)": "312.15",
+    "1D Return %": "-0.43",
+    "Market Cap (Cr)": "30,186",
+    "52W High / Low (₹)": "415.80/135.65",
+    "Volume": "21,84,501"
+  },
+  {
+    "Company": "Poonawalla Fincorp Ltd.",
+    "LTP (₹)": "388.10",
+    "1D Return %": "-0.55",
+    "Market Cap (Cr)": "30,184",
+    "52W High / Low (₹)": "519.70/336.30",
+    "Volume": "8,66,102"
+  },
+  {
+    "Company": "Whirlpool Of India Ltd.",
+    "LTP (₹)": "2,370.65",
+    "1D Return %": "-0.04",
+    "Market Cap (Cr)": "30,077",
+    "52W High / Low (₹)": "2,414.95/1,186.10",
+    "Volume": "1,57,511"
+  },
+  {
+    "Company": "Dr. Lal Pathlabs Ltd.",
+    "LTP (₹)": "3,528.85",
+    "1D Return %": "-2.13",
+    "Market Cap (Cr)": "29,492",
+    "52W High / Low (₹)": "3,653.95/1,943.70",
+    "Volume": "1,61,597"
+  },
+  {
+    "Company": "Tata Chemicals Ltd.",
+    "LTP (₹)": "1,151.20",
+    "1D Return %": "+4.15",
+    "Market Cap (Cr)": "29,328",
+    "52W High / Low (₹)": "1,349.00/933.00",
+    "Volume": "1,24,18,567"
+  },
+  {
+    "Company": "Gillette India Ltd.",
+    "LTP (₹)": "8,952.00",
+    "1D Return %": "-0.49",
+    "Market Cap (Cr)": "29,170",
+    "52W High / Low (₹)": "9,560.00/5,956.05",
+    "Volume": "37,307"
+  },
+  {
+    "Company": "Motherson Sumi Wiring India Ltd.",
+    "LTP (₹)": "65.97",
+    "1D Return %": "-1.09",
+    "Market Cap (Cr)": "29,166",
+    "52W High / Low (₹)": "80.00/57.85",
+    "Volume": "39,56,926"
+  },
+  {
+    "Company": "Piramal Pharma Ltd.",
+    "LTP (₹)": "218.29",
+    "1D Return %": "-2.60",
+    "Market Cap (Cr)": "28,940",
+    "52W High / Low (₹)": "243.99/87.50",
+    "Volume": "26,39,663"
+  },
+  {
+    "Company": "Inox Wind Ltd.",
+    "LTP (₹)": "219.18",
+    "1D Return %": "-1.84",
+    "Market Cap (Cr)": "28,577",
+    "52W High / Low (₹)": "261.90/47.37",
+    "Volume": "45,48,120"
+  },
+  {
+    "Company": "Crompton Greaves Consumer Electricals Ltd.",
+    "LTP (₹)": "440.90",
+    "1D Return %": "+1.00",
+    "Market Cap (Cr)": "28,379",
+    "52W High / Low (₹)": "484.00/261.25",
+    "Volume": "46,40,122"
+  },
+  {
+    "Company": "Radico Khaitan Ltd.",
+    "LTP (₹)": "2,114.50",
+    "1D Return %": "-0.09",
+    "Market Cap (Cr)": "28,284",
+    "52W High / Low (₹)": "2,332.70/1,141.25",
+    "Volume": "2,14,838"
+  },
+  {
+    "Company": "J B Chemicals & Pharmaceuticals Ltd.",
+    "LTP (₹)": "1,812.55",
+    "1D Return %": "+1.28",
+    "Market Cap (Cr)": "28,152",
+    "52W High / Low (₹)": "2,030.00/1,244.45",
+    "Volume": "5,04,343"
+  },
+  {
+    "Company": "ZF Commercial Vehicle Control Systems India Ltd.",
+    "LTP (₹)": "14,836.60",
+    "1D Return %": "-2.49",
+    "Market Cap (Cr)": "28,141",
+    "52W High / Low (₹)": "18,250.00/12,975.00",
+    "Volume": "96,700"
+  },
+  {
+    "Company": "Timken India Ltd.",
+    "LTP (₹)": "3,732.10",
+    "1D Return %": "-0.32",
+    "Market Cap (Cr)": "28,072",
+    "52W High / Low (₹)": "4,817.90/2,524.50",
+    "Volume": "29,182"
+  },
+  {
+    "Company": "Gland Pharma Ltd.",
+    "LTP (₹)": "1,702.50",
+    "1D Return %": "+0.14",
+    "Market Cap (Cr)": "28,049",
+    "52W High / Low (₹)": "2,220.95/1,475.05",
+    "Volume": "72,509"
+  },
+  {
+    "Company": "Global Health Ltd.",
+    "LTP (₹)": "1,038.05",
+    "1D Return %": "+3.65",
+    "Market Cap (Cr)": "27,877",
+    "52W High / Low (₹)": "1,513.90/708.00",
+    "Volume": "7,41,888"
+  },
+  {
+    "Company": "Carborundum Universal Ltd.",
+    "LTP (₹)": "1,464.50",
+    "1D Return %": "+1.17",
+    "Market Cap (Cr)": "27,871",
+    "52W High / Low (₹)": "1,841.15/1,025.60",
+    "Volume": "98,829"
+  },
+  {
+    "Company": "Emcure Pharmaceuticals Ltd.",
+    "LTP (₹)": "1,470.35",
+    "1D Return %": "-1.53",
+    "Market Cap (Cr)": "27,804",
+    "52W High / Low (₹)": "1,580.00/1,008.00",
+    "Volume": "3,10,941"
+  },
+  {
+    "Company": "ICICI Securities Ltd.",
+    "LTP (₹)": "842.95",
+    "1D Return %": "-2.91",
+    "Market Cap (Cr)": "27,315",
+    "52W High / Low (₹)": "922.45/621.55",
+    "Volume": "4,16,843"
+  },
+  {
+    "Company": "Sumitomo Chemical India Ltd.",
+    "LTP (₹)": "544.10",
+    "1D Return %": "+0.85",
+    "Market Cap (Cr)": "27,159",
+    "52W High / Low (₹)": "628.30/336.10",
+    "Volume": "2,09,583"
+  },
+  {
+    "Company": "Grindwell Norton Ltd.",
+    "LTP (₹)": "2,450.65",
+    "1D Return %": "+2.54",
+    "Market Cap (Cr)": "27,134",
+    "52W High / Low (₹)": "2,960.00/1,875.20",
+    "Volume": "27,331"
+  },
+  {
+    "Company": "KEC International Ltd.",
+    "LTP (₹)": "1,017.45",
+    "1D Return %": "+1.00",
+    "Market Cap (Cr)": "27,085",
+    "52W High / Low (₹)": "1,068.00/550.05",
+    "Volume": "3,30,317"
+  },
+  {
+    "Company": "TVS Holdings Ltd.",
+    "LTP (₹)": "13,363.40",
+    "1D Return %": "+5.25",
+    "Market Cap (Cr)": "27,037",
+    "52W High / Low (₹)": "15,137.45/5,162.65",
+    "Volume": "10,793"
+  },
+  {
+    "Company": "EIH Ltd.",
+    "LTP (₹)": "431.40",
+    "1D Return %": "+5.89",
+    "Market Cap (Cr)": "26,978",
+    "52W High / Low (₹)": "502.20/205.55",
+    "Volume": "44,65,982"
+  },
+  {
+    "Company": "SKF India Ltd.",
+    "LTP (₹)": "5,407.45",
+    "1D Return %": "+0.61",
+    "Market Cap (Cr)": "26,733",
+    "52W High / Low (₹)": "7,350.00/4,024.50",
+    "Volume": "2,30,554"
+  },
+  {
+    "Company": "Pfizer Ltd.",
+    "LTP (₹)": "5,743.30",
+    "1D Return %": "+0.66",
+    "Market Cap (Cr)": "26,274",
+    "52W High / Low (₹)": "6,451.15/3,838.00",
+    "Volume": "19,166"
+  },
+  {
+    "Company": "Shyam Metalics And Energy Ltd.",
+    "LTP (₹)": "929.10",
+    "1D Return %": "-0.18",
+    "Market Cap (Cr)": "25,934",
+    "52W High / Low (₹)": "956.90/420.20",
+    "Volume": "2,35,770"
+  },
+  {
+    "Company": "Anant Raj Ltd.",
+    "LTP (₹)": "755.30",
+    "1D Return %": "+2.25",
+    "Market Cap (Cr)": "25,823",
+    "52W High / Low (₹)": "762.00/220.00",
+    "Volume": "12,74,664"
+  },
+  {
+    "Company": "Natco Pharma Ltd.",
+    "LTP (₹)": "1,437.50",
+    "1D Return %": "-2.50",
+    "Market Cap (Cr)": "25,747",
+    "52W High / Low (₹)": "1,639.00/724.20",
+    "Volume": "8,80,333"
+  },
+  {
+    "Company": "Amara Raja Energy & Mobility Ltd.",
+    "LTP (₹)": "1,399.60",
+    "1D Return %": "+1.78",
+    "Market Cap (Cr)": "25,616",
+    "52W High / Low (₹)": "1,775.95/599.00",
+    "Volume": "5,05,009"
+  },
+  {
+    "Company": "Jyoti CNC Automation Ltd.",
+    "LTP (₹)": "1,126.30",
+    "1D Return %": "+0.63",
+    "Market Cap (Cr)": "25,615",
+    "52W High / Low (₹)": "1,449.95/331.00",
+    "Volume": "4,83,190"
+  },
+  {
+    "Company": "Hatsun Agro Products Ltd.",
+    "LTP (₹)": "1,135.30",
+    "1D Return %": "-0.51",
+    "Market Cap (Cr)": "25,289",
+    "52W High / Low (₹)": "1,400.00/959.95",
+    "Volume": "9,662"
+  },
+  {
+    "Company": "Laurus Labs Ltd.",
+    "LTP (₹)": "465.25",
+    "1D Return %": "+2.50",
+    "Market Cap (Cr)": "25,084",
+    "52W High / Low (₹)": "518.00/349.40",
+    "Volume": "38,56,561"
+  },
+  {
+    "Company": "Narayana Hrudayalaya Ltd.",
+    "LTP (₹)": "1,223.75",
+    "1D Return %": "+0.12",
+    "Market Cap (Cr)": "25,009",
+    "52W High / Low (₹)": "1,444.90/979.95",
+    "Volume": "91,767"
+  },
+  {
+    "Company": "Ratnamani Metals & Tubes Ltd.",
+    "LTP (₹)": "3,540.50",
+    "1D Return %": "-0.14",
+    "Market Cap (Cr)": "24,816",
+    "52W High / Low (₹)": "3,978.50/2,561.85",
+    "Volume": "47,956"
+  },
+  {
+    "Company": "PNB Housing Finance Ltd.",
+    "LTP (₹)": "950.25",
+    "1D Return %": "+0.44",
+    "Market Cap (Cr)": "24,692",
+    "52W High / Low (₹)": "1,202.20/604.00",
+    "Volume": "10,25,744"
+  },
+  {
+    "Company": "CESC Ltd.",
+    "LTP (₹)": "185.67",
+    "1D Return %": "-1.06",
+    "Market Cap (Cr)": "24,612",
+    "52W High / Low (₹)": "212.49/82.30",
+    "Volume": "22,12,216"
+  },
+  {
+    "Company": "Aegis Logistics Ltd.",
+    "LTP (₹)": "691.80",
+    "1D Return %": "-1.14",
+    "Market Cap (Cr)": "24,282",
+    "52W High / Low (₹)": "970.00/280.00",
+    "Volume": "1,18,866"
+  },
+  {
+    "Company": "Piramal Enterprises Ltd.",
+    "LTP (₹)": "1,052.40",
+    "1D Return %": "+2.08",
+    "Market Cap (Cr)": "23,729",
+    "52W High / Low (₹)": "1,143.80/736.60",
+    "Volume": "6,48,626"
+  },
+  {
+    "Company": "Triveni Turbine Ltd.",
+    "LTP (₹)": "744.55",
+    "1D Return %": "-1.05",
+    "Market Cap (Cr)": "23,668",
+    "52W High / Low (₹)": "843.95/312.00",
+    "Volume": "5,96,634"
+  },
+  {
+    "Company": "ITI Ltd.",
+    "LTP (₹)": "246.15",
+    "1D Return %": "+0.08",
+    "Market Cap (Cr)": "23,652",
+    "52W High / Low (₹)": "384.30/223.05",
+    "Volume": "2,42,136"
+  },
+  {
+    "Company": "Five-Star Business Finance Ltd.",
+    "LTP (₹)": "806.90",
+    "1D Return %": "+0.44",
+    "Market Cap (Cr)": "23,601",
+    "52W High / Low (₹)": "862.75/600.05",
+    "Volume": "3,66,814"
+  },
+  {
+    "Company": "Kansai Nerolac Paints Ltd.",
+    "LTP (₹)": "291.50",
+    "1D Return %": "+0.03",
+    "Market Cap (Cr)": "23,565",
+    "52W High / Low (₹)": "357.30/251.85",
+    "Volume": "2,39,157"
+  },
+  {
+    "Company": "Angel One Ltd.",
+    "LTP (₹)": "2,606.55",
+    "1D Return %": "+0.48",
+    "Market Cap (Cr)": "23,498",
+    "52W High / Low (₹)": "3,896.00/2,025.00",
+    "Volume": "7,40,979"
+  },
+  {
+    "Company": "Atul Ltd.",
+    "LTP (₹)": "7,971.25",
+    "1D Return %": "+0.79",
+    "Market Cap (Cr)": "23,469",
+    "52W High / Low (₹)": "8,180.00/5,174.85",
+    "Volume": "1,37,116"
+  },
+  {
+    "Company": "Alembic Pharmaceuticals Ltd.",
+    "LTP (₹)": "1,190.80",
+    "1D Return %": "-3.26",
+    "Market Cap (Cr)": "23,407",
+    "52W High / Low (₹)": "1,303.90/707.15",
+    "Volume": "2,02,768"
+  },
+  {
+    "Company": "Gujarat State Petronet Ltd.",
+    "LTP (₹)": "410.30",
+    "1D Return %": "-0.13",
+    "Market Cap (Cr)": "23,150",
+    "52W High / Low (₹)": "469.70/254.50",
+    "Volume": "18,46,266"
+  },
+  {
+    "Company": "Jindal Saw Ltd.",
+    "LTP (₹)": "361.00",
+    "1D Return %": "-2.23",
+    "Market Cap (Cr)": "23,086",
+    "52W High / Low (₹)": "383.85/165.00",
+    "Volume": "7,50,458"
+  },
+  {
+    "Company": "Nuvama Wealth Management Ltd.",
+    "LTP (₹)": "6,375.25",
+    "1D Return %": "+0.17",
+    "Market Cap (Cr)": "22,770",
+    "52W High / Low (₹)": "7,100.00/2,285.30",
+    "Volume": "45,254"
+  },
+  {
+    "Company": "Poly Medicure Ltd.",
+    "LTP (₹)": "2,369.20",
+    "1D Return %": "+1.06",
+    "Market Cap (Cr)": "22,737",
+    "52W High / Low (₹)": "2,686.60/1,250.10",
+    "Volume": "35,591"
+  },
+  {
+    "Company": "Affle (India) Ltd.",
+    "LTP (₹)": "1,608.05",
+    "1D Return %": "-0.07",
+    "Market Cap (Cr)": "22,565",
+    "52W High / Low (₹)": "1,715.00/988.15",
+    "Volume": "2,88,034"
+  },
+  {
+    "Company": "Castrol India Ltd.",
+    "LTP (₹)": "228.11",
+    "1D Return %": "-0.91",
+    "Market Cap (Cr)": "22,563",
+    "52W High / Low (₹)": "284.40/132.40",
+    "Volume": "21,63,826"
+  },
+  {
+    "Company": "KIOCL Ltd.",
+    "LTP (₹)": "365.55",
+    "1D Return %": "-1.63",
+    "Market Cap (Cr)": "22,216",
+    "52W High / Low (₹)": "577.35/302.80",
+    "Volume": "79,335"
+  },
+  {
+    "Company": "Kajaria Ceramics Ltd.",
+    "LTP (₹)": "1,389.95",
+    "1D Return %": "-0.72",
+    "Market Cap (Cr)": "22,136",
+    "52W High / Low (₹)": "1,578.70/1,110.35",
+    "Volume": "7,61,132"
+  },
+  {
+    "Company": "Computer Age Management Services Ltd.",
+    "LTP (₹)": "4,490.45",
+    "1D Return %": "+1.82",
+    "Market Cap (Cr)": "22,130",
+    "52W High / Low (₹)": "4,910.00/2,230.00",
+    "Volume": "2,05,033"
+  },
+  {
+    "Company": "Devyani International Ltd.",
+    "LTP (₹)": "180.13",
+    "1D Return %": "+0.04",
+    "Market Cap (Cr)": "21,728",
+    "52W High / Low (₹)": "222.74/142.25",
+    "Volume": "42,42,219"
+  },
+  {
+    "Company": "Krishna Institute Of Medical Sciences Ltd.",
+    "LTP (₹)": "541.25",
+    "1D Return %": "+1.18",
+    "Market Cap (Cr)": "21,658",
+    "52W High / Low (₹)": "580.00/350.00",
+    "Volume": "1,69,024"
+  },
+  {
+    "Company": "Firstsource Solutions Ltd.",
+    "LTP (₹)": "310.20",
+    "1D Return %": "-1.08",
+    "Market Cap (Cr)": "21,621",
+    "52W High / Low (₹)": "345.00/148.30",
+    "Volume": "14,23,594"
+  },
+  {
+    "Company": "Kalpataru Projects International Ltd.",
+    "LTP (₹)": "1,323.05",
+    "1D Return %": "-0.05",
+    "Market Cap (Cr)": "21,492",
+    "52W High / Low (₹)": "1,449.00/601.25",
+    "Volume": "6,71,292"
+  },
+  {
+    "Company": "Bikaji Foods International Ltd.",
+    "LTP (₹)": "852.85",
+    "1D Return %": "-1.15",
+    "Market Cap (Cr)": "21,354",
+    "52W High / Low (₹)": "1,007.95/450.20",
+    "Volume": "2,97,693"
+  },
+  {
+    "Company": "Jupiter Wagons Ltd.",
+    "LTP (₹)": "501.30",
+    "1D Return %": "+0.22",
+    "Market Cap (Cr)": "21,280",
+    "52W High / Low (₹)": "748.10/266.80",
+    "Volume": "6,32,894"
+  },
+  {
+    "Company": "Signatureglobal (India) Ltd.",
+    "LTP (₹)": "1,509.85",
+    "1D Return %": "-2.22",
+    "Market Cap (Cr)": "21,215",
+    "52W High / Low (₹)": "1,647.00/493.25",
+    "Volume": "3,77,467"
+  },
+  {
+    "Company": "Elgi Equipments Ltd.",
+    "LTP (₹)": "667.20",
+    "1D Return %": "-0.89",
+    "Market Cap (Cr)": "21,144",
+    "52W High / Low (₹)": "798.95/466.80",
+    "Volume": "83,542"
+  },
+  {
+    "Company": "Jai Balaji Industries Ltd.",
+    "LTP (₹)": "1,147.45",
+    "1D Return %": "+2.34",
+    "Market Cap (Cr)": "20,935",
+    "52W High / Low (₹)": "1,314.00/490.00",
+    "Volume": "2,65,949"
+  },
+  {
+    "Company": "Aster DM Healthcare Ltd.",
+    "LTP (₹)": "418.30",
+    "1D Return %": "-0.59",
+    "Market Cap (Cr)": "20,895",
+    "52W High / Low (₹)": "558.00/311.10",
+    "Volume": "2,94,380"
+  },
+  {
+    "Company": "JBM Auto Ltd.",
+    "LTP (₹)": "1,757.35",
+    "1D Return %": "-0.72",
+    "Market Cap (Cr)": "20,780",
+    "52W High / Low (₹)": "2,428.35/1,113.35",
+    "Volume": "78,572"
+  },
+  {
+    "Company": "Ircon International Ltd.",
+    "LTP (₹)": "220.56",
+    "1D Return %": "-0.96",
+    "Market Cap (Cr)": "20,744",
+    "52W High / Low (₹)": "351.60/127.25",
+    "Volume": "23,27,469"
+  },
+  {
+    "Company": "CIE Automotive India Ltd.",
+    "LTP (₹)": "544.90",
+    "1D Return %": "+0.40",
+    "Market Cap (Cr)": "20,671",
+    "52W High / Low (₹)": "622.40/406.80",
+    "Volume": "66,930"
+  },
+  {
+    "Company": "Schneider Electric Infrastructure Ltd.",
+    "LTP (₹)": "863.95",
+    "1D Return %": "+4.61",
+    "Market Cap (Cr)": "20,657",
+    "52W High / Low (₹)": "980.00/300.00",
+    "Volume": "9,44,042"
+  },
+  {
+    "Company": "Cyient Ltd.",
+    "LTP (₹)": "1,860.05",
+    "1D Return %": "-0.27",
+    "Market Cap (Cr)": "20,633",
+    "52W High / Low (₹)": "2,458.95/1,542.10",
+    "Volume": "1,51,957"
+  },
+  {
+    "Company": "Vinati Organics Ltd.",
+    "LTP (₹)": "1,965.50",
+    "1D Return %": "-1.62",
+    "Market Cap (Cr)": "20,375",
+    "52W High / Low (₹)": "2,330.00/1,462.20",
+    "Volume": "28,986"
+  },
+  {
+    "Company": "The Ramco Cements Ltd.",
+    "LTP (₹)": "862.05",
+    "1D Return %": "+0.80",
+    "Market Cap (Cr)": "20,370",
+    "52W High / Low (₹)": "1,058.20/700.00",
+    "Volume": "2,20,995"
+  },
+  {
+    "Company": "Tejas Networks Ltd.",
+    "LTP (₹)": "1,188.60",
+    "1D Return %": "+0.78",
+    "Market Cap (Cr)": "20,356",
+    "52W High / Low (₹)": "1,495.00/651.25",
+    "Volume": "4,41,584"
+  },
+  {
+    "Company": "Blue Dart Express Ltd.",
+    "LTP (₹)": "8,539.10",
+    "1D Return %": "-1.22",
+    "Market Cap (Cr)": "20,262",
+    "52W High / Low (₹)": "9,488.70/5,486.60",
+    "Volume": "10,696"
+  },
+  {
+    "Company": "Techno Electric & Engineering Company Ltd.",
+    "LTP (₹)": "1,730.80",
+    "1D Return %": "+3.81",
+    "Market Cap (Cr)": "20,129",
+    "52W High / Low (₹)": "1,796.70/480.00",
+    "Volume": "4,50,710"
+  },
+  {
+    "Company": "PTC Industries Ltd.",
+    "LTP (₹)": "13,418.45",
+    "1D Return %": "-0.86",
+    "Market Cap (Cr)": "20,089",
+    "52W High / Low (₹)": "15,702.10/4,469.35",
+    "Volume": "3,571"
+  },
+  {
+    "Company": "Aditya Birla Sun Life AMC Ltd.",
+    "LTP (₹)": "696.50",
+    "1D Return %": "-1.18",
+    "Market Cap (Cr)": "20,080",
+    "52W High / Low (₹)": "775.00/423.00",
+    "Volume": "1,78,334"
+  },
+  {
+    "Company": "HFCL Ltd.",
+    "LTP (₹)": "138.52",
+    "1D Return %": "-0.53",
+    "Market Cap (Cr)": "19,984",
+    "52W High / Low (₹)": "171.00/61.50",
+    "Volume": "97,58,321"
+  },
+  {
+    "Company": "Garden Reach Shipbuilders & Engineers Ltd.",
+    "LTP (₹)": "1,742.80",
+    "1D Return %": "+6.51",
+    "Market Cap (Cr)": "19,964",
+    "52W High / Low (₹)": "2,833.80/648.30",
+    "Volume": "49,85,663"
+  },
+  {
+    "Company": "Relaxo Footwears Ltd.",
+    "LTP (₹)": "801.80",
+    "1D Return %": "+0.87",
+    "Market Cap (Cr)": "19,960",
+    "52W High / Low (₹)": "959.00/758.25",
+    "Volume": "39,830"
+  },
+  {
+    "Company": "Century Plyboards (India) Ltd.",
+    "LTP (₹)": "898.05",
+    "1D Return %": "+2.40",
+    "Market Cap (Cr)": "19,952",
+    "52W High / Low (₹)": "935.00/594.00",
+    "Volume": "2,62,380"
+  },
+  {
+    "Company": "Chambal Fertilisers & Chemicals Ltd.",
+    "LTP (₹)": "497.75",
+    "1D Return %": "+0.47",
+    "Market Cap (Cr)": "19,942",
+    "52W High / Low (₹)": "574.35/263.45",
+    "Volume": "39,75,485"
+  },
+  {
+    "Company": "Finolex Cables Ltd.",
+    "LTP (₹)": "1,300.15",
+    "1D Return %": "+0.39",
+    "Market Cap (Cr)": "19,884",
+    "52W High / Low (₹)": "1,700.00/831.25",
+    "Volume": "1,73,681"
+  },
+  {
+    "Company": "Cello World Ltd.",
+    "LTP (₹)": "892.15",
+    "1D Return %": "+2.23",
+    "Market Cap (Cr)": "19,706",
+    "52W High / Low (₹)": "1,025.00/648.00",
+    "Volume": "99,589"
+  },
+  {
+    "Company": "Concord Biotech Ltd.",
+    "LTP (₹)": "1,877.95",
+    "1D Return %": "-3.62",
+    "Market Cap (Cr)": "19,646",
+    "52W High / Low (₹)": "2,664.00/1,125.55",
+    "Volume": "62,758"
+  },
+  {
+    "Company": "Jyothy Labs Ltd.",
+    "LTP (₹)": "534.95",
+    "1D Return %": "+1.00",
+    "Market Cap (Cr)": "19,644",
+    "52W High / Low (₹)": "595.85/333.00",
+    "Volume": "2,49,378"
+  },
+  {
+    "Company": "PCBL Ltd.",
+    "LTP (₹)": "519.45",
+    "1D Return %": "+2.42",
+    "Market Cap (Cr)": "19,607",
+    "52W High / Low (₹)": "584.40/182.00",
+    "Volume": "18,06,167"
+  },
+  {
+    "Company": "R R Kabel Ltd.",
+    "LTP (₹)": "1,725.25",
+    "1D Return %": "-0.54",
+    "Market Cap (Cr)": "19,505",
+    "52W High / Low (₹)": "1,901.95/1,308.00",
+    "Volume": "68,308"
+  },
+  {
+    "Company": "AstraZeneca Pharma India Ltd.",
+    "LTP (₹)": "7,739.70",
+    "1D Return %": "-1.79",
+    "Market Cap (Cr)": "19,349",
+    "52W High / Low (₹)": "8,139.00/4,475.00",
+    "Volume": "31,964"
+  },
+  {
+    "Company": "Chalet Hotels Ltd.",
+    "LTP (₹)": "883.90",
+    "1D Return %": "-0.75",
+    "Market Cap (Cr)": "19,291",
+    "52W High / Low (₹)": "958.00/535.10",
+    "Volume": "95,778"
+  },
+  {
+    "Company": "IIFL Finance Ltd.",
+    "LTP (₹)": "454.60",
+    "1D Return %": "+0.24",
+    "Market Cap (Cr)": "19,286",
+    "52W High / Low (₹)": "683.28/304.29",
+    "Volume": "24,88,652"
+  },
+  {
+    "Company": "V-Guard Industries Ltd.",
+    "LTP (₹)": "441.80",
+    "1D Return %": "+0.51",
+    "Market Cap (Cr)": "19,220",
+    "52W High / Low (₹)": "577.45/283.10",
+    "Volume": "4,89,941"
+  }
+]

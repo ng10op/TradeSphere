@@ -108,9 +108,7 @@ const StockAnalysis = () => {
       mainPlot.removeAllSeries();
       indicatorPlot.removeAllSeries();
 
-      const candlestickSeries = mainPlot
-        .candlestick(mapping)
-        .name(name.toUpperCase());
+      const candlestickSeries = mainPlot.candlestick(mapping).name("DATA");
       candlestickSeries.legendItem().iconType("rising-falling");
 
       if (currentIndicators.ema) {
@@ -186,7 +184,7 @@ const StockAnalysis = () => {
       <Navbar />
       <div className="flex p-6 mx-4 my-3 shadow-xl bg-white rounded-lg">
         {/* Toggle Buttons Div */}
-        <div className="w-[15%] p-4">
+        <div className="w-[15%] p-4 my-auto">
           <div className="grid grid-cols-1 gap-4">
             <Toggle
               label="EMA"
@@ -253,7 +251,7 @@ const StockAnalysis = () => {
       </div>
 
       {/* Indicator Description Section */}
-      <div className="w-[95%] mx-4 shadow-md rounded-lg bg-white mb-4 mt-8 p-6 space-y-6">
+      <div className="mx-4 shadow-md rounded-lg bg-white mb-4 mt-8 p-6 space-y-6">
         {/* Heading */}
         <h2 className="text-4xl font-bold text-black mb-8 text-center">
           About Indicators
