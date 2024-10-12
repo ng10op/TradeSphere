@@ -3,12 +3,14 @@ import { useNavigate } from "react-router-dom";
 import Sidebar from "../SideBar/Sidebar";
 import { useAuth } from "../Context/AuthContext";
 import Loader from "../Loader/Loader";
+import { useStock } from "../Context/StockContext";
 
 const Stocks = () => {
-  const { user, token } = useAuth();
+  const { token } = useAuth();
   const [visibleRows, setVisibleRows] = useState(20);
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const { stockData, handleUpdateData, loading } = useStock();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -86,12 +88,23 @@ const Stocks = () => {
     }
   };
 
-  if (isLoading) {
+  const handleUpdateDataClick = async () => {
+    setIsLoading(true); // Show loader
+    try {
+      handleUpdateData();
+    } catch (error) {
+      console.error("Error updating stock data:", error);
+    } finally {
+      setIsLoading(false); // Hide loader
+    }
+  };
+
+  if (isLoading || loading) {
     return <Loader />; // Show loader if loading
   }
 
   // Filter stock data based on search query
-  const filteredStockData = user.stocks.filter(
+  const filteredStockData = stockData.filter(
     (stock) =>
       stock.companyName &&
       stock.companyName.toLowerCase().includes(searchQuery.toLowerCase())
@@ -109,7 +122,7 @@ const Stocks = () => {
             direction="left"
           >
             <span className="flex">
-              {user.stocks.slice(0, 100).map((stock, index) => (
+              {stockData.slice(80, 200).map((stock, index) => (
                 <span key={index} className="mx-4">
                   {stock.companyName || "N/A"} ₹{stock.ltp || "N/A"} (
                   <span
@@ -144,7 +157,10 @@ const Stocks = () => {
             </div>
           </div>
           <div className="flex justify-center mr-8">
-            <button className="bg-[#4f46e5] text-white px-4 py-2 rounded-lg hover:bg-[#3730a3] transform hover:scale-105 transition duration-200">
+            <button
+              onClick={handleUpdateDataClick}
+              className="bg-[#4f46e5] text-white px-4 py-2 rounded-lg hover:bg-[#3730a3] transform hover:scale-105 transition duration-200"
+            >
               Update Data
             </button>
           </div>
@@ -221,7 +237,7 @@ const Stocks = () => {
               {filteredStockData.length} stocks
             </span>
             <span className="text-sm ml-4">
-              Last Updated: {formatDate(user.stocks[0].updatedAt) || "N/A"}
+              Last Updated: {formatDate(stockData[0]?.updatedAt) || "N/A"}
             </span>
           </div>
           <div className="flex justify-end mr-8">

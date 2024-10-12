@@ -14,6 +14,7 @@ import Loader from "./components/Loader/Loader";
 import ScrollToTopButton from "./components/Buttons/ScrollToTopButton";
 import PrivateRoute from "./components/Auth/PrivateRoute";
 import { AuthProvider } from "./components/Context/AuthContext";
+import { StockProvider } from "./components/Context/StockContext";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -30,85 +31,87 @@ const App = () => {
 
   return (
     <AuthProvider>
-      {" "}
-      <Router>
-        <div className="content">
-          {loading ? (
-            <Loader />
-          ) : (
-            <Routes>
-              <Route path="/" element={<FullPage />} />
-              <Route path="/auth" element={<UserAuth />} />
+      <StockProvider>
+        {" "}
+        <Router>
+          <div className="content">
+            {loading ? (
+              <Loader />
+            ) : (
+              <Routes>
+                <Route path="/" element={<FullPage />} />
+                <Route path="/auth" element={<UserAuth />} />
 
-              <Route
-                path="/dashboard"
-                element={
-                  <PrivateRoute>
-                    <Dashboard />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/stocks"
-                element={
-                  <PrivateRoute>
-                    <Stocks />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/support"
-                element={
-                  <PrivateRoute>
-                    <Support />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/profile"
-                element={
-                  <PrivateRoute>
-                    <ProfilePage />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/settings"
-                element={
-                  <PrivateRoute>
-                    <SettingsPage />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/logout"
-                element={
-                  <PrivateRoute>
-                    <LogoutPage />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/stock/:id"
-                element={
-                  <PrivateRoute>
-                    <IndividualStock />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/stock-analysis/:id"
-                element={
-                  <PrivateRoute>
-                    <StockAnalysis />
-                  </PrivateRoute>
-                }
-              />
-            </Routes>
-          )}
-          <ScrollToTopButton />
-        </div>
-      </Router>
+                <Route
+                  path="/dashboard"
+                  element={
+                    <PrivateRoute>
+                      <Dashboard />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/stocks"
+                  element={
+                    <PrivateRoute>
+                      <Stocks />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/support"
+                  element={
+                    <PrivateRoute>
+                      <Support />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/profile"
+                  element={
+                    <PrivateRoute>
+                      <ProfilePage />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/settings"
+                  element={
+                    <PrivateRoute>
+                      <SettingsPage />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/logout"
+                  element={
+                    <PrivateRoute>
+                      <LogoutPage />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/stock/:id"
+                  element={
+                    <PrivateRoute>
+                      <IndividualStock />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/stock-analysis/:id"
+                  element={
+                    <PrivateRoute>
+                      <StockAnalysis />
+                    </PrivateRoute>
+                  }
+                />
+              </Routes>
+            )}
+            <ScrollToTopButton />
+          </div>
+        </Router>
+      </StockProvider>
     </AuthProvider>
   );
 };

@@ -1,6 +1,6 @@
-// Existing imports
 const { Builder, By } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
+const User = require("../models/user.model"); // Update the path accordingly
 
 // Set up Chrome options
 const chromeOptions = new chrome.Options();
@@ -54,7 +54,6 @@ async function scrapeStockTable() {
       const rowData = {};
       for (let j = 0; j < cells.length; j++) {
         let cellText = await cells[j].getText();
-        // Keep all values as strings
         rowData[headers[j]] = cellText; // Store as string directly
       }
       if (Object.keys(rowData).length > 0) {
@@ -70,10 +69,34 @@ async function scrapeStockTable() {
 }
 
 // New function to handle sending data with status codes
+// New function to handle sending data with status codes
 async function sendScrapedData(req, res) {
+  const { email } = req.body; // Expecting email in the request body
+
   try {
     const scrapedData = await scrapeStockTable();
-    res.status(200).json(scrapedData); // Respond with 200 and the scraped data
+
+    // Transform scraped data to match the required structure
+    const stocks = scrapedData.map((stock) => ({
+      companyName: stock.Company,
+      ltp: stock["LTP (₹)"],
+      oneDReturn: stock["1D Return %"],
+      marketCap: stock["Market Cap (Cr)"],
+      highLow52W: stock["52W High / Low (₹)"],
+      volume: stock.Volume,
+    }));
+
+    // Find user by email and replace their stocks
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ error: "User not found, please Signup!" });
+    }
+
+    // Update user's stocks with the new scraped data
+    user.stocks = stocks; // Replace the stocks array with the transformed data
+    await user.save();
+
+    res.status(200).json(user.stocks); // Respond with 200 and the updated stocks
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Failed to scrape stock data." }); // Respond with 500 on error

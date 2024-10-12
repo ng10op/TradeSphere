@@ -3,10 +3,23 @@ import { Link } from "react-router-dom";
 import Navbar from "../NavBar/Navbar";
 import Sidebar from "../SideBar/Sidebar";
 import Charts from "./Chart";
-import { useAuth } from "../Context/AuthContext";
+import { useStock } from "../Context/StockContext";
 
 function Dashboard() {
-  const { user } = useAuth();
+  const { stockData } = useStock();
+
+  const formatDate = (isoDate) => {
+    const date = new Date(isoDate);
+    return date.toLocaleString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
+    });
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -203,7 +216,7 @@ function Dashboard() {
                 </tr>
               </thead>
               <tbody>
-                {user.stocks.slice(0, 10).map((data, index) => (
+                {stockData.slice(0, 10).map((data, index) => (
                   <tr
                     key={index}
                     className="hover:bg-gray-100 transition-colors"
@@ -229,6 +242,11 @@ function Dashboard() {
                 ))}
               </tbody>
             </table>
+            <div>
+              <span className="text-sm ml-4">
+                Last Updated: {formatDate(stockData[0]?.updatedAt) || "N/A"}
+              </span>
+            </div>
 
             <div className="flex justify-end mt-4 mr-4">
               <Link

@@ -8,6 +8,6 @@ const router = express.Router();
 
 router.post("/history", protectRoute, scrapeStockHistory);
 router.post("/page", protectRoute, scrapePageData);
-router.post("/table", sendScrapedData);
+router.post("/table", protectRoute, sendScrapedData);
 
 module.exports = router;
