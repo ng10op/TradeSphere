@@ -29,12 +29,6 @@ TradeSphere is a web-based application designed for stock analysis, utilizing we
 
 ## Getting Started
 
-### Prerequisites
-
-Make sure you have the following installed:
-
-- Node.js
-
 ### Installation
 
 1. Clone the repository:
@@ -57,3 +51,36 @@ Make sure you have the following installed:
    cd backend
    npm install
    ```
+
+### Environment Setup
+
+1. Create a file named .env in your backend folder.
+
+2. Add the following environment variables to your .env file:
+
+   ```bash
+   PORT = 8000
+   MONGO_DB_URI = <your_mongodb_atlas_connection_string>
+   NODE_ENV = development
+   JWT_SECRET = <your_jwt_secret>
+   ```
+
+### Running the Application
+
+1. Start the backend server:
+
+   ```bash
+   cd backend
+   npm run dev
+   ```
+
+2. Start the frontend server:
+
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+
+3. Access the application:
+
+   Open your web browser and go to http://localhost:5173 to view the application.
