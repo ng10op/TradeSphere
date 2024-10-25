@@ -84,3 +84,7 @@ TradeSphere is a web-based application designed for stock analysis, utilizing we
 3. Access the application:
 
    Open your web browser and go to http://localhost:5173 to view the application.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
