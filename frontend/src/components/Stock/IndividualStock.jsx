@@ -5,6 +5,7 @@ import "anychart/dist/css/anychart-ui.min.css";
 import Loader from "../Loader/Loader";
 import Navbar from "../NavBar/Navbar";
 import StockNavbar from "./StockNavbar";
+import parse from "html-react-parser";
 
 const IndividualStock = () => {
   const { id } = useParams();
@@ -121,64 +122,71 @@ const IndividualStock = () => {
       </div>
       {/* Section 1: Key Indicators */}
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
-        <h3 className="text-2xl font-bold mb-2">Key Indicators</h3>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: pageData.data.section_1.replace(/\n/g, "<br />"),
-          }}
-        />{" "}
-      </div>
-
-      {/* Section 3: Financials */}
-      <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
-        <h3 className="text-2xl font-bold mb-2">Financials</h3>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: pageData.data.section_3.replace(/\n/g, "<br />"),
-          }}
-        />{" "}
-      </div>
-
-      {/* Section 4: Shareholding */}
-      <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
-        <h3 className="text-2xl font-bold mb-2">Shareholding</h3>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: pageData.data.section_4.replace(/\n/g, "<br />"),
-          }}
-        />{" "}
+        <h3 className="text-3xl font-bold mb-2">Key Indicators</h3>
+        <div>
+          {pageData && pageData.data && pageData.data.section_1
+            ? parse(
+                pageData.data.section_1
+                  .replace(/md:gap-x-8/g, "md:gap-x-16 text-lg")
+                  .replace(/<h2[^>]*>.*?<\/h2>/gi, "")
+                  .replace(/text-xs/g, "text-base") // Replace w-full with w-80%
+              )
+            : "Loading..."}
+        </div>
       </div>
 
       {/* Section 5: Peer Comparison */}
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
-        <h3 className="text-2xl font-bold mb-2">Peer Comparison</h3>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: pageData.data.section_5.replace(/\n/g, "<br />"),
-          }}
-        />{" "}
+        <h3 className="text-3xl font-bold mb-2">Peer Comparison</h3>
+        <div>
+          {pageData && pageData.data && pageData.data.section_5
+            ? parse(
+                pageData.data.section_5
+                  .replace(/<h2[^>]*>.*?<\/h2>/gi, "")
+                  .replace(/text-xs/g, "text-base")
+                  .replace(/text-sm/g, "text-lg")
+                  .replace(/href="[^"]*"/gi, "")
+              ) // Safely parse and render the HTML
+            : "Loading..."}
+        </div>
       </div>
 
       {/* Section 6: About Company */}
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
-        <h3 className="text-2xl font-bold mb-2">
+        <h3 className="text-3xl font-bold mb-2">
           About Reliance Industries Ltd.
         </h3>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: pageData.data.section_6.replace(/\n/g, "<br />"),
-          }}
-        />{" "}
+        <div>
+          {pageData && pageData.data && pageData.data.section_6
+            ? parse(
+                pageData.data.section_6
+                  .replace(/<h2[^>]*>.*?<\/h2>/gi, "")
+                  .replace(/text-xs/g, "")
+                  .replace(/text-sm/g, "text-lg")
+                  .replace(/<button[^>]*>.*?<\/button>/gi, "")
+              ) // Safely parse and render the HTML
+            : "Loading..."}
+        </div>
       </div>
 
       {/* Section 7: News */}
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
         <h3 className="text-2xl font-bold mb-2">News</h3>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: pageData.data.section_7.replace(/\n/g, "<br />"),
-          }}
-        />
+        {/* <div dangerouslySetInnerHTML={{ __html: pageData.data.section_7 }} /> */}
+        <div>
+          {pageData && pageData.data && pageData.data.section_7
+            ? parse(
+                pageData.data.section_7
+                  .replace(/<h2[^>]*>.*?<\/h2>/gi, "")
+                  .replace(
+                    /<div\s+className="[^"]*">\s*Latest\s*<\/div>/gi,
+                    `<div class="inline-flex items-center border transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 px-1 py-0.5 text-red-600 text-xs font-proximaNovaSemibold rounded-[2px] ml-2 uppercase leading-3">LATEST</div>`
+                  )
+                  .replace(/text-xs/g, "")
+                  .replace(/<a href="\/stocks[^>]*>.*?<\/a>/gi, "")
+              ) // Safely parse and render the HTML
+            : "Loading..."}
+        </div>
       </div>
     </div>
   );

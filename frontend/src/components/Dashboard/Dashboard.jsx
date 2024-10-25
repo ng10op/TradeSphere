@@ -242,11 +242,6 @@ function Dashboard() {
                 ))}
               </tbody>
             </table>
-            <div>
-              <span className="text-sm ml-4">
-                Last Updated: {formatDate(stockData[0]?.updatedAt) || "N/A"}
-              </span>
-            </div>
 
             <div className="flex justify-end mt-4 mr-4">
               <Link

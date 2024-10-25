@@ -71,7 +71,6 @@ const Stocks = () => {
 
       // Navigate to stock page with both data sets
       const formattedCompanyName = companyName.replace(/\s+/g, "-");
-      console.log(pageData);
       navigate(`/stock/${formattedCompanyName}`, {
         state: {
           stockData: stockHistoryData,

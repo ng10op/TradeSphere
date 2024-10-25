@@ -56,18 +56,23 @@ const scrapePageData = async (req, res) => {
         console.log("No 'Read More' button found:", error);
       }
 
-      // Extract data from the page
+      // Extract data from the page as HTML
       let aboutSections = await driver.findElements(
         By.css("div.relative.shadow-shadow-1.bg-white.w-full.overflow-hidden")
       );
 
       let stockData = {};
       for (let i = 0; i < aboutSections.length; i++) {
-        let sectionText = await aboutSections[i].getText();
-        stockData[`section_${i + 1}`] = sectionText;
+        let sectionHtml = await aboutSections[i].getAttribute("innerHTML");
+
+        // Replace any occurrence of class= with className=
+        sectionHtml = sectionHtml.replace(/class=/g, "className=");
+
+        // Store the section's HTML content under section_<index>
+        stockData[`section_${i + 1}`] = sectionHtml;
       }
 
-      // Return the data as a JSON response
+      // Return the cleaned HTML data as a JSON response
       return res.status(200).json({
         company: companyName,
         data: stockData,
