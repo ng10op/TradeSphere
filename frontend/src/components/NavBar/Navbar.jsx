@@ -22,18 +22,16 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  // Check if the current path matches "/stock/:id"
   const isStockPage = location.pathname.startsWith("/stock");
   const isAnalysisPage = location.pathname.startsWith("/stock-analysis");
 
   const handleBackClick = () => {
-    // Use a variable to hold the stock ID if necessary
     if (isAnalysisPage) {
       navigate(`/stock/${id}`, {
         state: { stockData, pageData, companyName, ltp, change },
       });
     } else {
-      navigate("/stocks"); // Go back to the previous page
+      navigate("/stocks");
     }
   };
 
@@ -61,7 +59,6 @@ const Navbar = () => {
           </h1>
         </div>
         <div className="flex items-center space-x-4">
-          {/* Conditional "Dashboard" and "Stocks" links when on the stock page */}
           {isStockPage && (
             <>
               <div

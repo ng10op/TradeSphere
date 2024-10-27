@@ -25,7 +25,12 @@ const Support = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    alert("Message sent successfully!");
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
   };
 
   return (

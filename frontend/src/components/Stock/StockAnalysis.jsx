@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useLocation } from "react-router-dom"; // Import useNavigate
+import { useParams, useLocation } from "react-router-dom";
 import anychart from "anychart";
 import "anychart/dist/css/anychart-ui.min.css";
-import Toggle from "../Buttons/Toggle"; // Import the Toggle component
+import Toggle from "../Buttons/Toggle";
 import Navbar from "../NavBar/Navbar";
 import indicatorData from "./data.json";
 
 const StockAnalysis = () => {
   const { id } = useParams();
   const name = id.replace(/-/g, " ");
-  const location = useLocation(); // Access location object
+  const location = useLocation();
   const { stockData } = location.state || {};
 
   const [activeIndex, setActiveIndex] = useState(null);
@@ -45,7 +45,6 @@ const StockAnalysis = () => {
       setChart(stockChart);
 
       const dataTable = anychart.data.table("x");
-      // Prepare data for AnyChart from stockData
       const formattedData = stockData.map((item) => ({
         x: item.Date,
         open: item.Open,
@@ -183,7 +182,6 @@ const StockAnalysis = () => {
     <div className="bg-gray-200">
       <Navbar />
       <div className="flex p-6 mx-4 my-3 shadow-xl bg-white rounded-lg">
-        {/* Toggle Buttons Div */}
         <div className="w-[15%] p-4 my-auto">
           <div className="grid grid-cols-1 gap-4">
             <Toggle
@@ -239,7 +237,6 @@ const StockAnalysis = () => {
           </div>
         </div>
 
-        {/* Chart Div */}
         <div
           id="chartContainer"
           className="w-[90%] shadow-md rounded-lg bg-white mb-4 p-4"
@@ -250,9 +247,7 @@ const StockAnalysis = () => {
         />
       </div>
 
-      {/* Indicator Description Section */}
       <div className="mx-4 shadow-md rounded-lg bg-white mb-4 mt-8 p-6 space-y-6">
-        {/* Heading */}
         <h2 className="text-4xl font-bold text-black mb-8 text-center">
           About Indicators
         </h2>

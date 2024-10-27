@@ -20,7 +20,6 @@ const scrapePageData = async (req, res) => {
       const url = "https://www.etmoney.com/stocks/list-of-stocks";
       await driver.get(url);
 
-      // Input the company name into the search bar
       await driver.wait(
         until.elementLocated(By.id("desktop-search-container")),
         20000
@@ -31,17 +30,14 @@ const scrapePageData = async (req, res) => {
       );
       await searchBar.sendKeys(companyName);
 
-      // Wait for dropdown suggestions and click the first suggestion
       await driver.sleep(2000);
       let firstSuggestion = await driver.findElement(
         By.css("ul.custom-scrollbar li:first-child")
       );
       await firstSuggestion.click();
 
-      // Wait for the new page to load
       await driver.sleep(5000);
 
-      // Click "Read More" button if it exists
       try {
         let readMoreButton = await driver.wait(
           until.elementLocated(
@@ -56,7 +52,6 @@ const scrapePageData = async (req, res) => {
         console.log("No 'Read More' button found:", error);
       }
 
-      // Extract data from the page as HTML
       let aboutSections = await driver.findElements(
         By.css("div.relative.shadow-shadow-1.bg-white.w-full.overflow-hidden")
       );
@@ -65,14 +60,11 @@ const scrapePageData = async (req, res) => {
       for (let i = 0; i < aboutSections.length; i++) {
         let sectionHtml = await aboutSections[i].getAttribute("innerHTML");
 
-        // Replace any occurrence of class= with className=
         sectionHtml = sectionHtml.replace(/class=/g, "className=");
 
-        // Store the section's HTML content under section_<index>
         stockData[`section_${i + 1}`] = sectionHtml;
       }
 
-      // Return the cleaned HTML data as a JSON response
       return res.status(200).json({
         company: companyName,
         data: stockData,

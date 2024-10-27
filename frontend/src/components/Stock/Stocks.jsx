@@ -30,11 +30,9 @@ const Stocks = () => {
     });
   };
 
-  // Function to handle company click and navigation
   const handleCompanyClick = async (companyName, ltp, change) => {
-    setIsLoading(true); // Set loading state to true
+    setIsLoading(true);
     try {
-      // Fetch stock history data
       const stockHistoryResponse = await fetch(
         "http://localhost:8000/api/stock/history",
         {
@@ -53,7 +51,6 @@ const Stocks = () => {
 
       const stockHistoryData = await stockHistoryResponse.json();
 
-      // Fetch page data
       const pageResponse = await fetch("http://localhost:8000/api/stock/page", {
         method: "POST",
         headers: {
@@ -69,7 +66,6 @@ const Stocks = () => {
 
       const pageData = await pageResponse.json();
 
-      // Navigate to stock page with both data sets
       const formattedCompanyName = companyName.replace(/\s+/g, "-");
       navigate(`/stock/${formattedCompanyName}`, {
         state: {
@@ -83,26 +79,25 @@ const Stocks = () => {
     } catch (error) {
       console.error("Error fetching stock data or page data:", error);
     } finally {
-      setIsLoading(false); // Reset loading state
+      setIsLoading(false);
     }
   };
 
   const handleUpdateDataClick = async () => {
-    setIsLoading(true); // Show loader
+    setIsLoading(true);
     try {
       handleUpdateData();
     } catch (error) {
       console.error("Error updating stock data:", error);
     } finally {
-      setIsLoading(false); // Hide loader
+      setIsLoading(false);
     }
   };
 
   if (isLoading || loading) {
-    return <Loader />; // Show loader if loading
+    return <Loader />;
   }
 
-  // Filter stock data based on search query
   const filteredStockData = stockData.filter(
     (stock) =>
       stock.companyName &&
@@ -240,7 +235,6 @@ const Stocks = () => {
             </span>
           </div>
           <div className="flex justify-end mr-8">
-            {/* Load more button */}
             {visibleRows < filteredStockData.length && (
               <button
                 onClick={() => setVisibleRows((prev) => prev + 20)}

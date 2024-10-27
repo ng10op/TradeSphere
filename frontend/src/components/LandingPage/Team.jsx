@@ -23,6 +23,8 @@ const data = [
   },
 ];
 
+const fallbackImg = "/fallBackImg.jpg";
+
 const Team = () => {
   return (
     <div id="team" className="py-24">
@@ -46,6 +48,9 @@ const Team = () => {
                   src={d.img}
                   alt={d.name}
                   className="w-full h-64 object-contain"
+                  onError={(e) => {
+                    e.target.src = fallbackImg;
+                  }}
                 />
                 <div className="p-4 text-center">
                   <h4 className="text-xl font-semibold mb-2">{d.name}</h4>

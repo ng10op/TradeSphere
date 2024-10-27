@@ -9,7 +9,7 @@ export const StockProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setStockData(user?.stocks || []); // Fetch stock data on route change
+    setStockData(user?.stocks || []);
   }, [user, user?.stocks]);
 
   const handleUpdateData = async () => {
@@ -21,7 +21,7 @@ export const StockProvider = ({ children }) => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ email: user.email }), // Send user email to backend
+        body: JSON.stringify({ email: user.email }),
       });
 
       if (!response.ok) {
@@ -32,8 +32,8 @@ export const StockProvider = ({ children }) => {
         );
       }
 
-      const updatedStocks = await response.json(); // Fetch the updated stock data
-      setStockData(updatedStocks); // Update stock data in state
+      const updatedStocks = await response.json();
+      setStockData(updatedStocks);
     } catch (error) {
       console.error("Error updating stock data:", error);
     } finally {

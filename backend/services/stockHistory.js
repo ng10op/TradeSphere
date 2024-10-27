@@ -3,13 +3,10 @@ const csv = require("csv-parser");
 const yahooFinance = require("yahoo-finance2").default;
 const path = require("path");
 
-// Path to your CSV file
 const csvFilePath = path.join(__dirname, "AllStocksSymbols.csv");
 
-// Load the CSV file into an array of objects
 const companies = [];
 
-// Load companies from CSV
 const loadCompanies = () => {
   return new Promise((resolve, reject) => {
     fs.createReadStream(csvFilePath)
@@ -20,9 +17,7 @@ const loadCompanies = () => {
   });
 };
 
-// Function to get the symbol and date of listing for a given company name
 const getSymbolAndDate = (companyName) => {
-  // Replace 'Ltd.' with 'Limited' in the company name for matching
   const formattedCompanyName = companyName.replace("Ltd.", "Limited");
 
   const found = companies.find((company) =>
@@ -35,40 +30,33 @@ const getSymbolAndDate = (companyName) => {
     : null;
 };
 
-// Function to scrape stock data based on company name
 const scrapeStockHistory = async (req, res) => {
   try {
-    const { companyName } = req.body; // Extract the company name from the request body
+    const { companyName } = req.body;
 
-    // Load companies from CSV
     await loadCompanies();
 
-    // Get the symbol and date of listing for the company
     const result = getSymbolAndDate(companyName);
 
     if (result) {
       const { symbol, dateOfListing } = result;
 
-      // Check if dateOfListing is defined before proceeding
       if (!dateOfListing) {
         return res.status(404).json({
           error: `No date of listing found for company: ${companyName}`,
         });
       }
 
-      // Convert date of listing from "DD-MMM-YYYY" to "YYYY-MM-DD"
       const listingDate = new Date(dateOfListing.split("-").reverse().join(" "))
         .toISOString()
         .split("T")[0];
 
-      // Download stock data using yahoo-finance2
       const data = await yahooFinance.historical(symbol + ".NS", {
-        period1: listingDate, // Start date from the listing date
-        period2: new Date().toISOString().split("T")[0], // End date
-        interval: "1d", // Daily data
+        period1: listingDate,
+        period2: new Date().toISOString().split("T")[0],
+        interval: "1d",
       });
 
-      // Format the data for JSON response
       const formattedData = data.map((item) => ({
         Date: item.date.toISOString().split("T")[0],
         Open: item.open,
@@ -78,7 +66,7 @@ const scrapeStockHistory = async (req, res) => {
         Volume: item.volume,
       }));
 
-      return res.json(formattedData); // Return the formatted data in JSON format
+      return res.json(formattedData);
     } else {
       return res
         .status(404)
@@ -90,4 +78,4 @@ const scrapeStockHistory = async (req, res) => {
   }
 };
 
-module.exports = { scrapeStockHistory }; // Export the function
+module.exports = { scrapeStockHistory };

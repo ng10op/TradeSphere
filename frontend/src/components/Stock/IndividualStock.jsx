@@ -29,66 +29,52 @@ const IndividualStock = () => {
     const container = document.getElementById("chartContainer");
 
     if (container && stockData) {
-      // Create chart instance
       const chart = anychart.stock();
       chart.container(container);
 
-      // Create data table on loaded data
       const dataTable = anychart.data.table("x");
 
-      // Convert the data to the format expected by AnyChart
       const formattedData = stockData.map((item) => ({
-        x: item.Date, // Use Date as the x value
-        close: item.Close, // Use Close price for the line chart
+        x: item.Date,
+        close: item.Close,
       }));
 
-      dataTable.addData(formattedData); // Add the formatted data
+      dataTable.addData(formattedData);
 
-      // Map loaded data for the line series
       const mapping = dataTable.mapAs({
-        value: "close", // Map 'close' price to the line chart
+        value: "close",
       });
 
-      // Create the first plot on the chart
       const plot = chart.plot(0);
       plot.yGrid(true).xGrid(true).yMinorGrid(true).xMinorGrid(true);
 
-      // Create line series and customize the stroke (color, thickness)
       const series = plot.line(mapping).name("LTP");
       series.legendItem().iconType("line");
 
-      // Change the color of the line
       series.stroke("#28a745", 3);
 
-      // Create scroller series with mapped data
       chart.scroller().line(mapping);
 
-      // Create and initialize range picker
       const rangePicker = anychart.ui.rangePicker();
       rangePicker.render(chart);
 
-      // Create and initialize range selector
       const rangeSelector = anychart.ui.rangeSelector();
       rangeSelector.render(chart);
 
-      // Set chart title
       chart.title(`${name.toUpperCase()}`);
 
-      // Draw chart
       chart.draw();
 
-      // Cleanup function
       return () => {
         if (container) {
-          container.innerHTML = ""; // Clear chart container on unmount
+          container.innerHTML = "";
         }
       };
     }
-  }, [id, stockData]); // Add stockData to dependencies
+  }, [id, stockData]);
 
-  // Check if stockData is available, otherwise show loader
   if (!stockData) {
-    return <Loader />; // Show the loader while fetching data
+    return <Loader />;
   }
 
   return (
@@ -96,7 +82,6 @@ const IndividualStock = () => {
       <Navbar />
       <StockNavbar companyName={companyName} ltp={ltp} change={change} />
       <div className="p-6 mx-4 my-3 shadow-2xl bg-white rounded-lg">
-        {/* Heading with Terminal Button */}
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-3xl font-bold ml-6">Share Price Chart</h2>
           <button
@@ -108,7 +93,6 @@ const IndividualStock = () => {
           </button>
         </div>
 
-        {/* Chart Container with Tailwind Shadow */}
         <div
           id="chartContainer"
           className="shadow-md rounded-lg bg-white mb-4"
@@ -120,7 +104,6 @@ const IndividualStock = () => {
           }}
         />
       </div>
-      {/* Section 1: Key Indicators */}
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
         <h3 className="text-3xl font-bold mb-2">Key Indicators</h3>
         <div>
@@ -129,13 +112,12 @@ const IndividualStock = () => {
                 pageData.data.section_1
                   .replace(/md:gap-x-8/g, "md:gap-x-16 text-lg")
                   .replace(/<h2[^>]*>.*?<\/h2>/gi, "")
-                  .replace(/text-xs/g, "text-base") // Replace w-full with w-80%
+                  .replace(/text-xs/g, "text-base")
               )
             : "Loading..."}
         </div>
       </div>
 
-      {/* Section 5: Peer Comparison */}
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
         <h3 className="text-3xl font-bold mb-2">Peer Comparison</h3>
         <div>
@@ -146,16 +128,14 @@ const IndividualStock = () => {
                   .replace(/text-xs/g, "text-base")
                   .replace(/text-sm/g, "text-lg")
                   .replace(/href="[^"]*"/gi, "")
-              ) // Safely parse and render the HTML
+                  .replace(/View detailed comparison/gi, "")
+              )
             : "Loading..."}
         </div>
       </div>
 
-      {/* Section 6: About Company */}
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
-        <h3 className="text-3xl font-bold mb-2">
-          About Reliance Industries Ltd.
-        </h3>
+        <h3 className="text-3xl font-bold mb-2">About {companyName}</h3>
         <div>
           {pageData && pageData.data && pageData.data.section_6
             ? parse(
@@ -164,15 +144,17 @@ const IndividualStock = () => {
                   .replace(/text-xs/g, "")
                   .replace(/text-sm/g, "text-lg")
                   .replace(/<button[^>]*>.*?<\/button>/gi, "")
-              ) // Safely parse and render the HTML
+                  .replace(
+                    /<h3[^>]*className="text-lg font-proximaNovaSemibold flex justify-between items-center mt-4"[^>]*>/gi,
+                    '<h3 class="font-bold mt-4 text-xl">'
+                  )
+              )
             : "Loading..."}
         </div>
       </div>
 
-      {/* Section 7: News */}
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
         <h3 className="text-2xl font-bold mb-2">News</h3>
-        {/* <div dangerouslySetInnerHTML={{ __html: pageData.data.section_7 }} /> */}
         <div>
           {pageData && pageData.data && pageData.data.section_7
             ? parse(
@@ -184,7 +166,7 @@ const IndividualStock = () => {
                   )
                   .replace(/text-xs/g, "")
                   .replace(/<a href="\/stocks[^>]*>.*?<\/a>/gi, "")
-              ) // Safely parse and render the HTML
+              )
             : "Loading..."}
         </div>
       </div>
