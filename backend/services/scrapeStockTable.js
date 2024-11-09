@@ -70,7 +70,7 @@ async function sendScrapedData(req, res) {
     const stocks = scrapedData.map((stock) => ({
       companyName: stock.Company,
       ltp: stock["LTP (₹)"],
-      oneDReturn: stock["1D Return %"],
+      oneDReturn: stock["1D Change %"],
       marketCap: stock["Market Cap (Cr)"],
       highLow52W: stock["52W High / Low (₹)"],
       volume: stock.Volume,
