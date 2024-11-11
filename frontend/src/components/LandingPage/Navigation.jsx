@@ -91,7 +91,7 @@ const Navigation = () => {
                 href="#testimonials"
                 onClick={handleScroll}
               >
-                Tesimonials
+                Testimonials
               </a>
             </li>
             <li>
