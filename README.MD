@@ -4,6 +4,14 @@
 
 TradeSphere is a web-based application designed for stock analysis, utilizing web scraping to collect, analyze, and visualize stock market data. The platform aims to assist investors in making informed decisions by providing real-time data collection, analysis, and visualization tools.
 
+Here’s a quick look at TradeSphere:
+
+![Homepage](screenshots\Homepage\img1.png)
+![Stock Data](screenshots\StockData&Analysis\img1.png)
+![Stock Analysis](screenshots\StockData&Analysis\img5.png)
+
+For a detailed view, check the [screenshots folder](screenshots/).
+
 ## Features
 
 - **Real-time Stock Data**: Collects and displays up-to-date stock market information.
