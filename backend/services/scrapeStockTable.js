@@ -3,7 +3,7 @@ const chrome = require("selenium-webdriver/chrome");
 const User = require("../models/user.model");
 
 const chromeOptions = new chrome.Options();
-chromeOptions.addArguments("--headless=old");
+chromeOptions.addArguments("--headless");
 
 async function scrapeStockTable() {
   let driver = await new Builder()

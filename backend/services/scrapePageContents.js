@@ -9,7 +9,7 @@ const scrapePageData = async (req, res) => {
     }
 
     const chromeOptions = new chrome.Options();
-    chromeOptions.addArguments("--headless=old");
+    chromeOptions.addArguments("--headless");
 
     let driver = await new Builder()
       .forBrowser("chrome")

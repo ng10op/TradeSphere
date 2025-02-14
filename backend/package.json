@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "chromedriver": "^129.0.4",
+    "chromedriver": "^132.0.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "csv-parser": "^3.0.0",
@@ -20,7 +20,7 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.6.1",
-    "selenium-webdriver": "^4.25.0",
+    "selenium-webdriver": "^4.28.1",
     "yahoo-finance2": "^2.13.2"
   },
   "devDependencies": {
