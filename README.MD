@@ -6,9 +6,9 @@ TradeSphere is a web-based application designed for stock analysis, utilizing we
 
 Here’s a quick look at TradeSphere:
 
-![Homepage](screenshots\Homepage\img1.png)
-![Stock Data](screenshots\StockData&Analysis\img1.png)
-![Stock Analysis](screenshots\StockData&Analysis\img5.png)
+![Homepage](./screenshots/Homepage/img1.png "Homepage")
+![Stock Data](./screenshots/StockData&Analysis/img1.png "Stock Data")
+![Stock Analysis](./screenshots/StockData&Analysis/img5.png "Stock Analysis")
 
 For a detailed view, check the [screenshots folder](screenshots/).
 
