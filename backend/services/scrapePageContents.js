@@ -65,9 +65,28 @@ const scrapePageData = async (req, res) => {
         stockData[`section_${i + 1}`] = sectionHtml;
       }
 
+      let faqData = [];
+
+      try {
+        const faqScript = await driver.findElement(By.css("script#faq-schema"));
+        const faqJsonText = await faqScript.getAttribute("innerHTML");
+
+        const faqJson = JSON.parse(faqJsonText);
+
+        if (faqJson.mainEntity && Array.isArray(faqJson.mainEntity)) {
+          faqData = faqJson.mainEntity.map((item) => ({
+            question: item.name || item.question,
+            answer: item.acceptedAnswer?.text || "No answer available",
+          }));
+        }
+      } catch (err) {
+        console.log("Error extracting FAQ JSON:", err.message);
+      }
+
       return res.status(200).json({
         company: companyName,
         data: stockData,
+        faqs: faqData,
       });
     } finally {
       await driver.quit();

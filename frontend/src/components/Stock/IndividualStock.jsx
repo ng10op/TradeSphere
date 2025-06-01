@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import anychart from "anychart";
 import "anychart/dist/css/anychart-ui.min.css";
@@ -24,6 +24,12 @@ const IndividualStock = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const handleToggle = (index) => {
+    setOpenIndex(index === openIndex ? null : index);
+  };
 
   useEffect(() => {
     const container = document.getElementById("chartContainer");
@@ -154,20 +160,28 @@ const IndividualStock = () => {
       </div>
 
       <div className="p-6 mx-4 my-3 shadow-md bg-white rounded-lg hover:shadow-xl transition-shadow duration-200">
-        <h3 className="text-2xl font-bold mb-2">News</h3>
-        <div>
-          {pageData && pageData.data && pageData.data.section_7
-            ? parse(
-                pageData.data.section_7
-                  .replace(/<h2[^>]*>.*?<\/h2>/gi, "")
-                  .replace(
-                    /<div\s+className="[^"]*">\s*Latest\s*<\/div>/gi,
-                    `<div class="inline-flex items-center border transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 px-1 py-0.5 text-red-600 text-xs font-proximaNovaSemibold rounded-[2px] ml-2 uppercase leading-3">LATEST</div>`
-                  )
-                  .replace(/text-xs/g, "")
-                  .replace(/<a href="\/stocks[^>]*>.*?<\/a>/gi, "")
-              )
-            : "Loading..."}
+        <h3 className="text-2xl font-bold mb-4">{companyName} Shares FAQs</h3>
+        <div className="space-y-2">
+          {pageData.faqs.length > 0 ? (
+            pageData.faqs.map((faq, index) => (
+              <div key={index} className="border-b py-2">
+                <button
+                  onClick={() => handleToggle(index)}
+                  className="w-full text-left text-lg font-semibold text-gray-800 focus:outline-none flex justify-between items-center"
+                >
+                  {faq.question}
+                  <span className="text-gray-500 text-sm">
+                    {openIndex === index ? "▲" : "▼"}
+                  </span>
+                </button>
+                {openIndex === index && (
+                  <p className="mt-2 text-gray-700">{faq.answer}</p>
+                )}
+              </div>
+            ))
+          ) : (
+            <p className="text-gray-500">Loading FAQs...</p>
+          )}
         </div>
       </div>
     </div>
