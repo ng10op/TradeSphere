@@ -172,6 +172,7 @@ function Dashboard() {
                 <h2 className="text-xl font-bold">Stocks in News</h2>
                 <Link
                   to="https://economictimes.indiatimes.com/"
+                  target="_blank"
                   className="text-blue-500 hover:text-blue-700 font-semibold flex items-center"
                 >
                   <i className="fas fa-newspaper mr-2"></i>

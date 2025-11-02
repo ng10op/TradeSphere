@@ -157,7 +157,7 @@ const Contact = () => {
       </div>
       <footer id="footer" className="bg-gray-200 py-6 text-center">
         <p className="text-gray-600 text-sm">
-          &copy; 2024 TradeSphere. All rights reserved. Developed by{" "}
+          &copy; 2025 TradeSphere. All rights reserved. Developed by{" "}
           <a
             href="https://github.com/ng10op"
             className="text-blue-600 hover:underline"
