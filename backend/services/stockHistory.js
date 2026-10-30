@@ -1,6 +1,7 @@
 const fs = require("fs");
 const csv = require("csv-parser");
-const yahooFinance = require("yahoo-finance2").default;
+const YahooFinance = require("yahoo-finance2").default;
+const yahooFinance = new YahooFinance();
 const path = require("path");
 
 const csvFilePath = path.join(__dirname, "AllStocksSymbols.csv");
@@ -23,7 +24,7 @@ const getSymbolAndDate = (companyName) => {
   const found = companies.find((company) =>
     company["NAME OF COMPANY"]
       .toLowerCase()
-      .includes(formattedCompanyName.toLowerCase())
+      .includes(formattedCompanyName.toLowerCase()),
   );
   return found
     ? { symbol: found["SYMBOL"], dateOfListing: found[" DATE OF LISTING"] }
@@ -51,13 +52,19 @@ const scrapeStockHistory = async (req, res) => {
         .toISOString()
         .split("T")[0];
 
-      const data = await yahooFinance.historical(symbol + ".NS", {
+      // const data = await yahooFinance.historical(symbol + ".NS", {
+      //   period1: listingDate,
+      //   period2: new Date().toISOString().split("T")[0],
+      //   interval: "1d",
+      // });
+
+      const data = await yahooFinance.chart(symbol + ".NS", {
         period1: listingDate,
-        period2: new Date().toISOString().split("T")[0],
+        period2: Math.floor(Date.now() / 1000),
         interval: "1d",
       });
 
-      const formattedData = data.map((item) => ({
+      const formattedData = data.quotes.map((item) => ({
         Date: item.date.toISOString().split("T")[0],
         Open: item.open,
         High: item.high,
